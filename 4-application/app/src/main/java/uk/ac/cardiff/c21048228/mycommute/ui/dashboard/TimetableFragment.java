@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import uk.ac.cardiff.c21048228.mycommute.databinding.FragmentDashboardBinding;
+import uk.ac.cardiff.c21048228.mycommute.databinding.FragmentTimetableBinding;
 
-public class DashboardFragment extends Fragment {
+public class TimetableFragment extends Fragment {
 
-    private FragmentDashboardBinding binding;
+    private FragmentTimetableBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        DashboardViewModel dashboardViewModel =
-                new ViewModelProvider(this).get(DashboardViewModel.class);
+        TimetableViewModel timetableViewModel =
+                new ViewModelProvider(this).get(TimetableViewModel.class);
 
-        binding = FragmentDashboardBinding.inflate(inflater, container, false);
+        binding = FragmentTimetableBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textDashboard;
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textTimetable;
+        timetableViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
