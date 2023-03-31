@@ -24,8 +24,6 @@ public class TimetableFragment extends Fragment {
         binding = FragmentTimetableBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textTimetable;
-        timetableViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
