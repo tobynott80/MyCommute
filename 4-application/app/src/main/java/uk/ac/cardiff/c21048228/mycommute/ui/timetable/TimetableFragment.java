@@ -9,6 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import uk.ac.cardiff.c21048228.mycommute.databinding.FragmentTimetableBinding;
+
 public class TimetableFragment extends Fragment {
 
     private FragmentTimetableBinding binding;
