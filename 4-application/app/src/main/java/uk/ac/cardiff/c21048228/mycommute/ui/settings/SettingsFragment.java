@@ -1,4 +1,4 @@
-package uk.ac.cardiff.c21048228.mycommute.ui.notifications;
+package uk.ac.cardiff.c21048228.mycommute.ui.settings;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +12,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import uk.ac.cardiff.c21048228.mycommute.databinding.FragmentSettingsBinding;
 
-public class NotificationsFragment extends Fragment {
+public class SettingsFragment extends Fragment {
 
     private FragmentSettingsBinding binding;
 

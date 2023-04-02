@@ -1,4 +1,4 @@
-package uk.ac.cardiff.c21048228.mycommute.ui.notifications;
+package uk.ac.cardiff.c21048228.mycommute.ui.settings;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
