@@ -17,29 +17,30 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text='"Search"' />
 
-    <EditText
-        android:id="@+id/editTextDeparture"
+    <Button
+        android:id="@+id/btnTextDeparture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint='@string/travelling_from'
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textSearch"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/textSearch" />
 
-    <EditText
-        android:id="@+id/editTextArrival"
+    <Button
+        android:id="@+id/btnTextArrival"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint='@string/travelling_to'
         android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDeparture"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/btnTextDeparture" />
 </androidx.constraintlayout.widget.ConstraintLayout>
