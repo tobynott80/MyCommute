@@ -4,6 +4,35 @@ import java.util.ArrayList;
 
 public class SearchModel {
 
+    public Location location;
+    public Filter filter;
+    public ArrayList<Service> services;
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
+    public Filter getFilter() {
+        return filter;
+    }
+
+    public void setFilter(Filter filter) {
+        this.filter = filter;
+    }
+
+    public ArrayList<Service> getServices() {
+        return services;
+    }
+
+    public void setServices(ArrayList<Service> services) {
+        this.services = services;
+    }
+
+
     public class Destination{
         public String name;
         public String crs;
@@ -344,35 +373,7 @@ public class SearchModel {
         }
     }
 
-    public class Root{
-        public Location location;
-        public Filter filter;
-        public ArrayList<Service> services;
 
-        public Location getLocation() {
-            return location;
-        }
-
-        public void setLocation(Location location) {
-            this.location = location;
-        }
-
-        public Filter getFilter() {
-            return filter;
-        }
-
-        public void setFilter(Filter filter) {
-            this.filter = filter;
-        }
-
-        public ArrayList<Service> getServices() {
-            return services;
-        }
-
-        public void setServices(ArrayList<Service> services) {
-            this.services = services;
-        }
-    }
 
     public class Service{
         public LocationDetail locationDetail;
