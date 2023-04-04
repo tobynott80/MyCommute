@@ -1,12 +1,17 @@
 package uk.ac.cardiff.c21048228.mycommute.ui.locationSelector;
 
+import android.content.Context;
 import android.content.res.XmlResourceParser;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -20,7 +25,7 @@ import uk.ac.cardiff.c21048228.mycommute.R;
 import uk.ac.cardiff.c21048228.mycommute.databinding.FragmentLocationSelectorBinding;
 import uk.ac.cardiff.c21048228.mycommute.ui.timetable.TimetableFragment;
 
-public class LocationSelectorFragment extends Fragment implements recyclerAdapter.ClickListener{
+public class LocationSelectorFragment extends Fragment{
 
     private FragmentLocationSelectorBinding binding;
 
@@ -29,9 +34,12 @@ public class LocationSelectorFragment extends Fragment implements recyclerAdapte
     private RecyclerView recyclerView;
     private recyclerAdapter adapter;
 
+
     public LocationSelectorFragment(String stationType){
         this.StationType = stationType;
     }
+
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -43,6 +51,8 @@ public class LocationSelectorFragment extends Fragment implements recyclerAdapte
 
         recyclerView = view.findViewById(R.id.rvStations);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        setHasOptionsMenu(true);
+
 
         stationArrayList = new ArrayList<>();
         //populate the array list with the stations from stations.xml
@@ -58,7 +68,7 @@ public class LocationSelectorFragment extends Fragment implements recyclerAdapte
         }}catch (Exception e){
             e.printStackTrace();
         }
-        adapter = new recyclerAdapter(stationArrayList, this);
+        adapter = new recyclerAdapter(stationArrayList);
         recyclerView.setAdapter(adapter);
 
 
@@ -71,12 +81,57 @@ public class LocationSelectorFragment extends Fragment implements recyclerAdapte
         binding = null;
     }
 
+
     @Override
-    public void onItemClick(String stationName, String stationCRS) {
-        if (StationType.equals("departure")) {
-            ((TimetableFragment) getParentFragment()).setDepartureStation(new Station(stationName, stationCRS));
-        } else if (StationType.equals("arrival")) {
-            ((TimetableFragment) getParentFragment()).setArrivalStation(new Station(stationName, stationCRS));
-        }
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
     }
+    @Override
+    @SuppressWarnings("deprecation")
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        inflater.inflate(R.menu.search_menu, menu);
+        MenuItem searchItem = menu.findItem(R.id.actionSearch);
+        SearchView searchView = (SearchView) searchItem.getActionView();
+        searchView.setQueryHint(getString(R.string.search_hint));
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                // Handle search query submission
+                ArrayList<Station> filteredList = new ArrayList<>();
+                for(Station s: stationArrayList){
+                    if (s.getStationName().toLowerCase().contains(query.toLowerCase())){
+                        filteredList.add(s);
+                    }
+                }
+                adapter.filterList(filteredList);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                // Filter the list based on the search query
+                ArrayList<Station> filteredList = new ArrayList<>();
+                for(Station s: stationArrayList){
+                    if (s.getStationName().toLowerCase().contains(newText.toLowerCase())){
+                        filteredList.add(s);
+                    }
+                }
+                adapter.filterList(filteredList);
+                return true;
+            }
+        });
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    @SuppressWarnings("deprecation")
+    public void onPrepareOptionsMenu(@NonNull Menu menu) {
+        super.onPrepareOptionsMenu(menu);
+
+    }
+
+
+
+
+
 }

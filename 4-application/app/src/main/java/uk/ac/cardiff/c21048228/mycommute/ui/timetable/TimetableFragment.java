@@ -24,6 +24,9 @@ public class TimetableFragment extends Fragment {
     private Station departureStation;
     private Station arrivalStation;
 
+    Button btnTextDeparture;
+    Button btnTextArrival;
+
     public Station getDepartureStation() {
         return departureStation;
     }
@@ -48,8 +51,8 @@ public class TimetableFragment extends Fragment {
         binding = FragmentTimetableBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        Button btnTextDeparture = binding.btnTextDeparture;
-        Button btnTextArrival = binding.btnTextArrival;
+        btnTextDeparture = binding.btnTextDeparture;
+        btnTextArrival = binding.btnTextArrival;
 
         btnTextDeparture.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +63,7 @@ public class TimetableFragment extends Fragment {
                 LocationSelectorFragment locationSelectorFragment = new LocationSelectorFragment("departure");
                 fragmentTransaction.replace(R.id.nav_host_fragment_activity_main, locationSelectorFragment);
                 fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.setReorderingAllowed(true);
                 fragmentTransaction.commit();
             }
         });
@@ -73,6 +77,7 @@ public class TimetableFragment extends Fragment {
                 LocationSelectorFragment locationSelectorFragment = new LocationSelectorFragment("arrival");
                 fragmentTransaction.replace(R.id.nav_host_fragment_activity_main, locationSelectorFragment);
                 fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.setReorderingAllowed(true);
                 fragmentTransaction.commit();
             }
         });
@@ -85,4 +90,6 @@ public class TimetableFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
+
 }

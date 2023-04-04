@@ -6,4 +6,5 @@
     <string name="travelling_from">Travelling From</string>
     <string name="search">Search</string>
     <string name="travelling_to">Travelling to</string>
+    <string name="search_hint">Station</string>
 </resources>

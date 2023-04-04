@@ -15,12 +15,11 @@ import uk.ac.cardiff.c21048228.mycommute.R;
 public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.ViewHolder> {
 
     private ArrayList<Station> stations;
+    private Station selectedStation;
 
-    private ClickListener clickListener;
 
-    public recyclerAdapter(ArrayList<Station> stations, ClickListener clickListener) {
+    public recyclerAdapter(ArrayList<Station> stations) {
         this.stations = stations;
-        this.clickListener = clickListener;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -32,6 +31,12 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.ViewHo
             stationName = view.findViewById(R.id.textStationName);
             stationCRS = view.findViewById(R.id.textStationCRS);
         }
+    }
+
+    //method for filtering our recyclerview items
+    public void filterList(ArrayList<Station> filterList){
+        stations = filterList;
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -50,7 +55,7 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.ViewHo
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                clickListener.onItemClick(stationName, stationCRS);
+                selectedStation = new Station(stationName, stationCRS);
             }
         });
 
@@ -61,7 +66,7 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.ViewHo
         return stations.size();
     }
 
-    public interface ClickListener {
-        void onItemClick(String stationName, String stationCode);
-    }
+
+
+
 }
