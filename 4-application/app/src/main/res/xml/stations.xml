@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<stations>
     <station name="Abbey Wood" crs="ABW" />
     <station name="Aber" crs="ABE" />
     <station name="Abercynon" crs="ACY" />
@@ -2581,4 +2581,4 @@
     <station name="Ystrad Mynach" crs="YSM" />
     <station name="Ystrad Rhondda" crs="YSR" />
 
-</resources>
+</stations>

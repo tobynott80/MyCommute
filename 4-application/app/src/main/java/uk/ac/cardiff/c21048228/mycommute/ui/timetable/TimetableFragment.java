@@ -23,6 +23,7 @@ public class TimetableFragment extends Fragment {
         binding = FragmentTimetableBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+
         return root;
     }
 
