@@ -16,8 +16,11 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.ViewHo
 
     private ArrayList<Station> stations;
 
-    public recyclerAdapter(ArrayList<Station> stations) {
+    private ClickListener clickListener;
+
+    public recyclerAdapter(ArrayList<Station> stations, ClickListener clickListener) {
         this.stations = stations;
+        this.clickListener = clickListener;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -44,11 +47,21 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.ViewHo
         String stationCRS = stations.get(position).getStationCRS();
         holder.stationName.setText(stationName);
         holder.stationCRS.setText(stationCRS);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clickListener.onItemClick(stationName, stationCRS);
+            }
+        });
 
     }
 
     @Override
     public int getItemCount() {
         return stations.size();
+    }
+
+    public interface ClickListener {
+        void onItemClick(String stationName, String stationCode);
     }
 }

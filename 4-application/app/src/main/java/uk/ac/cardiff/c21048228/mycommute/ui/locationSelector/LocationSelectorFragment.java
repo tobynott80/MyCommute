@@ -18,15 +18,20 @@ import java.util.ArrayList;
 
 import uk.ac.cardiff.c21048228.mycommute.R;
 import uk.ac.cardiff.c21048228.mycommute.databinding.FragmentLocationSelectorBinding;
+import uk.ac.cardiff.c21048228.mycommute.ui.timetable.TimetableFragment;
 
-public class LocationSelectorFragment extends Fragment {
+public class LocationSelectorFragment extends Fragment implements recyclerAdapter.ClickListener{
 
     private FragmentLocationSelectorBinding binding;
 
+    private String StationType;
     private ArrayList<Station> stationArrayList;
     private RecyclerView recyclerView;
     private recyclerAdapter adapter;
 
+    public LocationSelectorFragment(String stationType){
+        this.StationType = stationType;
+    }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -53,8 +58,9 @@ public class LocationSelectorFragment extends Fragment {
         }}catch (Exception e){
             e.printStackTrace();
         }
-        adapter = new recyclerAdapter(stationArrayList);
+        adapter = new recyclerAdapter(stationArrayList, this);
         recyclerView.setAdapter(adapter);
+
 
         return view;
     }
@@ -63,5 +69,14 @@ public class LocationSelectorFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    @Override
+    public void onItemClick(String stationName, String stationCRS) {
+        if (StationType.equals("departure")) {
+            ((TimetableFragment) getParentFragment()).setDepartureStation(new Station(stationName, stationCRS));
+        } else if (StationType.equals("arrival")) {
+            ((TimetableFragment) getParentFragment()).setArrivalStation(new Station(stationName, stationCRS));
+        }
     }
 }
