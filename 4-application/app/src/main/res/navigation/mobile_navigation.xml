@@ -15,11 +15,20 @@
         android:id="@+id/navigation_timetable"
         android:name="uk.ac.cardiff.c21048228.mycommute.ui.timetable.TimetableFragment"
         android:label="@string/title_timetable"
-        tools:layout="@layout/fragment_timetable" />
+        tools:layout="@layout/fragment_timetable" >
+        <action
+            android:id="@+id/action_navigation_timetable_to_locationSelectorFragment2"
+            app:destination="@id/locationSelectorFragment2"
+            app:launchSingleTop="false" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_settings"
         android:name="uk.ac.cardiff.c21048228.mycommute.ui.settings.SettingsFragment"
         android:label="@string/title_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/locationSelectorFragment2"
+        android:name="uk.ac.cardiff.c21048228.mycommute.ui.locationSelector.LocationSelectorFragment"
+        android:label="LocationSelectorFragment" />
 </navigation>

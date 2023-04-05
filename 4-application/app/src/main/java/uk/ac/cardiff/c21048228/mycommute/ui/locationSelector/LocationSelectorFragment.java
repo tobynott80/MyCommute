@@ -3,6 +3,7 @@ package uk.ac.cardiff.c21048228.mycommute.ui.locationSelector;
 import android.content.Context;
 import android.content.res.XmlResourceParser;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -13,7 +14,11 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,8 +29,9 @@ import java.util.ArrayList;
 import uk.ac.cardiff.c21048228.mycommute.R;
 import uk.ac.cardiff.c21048228.mycommute.databinding.FragmentLocationSelectorBinding;
 import uk.ac.cardiff.c21048228.mycommute.ui.timetable.TimetableFragment;
+import uk.ac.cardiff.c21048228.mycommute.ui.timetable.TimetableViewModel;
 
-public class LocationSelectorFragment extends Fragment{
+public class LocationSelectorFragment extends Fragment implements recyclerAdapter.ClickListener{
 
     private FragmentLocationSelectorBinding binding;
 
@@ -68,7 +74,7 @@ public class LocationSelectorFragment extends Fragment{
         }}catch (Exception e){
             e.printStackTrace();
         }
-        adapter = new recyclerAdapter(stationArrayList);
+        adapter = new recyclerAdapter(stationArrayList, this);
         recyclerView.setAdapter(adapter);
 
 
@@ -130,8 +136,17 @@ public class LocationSelectorFragment extends Fragment{
 
     }
 
+    @Override
+    public void onItemClick(String stationName, String stationCRS) {
+        TimetableViewModel timetableViewModel = new ViewModelProvider(requireActivity()).get(TimetableViewModel.class);
+        if (StationType.equals("Departure")){
+            timetableViewModel.setSelectedDepartureStation(new Station(stationName, stationCRS));
+        }else if (StationType.equals("Arrival")){
+            timetableViewModel.setSelectedArrivalStation(new Station(stationName, stationCRS));
+        }
 
 
-
+    }
 
 }
+

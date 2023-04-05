@@ -17,9 +17,15 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.ViewHo
     private ArrayList<Station> stations;
     private Station selectedStation;
 
+    private ClickListener clickListener;
 
-    public recyclerAdapter(ArrayList<Station> stations) {
+    public interface ClickListener{
+        void onItemClick(String stationName, String stationCRS);
+    }
+
+    public recyclerAdapter(ArrayList<Station> stations, ClickListener clickListener) {
         this.stations = stations;
+        this.clickListener = clickListener;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -55,9 +61,10 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.ViewHo
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                selectedStation = new Station(stationName, stationCRS);
+                clickListener.onItemClick(stationName, stationCRS);
             }
         });
+
 
     }
 

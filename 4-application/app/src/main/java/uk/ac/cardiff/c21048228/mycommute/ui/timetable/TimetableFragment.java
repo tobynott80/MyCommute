@@ -7,10 +7,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.OnLifecycleEvent;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.fragment.app.FragmentManager;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 
 import uk.ac.cardiff.c21048228.mycommute.R;
@@ -54,6 +59,8 @@ public class TimetableFragment extends Fragment {
         btnTextDeparture = binding.btnTextDeparture;
         btnTextArrival = binding.btnTextArrival;
 
+
+
         btnTextDeparture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,6 +72,7 @@ public class TimetableFragment extends Fragment {
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.setReorderingAllowed(true);
                 fragmentTransaction.commit();
+
             }
         });
 
@@ -82,8 +90,29 @@ public class TimetableFragment extends Fragment {
             }
         });
 
+        timetableViewModel.getSelectedDepartureStation().observe(getViewLifecycleOwner(), new Observer<Station>() {
+            @Override
+            public void onChanged(Station station) {
+                btnTextDeparture.setText(station.getStationName());
+                setDepartureStation(station);
+
+            }
+        });
+        timetableViewModel.getSelectedArrivalStation().observe(getViewLifecycleOwner(), new Observer<Station>() {
+                    @Override
+                    public void onChanged(Station station) {
+                        if (station != null) {
+                            btnTextArrival.setText(station.getStationName());
+                            setArrivalStation(station);
+                        }
+                    }
+                }
+        );
+
+
         return root;
     }
+
 
     @Override
     public void onDestroyView() {
