@@ -34,8 +34,8 @@ public class TimetableFragment extends Fragment {
     private Station departureStation;
     private Station arrivalStation;
 
-    Button btnTextDeparture;
-    Button btnTextArrival;
+    private Button btnTextDeparture;
+    private Button btnTextArrival;
 
     public Station getDepartureStation() {
         return departureStation;
