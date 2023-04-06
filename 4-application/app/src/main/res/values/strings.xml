@@ -7,4 +7,6 @@
     <string name="search">Search</string>
     <string name="travelling_to">Travelling to</string>
     <string name="search_hint">Station</string>
+    <string name="on_time">On Time</string>
+    <string name="platform">Platform</string>
 </resources>

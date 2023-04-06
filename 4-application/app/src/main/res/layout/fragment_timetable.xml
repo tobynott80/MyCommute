@@ -62,4 +62,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnTextArrival" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTrainServices"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSearch" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
