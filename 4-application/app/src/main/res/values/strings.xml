@@ -9,4 +9,7 @@
     <string name="search_hint">Station</string>
     <string name="on_time">On Time</string>
     <string name="platform">Platform</string>
+    <string name="delayed">Delayed</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="no_information">No Information</string>
 </resources>
