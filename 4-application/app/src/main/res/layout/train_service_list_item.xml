@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tvArrival"
+        android:id="@+id/tvDeparture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -24,9 +24,9 @@
         android:layout_marginTop="4dp"
         android:text="@string/on_time"
         android:textColor="@color/OnTimeGreen"
-        app:layout_constraintEnd_toEndOf="@+id/tvArrival"
-        app:layout_constraintStart_toStartOf="@+id/tvArrival"
-        app:layout_constraintTop_toBottomOf="@+id/tvArrival" />
+        app:layout_constraintEnd_toEndOf="@+id/tvDeparture"
+        app:layout_constraintStart_toStartOf="@+id/tvDeparture"
+        app:layout_constraintTop_toBottomOf="@+id/tvDeparture" />
 
     <TextView
         android:id="@+id/tvDestination"
@@ -36,7 +36,7 @@
         android:layout_marginTop="4dp"
         android:text=""
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/tvArrival"
+        app:layout_constraintStart_toEndOf="@+id/tvDeparture"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
