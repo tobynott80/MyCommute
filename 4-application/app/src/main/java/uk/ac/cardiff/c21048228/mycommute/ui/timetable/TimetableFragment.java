@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,8 +19,12 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 
+import retrofit2.Call;
 import uk.ac.cardiff.c21048228.mycommute.R;
 import uk.ac.cardiff.c21048228.mycommute.databinding.FragmentTimetableBinding;
+import uk.ac.cardiff.c21048228.mycommute.retrofit.RttMethods;
+import uk.ac.cardiff.c21048228.mycommute.retrofit.RttRetroFit;
+import uk.ac.cardiff.c21048228.mycommute.retrofit.SearchModel;
 import uk.ac.cardiff.c21048228.mycommute.ui.locationSelector.LocationSelectorFragment;
 import uk.ac.cardiff.c21048228.mycommute.ui.locationSelector.Station;
 
@@ -58,6 +63,7 @@ public class TimetableFragment extends Fragment {
 
         btnTextDeparture = binding.btnTextDeparture;
         btnTextArrival = binding.btnTextArrival;
+        Button btnSearch = binding.btnSearch;
 
 
         btnTextDeparture.setOnClickListener(new View.OnClickListener() {
@@ -89,6 +95,36 @@ public class TimetableFragment extends Fragment {
             }
         });
 
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (getDepartureStation() != null && getArrivalStation() != null) {
+                    //search with api
+                    RttMethods rttMethods = RttRetroFit.getRetrofitInstance().create(RttMethods.class);
+                    Call<SearchModel> call = rttMethods.getAllData(departureStation.getStationCRS(), arrivalStation.getStationCRS(), "XX-API-KEY-XX==");
+                    call.enqueue(new retrofit2.Callback<SearchModel>() {
+                        @Override
+                        public void onResponse(Call<SearchModel> call, retrofit2.Response<SearchModel> response) {
+                            System.out.println("Successful call " + response.code());
+                            if (response.isSuccessful()) {
+                                System.out.println(response.body().getServices().get(0).getLocationDetail().getGbttBookedArrival());
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<SearchModel> call, Throwable t) {
+                            Toast.makeText(binding.getRoot().getContext(), "Error: API unavailable", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+                }
+                else{
+                    //show error toast
+                    Toast.makeText(binding.getRoot().getContext(), "Please select an Arrival and Departure station", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
 
 
 
@@ -99,7 +135,7 @@ public class TimetableFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        TimetableViewModel timetableViewModel = new ViewModelProvider(this).get(TimetableViewModel.class);
+        TimetableViewModel timetableViewModel = new ViewModelProvider(requireParentFragment()).get(TimetableViewModel.class);
         timetableViewModel.getSelectedDepartureStation().observe(getViewLifecycleOwner(), new Observer<Station>() {
             @Override
             public void onChanged(Station station) {

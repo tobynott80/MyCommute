@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_timetable">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -30,5 +30,10 @@
     <fragment
         android:id="@+id/locationSelectorFragment2"
         android:name="uk.ac.cardiff.c21048228.mycommute.ui.locationSelector.LocationSelectorFragment"
-        android:label="LocationSelectorFragment" />
+        android:label="LocationSelectorFragment"
+        tools:layout="@layout/fragment_location_selector">
+        <action
+            android:id="@+id/action_locationSelectorFragment2_to_navigation_timetable"
+            app:destination="@id/navigation_timetable" />
+    </fragment>
 </navigation>

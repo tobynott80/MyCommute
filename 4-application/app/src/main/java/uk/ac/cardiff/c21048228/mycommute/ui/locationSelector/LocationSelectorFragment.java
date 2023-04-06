@@ -39,6 +39,7 @@ public class LocationSelectorFragment extends Fragment implements recyclerAdapte
     private ArrayList<Station> stationArrayList;
     private RecyclerView recyclerView;
     private recyclerAdapter adapter;
+    private TimetableViewModel timetableViewModel;
 
 
     public LocationSelectorFragment(String stationType){
@@ -58,6 +59,8 @@ public class LocationSelectorFragment extends Fragment implements recyclerAdapte
         recyclerView = view.findViewById(R.id.rvStations);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         setHasOptionsMenu(true);
+        timetableViewModel = new ViewModelProvider(requireParentFragment()).get(TimetableViewModel.class);
+
 
 
         stationArrayList = new ArrayList<>();
@@ -138,15 +141,14 @@ public class LocationSelectorFragment extends Fragment implements recyclerAdapte
 
     @Override
     public void onItemClick(String stationName, String stationCRS) {
-        TimetableViewModel timetableViewModel = new ViewModelProvider(requireActivity()).get(TimetableViewModel.class);
         if (StationType.equals("departure")){
             timetableViewModel.setSelectedDepartureStation(new Station(stationName, stationCRS));
+
         }else if (StationType.equals("arrival")){
             timetableViewModel.setSelectedArrivalStation(new Station(stationName, stationCRS));
         }
 
-        NavHostFragment.findNavController(this).navigateUp();
-
+        getParentFragmentManager().popBackStack();
     }
 
 }
