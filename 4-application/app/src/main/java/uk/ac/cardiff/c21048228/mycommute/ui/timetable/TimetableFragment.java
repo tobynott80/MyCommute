@@ -126,7 +126,7 @@ public class TimetableFragment extends Fragment {
                         private void populateRecyclerView(SearchModel searchModel) {
                             ArrayList<SearchModel.Service> services = searchModel.getServices();
                             departures = new ArrayList<>();
-                            if (services.size()<1 || services.isEmpty() || services == null){
+                            if (services == null){
                                 Toast.makeText(binding.getRoot().getContext(), "No Departures Available", Toast.LENGTH_SHORT).show();
                                 return;
                             }
@@ -143,6 +143,9 @@ public class TimetableFragment extends Fragment {
                                     platform = "--";
                                 }
                                 String departureTime = services.get(i).locationDetail.getRealtimeDeparture();
+                                if (departureTime == null){
+                                    departureTime = services.get(i).locationDetail.getGbttBookedDeparture();
+                                }
                                 String formattedDepartureTime = departureTime.substring(0, 2) + ":" + departureTime.substring(2, 4);
                                 TrainService trainService = new TrainService(platform, formattedDepartureTime, services.get(i).getLocationDetail().getOrigin().get(0).getDescription(), services.get(i).getLocationDetail().getDestination().get(0).getDescription(), status);
                                 departures.add(trainService);
