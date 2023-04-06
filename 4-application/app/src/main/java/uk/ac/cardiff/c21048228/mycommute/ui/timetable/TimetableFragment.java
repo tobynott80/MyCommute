@@ -60,7 +60,6 @@ public class TimetableFragment extends Fragment {
         btnTextArrival = binding.btnTextArrival;
 
 
-
         btnTextDeparture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,6 +89,17 @@ public class TimetableFragment extends Fragment {
             }
         });
 
+
+
+
+        return root;
+    }
+
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        TimetableViewModel timetableViewModel = new ViewModelProvider(this).get(TimetableViewModel.class);
         timetableViewModel.getSelectedDepartureStation().observe(getViewLifecycleOwner(), new Observer<Station>() {
             @Override
             public void onChanged(Station station) {
@@ -109,10 +119,7 @@ public class TimetableFragment extends Fragment {
                 }
         );
 
-
-        return root;
     }
-
 
     @Override
     public void onDestroyView() {
