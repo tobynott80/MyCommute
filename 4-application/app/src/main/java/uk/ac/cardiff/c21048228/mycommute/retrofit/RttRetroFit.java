@@ -9,7 +9,7 @@ public class RttRetroFit {
     public static Retrofit getRetrofitInstance() {
         if (retrofit == null) {
             retrofit = new retrofit2.Retrofit.Builder()
-                    .baseUrl("http://api.rtt.io/api/v1/json/")
+                    .baseUrl("https://api.rtt.io/api/v1/json/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
