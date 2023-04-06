@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 import uk.ac.cardiff.c21048228.mycommute.R;
 
-public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.ViewHolder> {
+public class StationListRecyclerAdapter extends RecyclerView.Adapter<StationListRecyclerAdapter.ViewHolder> {
 
     private ArrayList<Station> stations;
     private Station selectedStation;
@@ -23,7 +23,7 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.ViewHo
         void onItemClick(String stationName, String stationCRS);
     }
 
-    public recyclerAdapter(ArrayList<Station> stations, ClickListener clickListener) {
+    public StationListRecyclerAdapter(ArrayList<Station> stations, ClickListener clickListener) {
         this.stations = stations;
         this.clickListener = clickListener;
     }
@@ -47,13 +47,13 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.ViewHo
 
     @NonNull
     @Override
-    public recyclerAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public StationListRecyclerAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.station_list_item, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull recyclerAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull StationListRecyclerAdapter.ViewHolder holder, int position) {
         String stationName = stations.get(position).getStationName();
         String stationCRS = stations.get(position).getStationCRS();
         holder.stationName.setText(stationName);
