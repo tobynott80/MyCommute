@@ -36,7 +36,6 @@ public class SearchModel {
     public class Destination{
         public String name;
         public String crs;
-        public String tiploc;
         public String country;
         public String system;
         public String description;
@@ -59,13 +58,7 @@ public class SearchModel {
             this.crs = crs;
         }
 
-        public String getTiploc() {
-            return tiploc;
-        }
 
-        public void setTiploc(String tiploc) {
-            this.tiploc = tiploc;
-        }
 
         public String getCountry() {
             return country;
@@ -124,7 +117,6 @@ public class SearchModel {
     public class Location{
         public String name;
         public String crs;
-        public String tiploc;
         public String country;
         public String system;
 
@@ -144,13 +136,6 @@ public class SearchModel {
             this.crs = crs;
         }
 
-        public String getTiploc() {
-            return tiploc;
-        }
-
-        public void setTiploc(String tiploc) {
-            this.tiploc = tiploc;
-        }
 
         public String getCountry() {
             return country;
@@ -171,7 +156,6 @@ public class SearchModel {
 
     public class LocationDetail{
         public boolean realtimeActivated;
-        public String tiploc;
         public String crs;
         public String description;
         public String gbttBookedArrival;
@@ -188,6 +172,15 @@ public class SearchModel {
         public String cancelReasonShortText;
         public String cancelReasonLongText;
         public String displayAs;
+        public String platform;
+
+        public String getPlatform() {
+            return platform;
+        }
+
+        public void setPlatform(String platform) {
+            this.platform = platform;
+        }
 
         public boolean isRealtimeActivated() {
             return realtimeActivated;
@@ -197,13 +190,6 @@ public class SearchModel {
             this.realtimeActivated = realtimeActivated;
         }
 
-        public String getTiploc() {
-            return tiploc;
-        }
-
-        public void setTiploc(String tiploc) {
-            this.tiploc = tiploc;
-        }
 
         public String getCrs() {
             return crs;
@@ -335,18 +321,10 @@ public class SearchModel {
     }
 
     public class Origin{
-        public String tiploc;
         public String description;
         public String workingTime;
         public String publicTime;
 
-        public String getTiploc() {
-            return tiploc;
-        }
-
-        public void setTiploc(String tiploc) {
-            this.tiploc = tiploc;
-        }
 
         public String getDescription() {
             return description;

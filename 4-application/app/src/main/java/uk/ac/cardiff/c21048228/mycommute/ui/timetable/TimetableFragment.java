@@ -1,5 +1,8 @@
 package uk.ac.cardiff.c21048228.mycommute.ui.timetable;
 
+import static uk.ac.cardiff.c21048228.mycommute.ui.timetable.TrainStatus.DELAYED;
+import static uk.ac.cardiff.c21048228.mycommute.ui.timetable.TrainStatus.ON_TIME;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +20,11 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+
+import java.util.ArrayList;
 
 import retrofit2.Call;
 import uk.ac.cardiff.c21048228.mycommute.R;
@@ -36,6 +43,11 @@ public class TimetableFragment extends Fragment {
 
     private Button btnTextDeparture;
     private Button btnTextArrival;
+
+    private RecyclerView recyclerView;
+    private TrainServiceRecyclerAdapter adapter;
+
+    private ArrayList<TrainService> departures;
 
     public Station getDepartureStation() {
         return departureStation;
@@ -98,7 +110,7 @@ public class TimetableFragment extends Fragment {
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (getDepartureStation() != null && getArrivalStation() != null) {
+                if (getDepartureStation() != null && getArrivalStation() != null && getArrivalStation() != getDepartureStation()) {
                     //search with api
                     RttMethods rttMethods = RttRetroFit.getRetrofitInstance().create(RttMethods.class);
                     Call<SearchModel> call = rttMethods.getAllData(departureStation.getStationCRS(), arrivalStation.getStationCRS(), "XX-API-KEY-XX==");
@@ -107,8 +119,40 @@ public class TimetableFragment extends Fragment {
                         public void onResponse(Call<SearchModel> call, retrofit2.Response<SearchModel> response) {
                             System.out.println("Successful call " + response.code());
                             if (response.isSuccessful()) {
-                                System.out.println(response.body().getServices().get(0).getLocationDetail().getGbttBookedArrival());
+                                populateRecyclerView(response.body());
                             }
+                        }
+
+                        private void populateRecyclerView(SearchModel searchModel) {
+                            ArrayList<SearchModel.Service> services = searchModel.getServices();
+                            departures = new ArrayList<>();
+                            if (services.size()<1 || services.isEmpty() || services == null){
+                                Toast.makeText(binding.getRoot().getContext(), "No Departures Available", Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+                            for (int i = 0; i < services.size(); i++) {
+                                TrainStatus status;
+                                if (services.get(i).getLocationDetail().isCall){
+                                    // services.get(i).locationDetail.getPlatform()
+                                    status = ON_TIME;
+                                }else {
+                                    status = DELAYED;
+                                }
+                                String platform = services.get(i).getLocationDetail().getPlatform();
+                                if (platform == null || platform.equals("DPL")){
+                                    platform = "--";
+                                }
+                                String departureTime = services.get(i).locationDetail.getRealtimeDeparture();
+                                String formattedDepartureTime = departureTime.substring(0, 2) + ":" + departureTime.substring(2, 4);
+                                TrainService trainService = new TrainService(platform, formattedDepartureTime, services.get(i).getLocationDetail().getOrigin().get(0).getDescription(), services.get(i).getLocationDetail().getDestination().get(0).getDescription(), status);
+                                departures.add(trainService);
+                                //TODO: add catch delay
+                            }
+                            recyclerView = root.findViewById(R.id.rvTrainServices);
+                            recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+                            adapter = new TrainServiceRecyclerAdapter(departures);
+                            recyclerView.setAdapter(adapter);
+
                         }
 
                         @Override

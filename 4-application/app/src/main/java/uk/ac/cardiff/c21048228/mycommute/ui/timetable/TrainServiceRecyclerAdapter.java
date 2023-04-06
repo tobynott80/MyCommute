@@ -16,6 +16,10 @@ public class TrainServiceRecyclerAdapter extends RecyclerView.Adapter<TrainServi
 
     private ArrayList<TrainService> trainServices;
 
+    public TrainServiceRecyclerAdapter(ArrayList<TrainService> trainServices) {
+        this.trainServices = trainServices;
+    }
+
 
     @NonNull
     @Override
