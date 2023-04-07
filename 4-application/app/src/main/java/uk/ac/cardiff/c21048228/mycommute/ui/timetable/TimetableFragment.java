@@ -111,9 +111,10 @@ public class TimetableFragment extends Fragment {
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Set progress bar to visible while the api is called and the data is parsed into the recyclerview
                 binding.progressBar.setVisibility(View.VISIBLE);
                 if (getDepartureStation() != null && getArrivalStation() != null && getArrivalStation() != getDepartureStation()) {
-                    //search with api
+                    //search with api using our retrofit instance
                     RttMethods rttMethods = RttRetroFit.getRetrofitInstance().create(RttMethods.class);
                     Call<SearchModel> call = rttMethods.getAllData(departureStation.getStationCRS(), arrivalStation.getStationCRS(), "XX-API-KEY-XX==");
                     call.enqueue(new retrofit2.Callback<SearchModel>() {
@@ -128,46 +129,61 @@ public class TimetableFragment extends Fragment {
                         private void populateRecyclerView(SearchModel searchModel) {
                             ArrayList<SearchModel.Service> services = searchModel.getServices();
                             departures = new ArrayList<>();
+                            //if no services are available - notify with toast
                             if (services == null){
                                 Toast.makeText(binding.getRoot().getContext(), "No Departures Available", Toast.LENGTH_SHORT).show();
                                 binding.progressBar.setVisibility(View.GONE);
                                 return;
                             }
+                            // Create Train Service objects for each returned departure in the response body
                             for (int i = 0; i < services.size(); i++) {
+                                // Create enum holder for service status
                                 TrainStatus status;
+                                // RTT api sometimes returns false isCall for delayed services
                                 if (services.get(i).getLocationDetail().isCall){
-                                    // services.get(i).locationDetail.getPlatform()
                                     status = ON_TIME;
                                 }else {
                                     status = DELAYED;
                                 }
+                                // Get platform from service
                                 String platform = services.get(i).getLocationDetail().getPlatform();
+                                // RTT often cannot find the platform for various reasons, so the platform is just set as -- instead
                                 if (platform == null || platform.equals("DPL")){
                                     platform = "--";
                                 }
+                                // Get the estimated departure time (departureTime). This can sometimes be null if RTT is unsure
                                 String departureTime = services.get(i).locationDetail.getRealtimeDeparture();
-                                String origin = "Arriving From: " + services.get(i).getLocationDetail().getOrigin().get(0).getDescription();
 
+                                // Get the origin (not super necessary, but it looks nicer in the UI lol)
+                                String origin = "Arriving From: " + services.get(i).getLocationDetail().getOrigin().get(0).getDescription();
+                                // If RTT cannot find an estimated departure, get the booked departure instead
                                 if (departureTime == null){
                                     departureTime = services.get(i).locationDetail.getGbttBookedDeparture();
                                 } else{
                                     String bookedArrival = services.get(i).locationDetail.getGbttBookedDeparture();
+                                    // GBTT can also be null sometimes - very annoying...
                                     if (!(bookedArrival == null)){
-                                        if (Integer.valueOf(departureTime) > Integer.valueOf(bookedArrival)){
+                                        if (Integer.parseInt(departureTime) > Integer.parseInt(bookedArrival)){
+                                            // If the train is delayed, set status to delayed and calculate delay length
                                             status = DELAYED;
-                                            origin = String.format("Delayed by %s mins", (Integer.valueOf(departureTime) - Integer.valueOf(bookedArrival)));
+                                            // Set the origin text view to the delay length, as it isn't actually that important
+                                            origin = String.format("Delayed by %s mins", (Integer.parseInt(departureTime) - Integer.parseInt(bookedArrival)));
                                         }
                                     }
                                 }
+                                // Format the departure time from HHMM to HH:MM
                                 String formattedDepartureTime = departureTime.substring(0, 2) + ":" + departureTime.substring(2, 4);
-
+                                // Create a new train service object with all the data parsed above
                                 TrainService trainService = new TrainService(platform, formattedDepartureTime, origin, services.get(i).getLocationDetail().getDestination().get(0).getDescription(), status);
+                                // Add said train service object to the arraylist
                                 departures.add(trainService);
                             }
+                            // Populate the recycler view with the services found and display
                             recyclerView = root.findViewById(R.id.rvTrainServices);
                             recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                             adapter = new TrainServiceRecyclerAdapter(departures);
                             recyclerView.setAdapter(adapter);
+                            // Remove progress bar
                             binding.progressBar.setVisibility(View.GONE);
 
                         }
