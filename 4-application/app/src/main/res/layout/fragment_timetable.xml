@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/search"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/btnSwap"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnTextArrival" />
@@ -73,7 +73,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnSearch" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSwap"
         android:layout_width="55dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

@@ -76,6 +76,7 @@ public class TimetableFragment extends Fragment {
         btnTextDeparture = binding.btnTextDeparture;
         btnTextArrival = binding.btnTextArrival;
         Button btnSearch = binding.btnSearch;
+        Button btnSwap = binding.btnSwap;
         binding.progressBar.setVisibility(View.GONE);
 
         btnTextDeparture.setOnClickListener(new View.OnClickListener() {
@@ -187,7 +188,25 @@ public class TimetableFragment extends Fragment {
             }
         });
 
+        btnSwap.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View view) {
+                //update UI
+                String tempBtnText = btnTextArrival.getText().toString();
+                btnTextArrival.setText(btnTextDeparture.getText().toString());
+                btnTextDeparture.setText(tempBtnText);
+
+                //update objects
+                String tempStationName = arrivalStation.getStationName();
+                String tempStationCRS = arrivalStation.getStationCRS();
+                arrivalStation.setStationName(departureStation.getStationName());
+                arrivalStation.setStationCRS(departureStation.getStationCRS());
+                departureStation.setStationName(tempStationName);
+                departureStation.setStationCRS(tempStationCRS);
+
+            }
+        });
 
 
         return root;
