@@ -12,4 +12,9 @@
     <string name="delayed">Delayed</string>
     <string name="cancelled">Cancelled</string>
     <string name="no_information">No Information</string>
+    <string name="arrival">Arrival</string>
+    <string name="departure">Departure</string>
+    <string name="forwards_arrow">Forwards Arrow</string>
+    <string name="home_commute">Home Commute</string>
+    <string name="work_commute">Work Commute</string>
 </resources>

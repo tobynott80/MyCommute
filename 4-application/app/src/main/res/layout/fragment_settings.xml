@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Home Commute"
+        android:text="@string/home_commute"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Work Commute"
+        android:text="@string/work_commute"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Arrival"
+        android:text="@string/arrival"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Departure"
+        android:text="@string/departure"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -62,14 +62,15 @@
         app:layout_constraintEnd_toStartOf="@+id/btnHomeArrival"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnHomeDeparture"
-        app:layout_constraintTop_toTopOf="@+id/btnHomeDeparture" />
+        app:layout_constraintTop_toTopOf="@+id/btnHomeDeparture"
+        android:contentDescription="@string/forwards_arrow" />
 
     <Button
         android:id="@+id/btnWorkDeparture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
-        android:text="Departure"
+        android:text="@string/departure"
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -87,14 +88,15 @@
         app:layout_constraintBottom_toBottomOf="@+id/btnWorkArrival"
         app:layout_constraintEnd_toStartOf="@+id/btnWorkArrival"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnWorkDeparture" />
+        app:layout_constraintStart_toEndOf="@+id/btnWorkDeparture"
+        android:contentDescription="@string/forwards_arrow" />
 
     <Button
         android:id="@+id/btnWorkArrival"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
-        android:text="Arrival"
+        android:text="@string/arrival"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
