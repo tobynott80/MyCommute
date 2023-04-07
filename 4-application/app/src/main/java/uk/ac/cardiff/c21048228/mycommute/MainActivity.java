@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
         SharedPreferences sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE);
         Boolean isFirstRun = sharedPreferences.getBoolean("isFirstRun", true);
-        if (isFirstRun) {
+        if (true) {
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putBoolean("isFirstRun", false);
             editor.apply();

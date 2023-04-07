@@ -17,4 +17,7 @@
     <string name="forwards_arrow">Forwards Arrow</string>
     <string name="home_commute">Home Commute</string>
     <string name="work_commute">Work Commute</string>
+    <string name="welcomeText3">If the journey has multiple legs, please only enter the first leg</string>
+    <string name="WelcomeText2">Get started by setting a home and work route</string>
+    <string name="WelcomeText1">Welcome to MyCommute!</string>
 </resources>
