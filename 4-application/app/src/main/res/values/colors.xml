@@ -10,4 +10,5 @@
     <color name="OnTimeGreen">#4CAF50</color>
     <color name="DelayedYellow">#FFC107</color>
     <color name="CancelledRed">#F44336</color>
+    <color name="blue_primary">#455ACC</color>
 </resources>
