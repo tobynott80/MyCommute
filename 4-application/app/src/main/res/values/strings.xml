@@ -20,4 +20,6 @@
     <string name="welcomeText3">If the journey has multiple legs, please only enter the first leg</string>
     <string name="WelcomeText2">Get started by setting a home and work route</string>
     <string name="WelcomeText1">Welcome to MyCommute!</string>
+    <string name="skip">Skip</string>
+    <string name="continueString">Continue</string>
 </resources>
