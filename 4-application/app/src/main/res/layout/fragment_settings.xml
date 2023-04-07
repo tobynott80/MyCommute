@@ -7,7 +7,7 @@
     tools:context=".ui.settings.SettingsFragment">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvHomeCommute"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvWorkCommute"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnHomeArrival"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -37,10 +37,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/tvHomeCommute" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnHomeDeparture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -49,7 +49,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/tvHomeCommute" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -59,13 +59,13 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
         android:src="@drawable/ic_baseline_arrow_forward_24"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/btnHomeArrival"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toTopOf="@+id/button" />
+        app:layout_constraintStart_toEndOf="@+id/btnHomeDeparture"
+        app:layout_constraintTop_toTopOf="@+id/btnHomeDeparture" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnWorkDeparture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
@@ -74,7 +74,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvWorkCommute" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -84,13 +84,13 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="11dp"
         android:src="@drawable/ic_baseline_arrow_forward_24"
-        app:layout_constraintBottom_toBottomOf="@+id/button4"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintBottom_toBottomOf="@+id/btnWorkArrival"
+        app:layout_constraintEnd_toStartOf="@+id/btnWorkArrival"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button3" />
+        app:layout_constraintStart_toEndOf="@+id/btnWorkDeparture" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnWorkArrival"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
@@ -98,6 +98,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvWorkCommute" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
