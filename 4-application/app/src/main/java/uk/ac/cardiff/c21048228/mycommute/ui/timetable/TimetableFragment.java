@@ -76,7 +76,7 @@ public class TimetableFragment extends Fragment {
         btnTextDeparture = binding.btnTextDeparture;
         btnTextArrival = binding.btnTextArrival;
         Button btnSearch = binding.btnSearch;
-
+        binding.progressBar.setVisibility(View.GONE);
 
         btnTextDeparture.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,6 +110,7 @@ public class TimetableFragment extends Fragment {
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                binding.progressBar.setVisibility(View.VISIBLE);
                 if (getDepartureStation() != null && getArrivalStation() != null && getArrivalStation() != getDepartureStation()) {
                     //search with api
                     RttMethods rttMethods = RttRetroFit.getRetrofitInstance().create(RttMethods.class);
@@ -128,6 +129,7 @@ public class TimetableFragment extends Fragment {
                             departures = new ArrayList<>();
                             if (services == null){
                                 Toast.makeText(binding.getRoot().getContext(), "No Departures Available", Toast.LENGTH_SHORT).show();
+                                binding.progressBar.setVisibility(View.GONE);
                                 return;
                             }
                             for (int i = 0; i < services.size(); i++) {
@@ -143,24 +145,36 @@ public class TimetableFragment extends Fragment {
                                     platform = "--";
                                 }
                                 String departureTime = services.get(i).locationDetail.getRealtimeDeparture();
+                                String origin = "Arriving From: " + services.get(i).getLocationDetail().getOrigin().get(0).getDescription();
+
                                 if (departureTime == null){
                                     departureTime = services.get(i).locationDetail.getGbttBookedDeparture();
+                                } else{
+                                    String bookedArrival = services.get(i).locationDetail.getGbttBookedDeparture();
+                                    if (!(bookedArrival == null)){
+                                        if (Integer.valueOf(departureTime) > Integer.valueOf(bookedArrival)){
+                                            status = DELAYED;
+                                            origin = String.format("Delayed by %s mins", (Integer.valueOf(departureTime) - Integer.valueOf(bookedArrival)));
+                                        }
+                                    }
                                 }
                                 String formattedDepartureTime = departureTime.substring(0, 2) + ":" + departureTime.substring(2, 4);
-                                TrainService trainService = new TrainService(platform, formattedDepartureTime, services.get(i).getLocationDetail().getOrigin().get(0).getDescription(), services.get(i).getLocationDetail().getDestination().get(0).getDescription(), status);
+
+                                TrainService trainService = new TrainService(platform, formattedDepartureTime, origin, services.get(i).getLocationDetail().getDestination().get(0).getDescription(), status);
                                 departures.add(trainService);
-                                //TODO: add catch delay
                             }
                             recyclerView = root.findViewById(R.id.rvTrainServices);
                             recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                             adapter = new TrainServiceRecyclerAdapter(departures);
                             recyclerView.setAdapter(adapter);
+                            binding.progressBar.setVisibility(View.GONE);
 
                         }
 
                         @Override
                         public void onFailure(Call<SearchModel> call, Throwable t) {
                             Toast.makeText(binding.getRoot().getContext(), "Error: API unavailable", Toast.LENGTH_SHORT).show();
+                            binding.progressBar.setVisibility(View.GONE);
                         }
                     });
 
@@ -168,6 +182,7 @@ public class TimetableFragment extends Fragment {
                 else{
                     //show error toast
                     Toast.makeText(binding.getRoot().getContext(), "Please select an Arrival and Departure station", Toast.LENGTH_SHORT).show();
+                    binding.progressBar.setVisibility(View.GONE);
                 }
             }
         });

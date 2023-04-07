@@ -1,5 +1,6 @@
 package uk.ac.cardiff.c21048228.mycommute.ui.timetable;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,12 +42,16 @@ public class TrainServiceRecyclerAdapter extends RecyclerView.Adapter<TrainServi
         holder.destination.setText(destination);
         if (status == TrainStatus.ON_TIME) {
             holder.status.setText(R.string.on_time);
+            holder.status.setTextColor(Color.parseColor("#4CAF50"));
         } else if (status == TrainStatus.DELAYED) {
             holder.status.setText(R.string.delayed);
+            holder.status.setTextColor(Color.parseColor("#FFC107"));
         } else if (status == TrainStatus.CANCELLED) {
             holder.status.setText(R.string.cancelled);
+            holder.status.setTextColor(Color.parseColor("#F44336"));
         } else if (status == TrainStatus.NO_INFORMATION) {
             holder.status.setText(R.string.no_information);
+            holder.status.setTextColor(Color.parseColor("#FF000000"));
         }
 
     }
