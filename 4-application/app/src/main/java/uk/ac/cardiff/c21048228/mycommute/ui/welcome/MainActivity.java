@@ -1,4 +1,4 @@
-package uk.ac.cardiff.c21048228.mycommute;
+package uk.ac.cardiff.c21048228.mycommute.ui.welcome;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,6 +12,8 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import uk.ac.cardiff.c21048228.mycommute.R;
+import uk.ac.cardiff.c21048228.mycommute.WelcomeActivity;
 import uk.ac.cardiff.c21048228.mycommute.databinding.ActivityMainBinding;
 import uk.ac.cardiff.c21048228.mycommute.ui.locationSelector.LocationSelectorFragment;
 

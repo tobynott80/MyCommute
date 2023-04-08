@@ -10,10 +10,12 @@
         <entry key="..\:/Users/c21048229/Documents/PORTFOLIOS/notttj-21048229-mob-dev-portfolio/4-application/app/src/main/res/drawable/ic_launcher_background.xml" value="0.226" />
         <entry key="..\:/Users/c21048229/Documents/PORTFOLIOS/notttj-21048229-mob-dev-portfolio/4-application/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.226" />
         <entry key="..\:/Users/c21048229/Documents/PORTFOLIOS/notttj-21048229-mob-dev-portfolio/4-application/app/src/main/res/layout/activity_main.xml" value="0.22780797101449277" />
+        <entry key="..\:/Users/c21048229/Documents/PORTFOLIOS/notttj-21048229-mob-dev-portfolio/4-application/app/src/main/res/layout/activity_welcome.xml" value="0.264" />
         <entry key="..\:/Users/c21048229/Documents/PORTFOLIOS/notttj-21048229-mob-dev-portfolio/4-application/app/src/main/res/layout/fragment_dashboard.xml" value="0.22780797101449277" />
         <entry key="..\:/Users/c21048229/Documents/PORTFOLIOS/notttj-21048229-mob-dev-portfolio/4-application/app/src/main/res/layout/fragment_home.xml" value="0.22780797101449277" />
         <entry key="..\:/Users/c21048229/Documents/PORTFOLIOS/notttj-21048229-mob-dev-portfolio/4-application/app/src/main/res/layout/fragment_location_selector.xml" value="0.1" />
         <entry key="..\:/Users/c21048229/Documents/PORTFOLIOS/notttj-21048229-mob-dev-portfolio/4-application/app/src/main/res/layout/fragment_settings.xml" value="0.264" />
+        <entry key="..\:/Users/c21048229/Documents/PORTFOLIOS/notttj-21048229-mob-dev-portfolio/4-application/app/src/main/res/layout/fragment_station_selector.xml" value="0.1" />
         <entry key="..\:/Users/c21048229/Documents/PORTFOLIOS/notttj-21048229-mob-dev-portfolio/4-application/app/src/main/res/layout/fragment_timetable.xml" value="0.22780797101449277" />
         <entry key="..\:/Users/c21048229/Documents/PORTFOLIOS/notttj-21048229-mob-dev-portfolio/4-application/app/src/main/res/layout/fragment_train_service.xml" value="0.6" />
         <entry key="..\:/Users/c21048229/Documents/PORTFOLIOS/notttj-21048229-mob-dev-portfolio/4-application/app/src/main/res/layout/station_list.xml" value="0.1717896174863388" />
