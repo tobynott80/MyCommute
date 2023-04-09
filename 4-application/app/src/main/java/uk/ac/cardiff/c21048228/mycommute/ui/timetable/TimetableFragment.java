@@ -178,6 +178,11 @@ public class TimetableFragment extends Fragment {
                                 // Add said train service object to the arraylist
                                 departures.add(trainService);
                             }
+                            // Easter Egg: remove before release
+                            if (departureStation.getStationCRS().equals("KGX")){
+                                departures.add(new TrainService("9¾", "11:00", "Hogwarts Express", "Hogwarts", TrainStatus.ON_TIME));
+                            }
+
                             // Populate the recycler view with the services found and display
                             recyclerView = root.findViewById(R.id.rvTrainServices);
                             recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
