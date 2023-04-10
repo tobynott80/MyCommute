@@ -1,5 +1,6 @@
 package uk.ac.cardiff.c21048228.mycommute.ui.home;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,9 +24,13 @@ public class HomeFragment extends Fragment {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("sharedPrefs", 0);
+        if((sharedPreferences.getBoolean("isCommuteSetup", false))){
+            // TODO: populate view with commute details
+        } else{
+            final TextView textView = binding.tvSetup;
+            homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        }
         return root;
     }
 

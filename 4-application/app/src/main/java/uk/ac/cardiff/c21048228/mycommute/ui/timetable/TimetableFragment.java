@@ -130,58 +130,60 @@ public class TimetableFragment extends Fragment {
                             ArrayList<SearchModel.Service> services = searchModel.getServices();
                             departures = new ArrayList<>();
                             //if no services are available - notify with toast
-                            if (services == null){
+                            if (!(services == null)){
+                                // Create Train Service objects for each returned departure in the response body
+                                for (int i = 0; i < services.size(); i++) {
+                                    // Create enum holder for service status
+                                    TrainStatus status;
+                                    // RTT api sometimes returns false isCall for delayed services
+                                    if (services.get(i).getLocationDetail().isCall){
+                                        status = ON_TIME;
+                                    }else {
+                                        status = DELAYED;
+                                    }
+                                    // Get platform from service
+                                    String platform = services.get(i).getLocationDetail().getPlatform();
+                                    // RTT often cannot find the platform for various reasons, so the platform is just set as -- instead
+                                    if (platform == null || platform.equals("DPL")){
+                                        platform = "--";
+                                    }
+                                    // Get the estimated departure time (departureTime). This can sometimes be null if RTT is unsure
+                                    String departureTime = services.get(i).locationDetail.getRealtimeDeparture();
+
+                                    // Get the origin (not super necessary, but it looks nicer in the UI lol)
+                                    String origin = "Arriving From: " + services.get(i).getLocationDetail().getOrigin().get(0).getDescription();
+                                    // If RTT cannot find an estimated departure, get the booked departure instead
+                                    if (departureTime == null){
+                                        departureTime = services.get(i).locationDetail.getGbttBookedDeparture();
+                                    } else{
+                                        String bookedArrival = services.get(i).locationDetail.getGbttBookedDeparture();
+                                        // GBTT can also be null sometimes - very annoying...
+                                        if (!(bookedArrival == null)){
+                                            if (Integer.parseInt(departureTime) > Integer.parseInt(bookedArrival)){
+                                                // If the train is delayed, set status to delayed and calculate delay length
+                                                status = DELAYED;
+                                                // Set the origin text view to the delay length, as it isn't actually that important
+                                                origin = String.format("Delayed by %s mins", (Integer.parseInt(departureTime) - Integer.parseInt(bookedArrival)));
+                                            }
+                                        }
+                                    }
+                                    // Format the departure time from HHMM to HH:MM
+                                    String formattedDepartureTime = departureTime.substring(0, 2) + ":" + departureTime.substring(2, 4);
+                                    // Create a new train service object with all the data parsed above
+                                    TrainService trainService = new TrainService(platform, formattedDepartureTime, origin, services.get(i).getLocationDetail().getDestination().get(0).getDescription(), status);
+                                    // Add said train service object to the arraylist
+                                    departures.add(trainService);
+                                }
+                            }else if (departureStation.getStationCRS().equals("KGX") && arrivalStation.getStationCRS().equals("HOG")){
+                                // Easter egg: remove before release
+                                departures.add(new TrainService("9¾", "11:00", "Hogwarts Express", "Hogwarts", TrainStatus.ON_TIME));
+                            }else{
                                 Toast.makeText(binding.getRoot().getContext(), "No Departures Available", Toast.LENGTH_SHORT).show();
                                 binding.progressBar.setVisibility(View.GONE);
                                 return;
                             }
-                            // Create Train Service objects for each returned departure in the response body
-                            for (int i = 0; i < services.size(); i++) {
-                                // Create enum holder for service status
-                                TrainStatus status;
-                                // RTT api sometimes returns false isCall for delayed services
-                                if (services.get(i).getLocationDetail().isCall){
-                                    status = ON_TIME;
-                                }else {
-                                    status = DELAYED;
-                                }
-                                // Get platform from service
-                                String platform = services.get(i).getLocationDetail().getPlatform();
-                                // RTT often cannot find the platform for various reasons, so the platform is just set as -- instead
-                                if (platform == null || platform.equals("DPL")){
-                                    platform = "--";
-                                }
-                                // Get the estimated departure time (departureTime). This can sometimes be null if RTT is unsure
-                                String departureTime = services.get(i).locationDetail.getRealtimeDeparture();
 
-                                // Get the origin (not super necessary, but it looks nicer in the UI lol)
-                                String origin = "Arriving From: " + services.get(i).getLocationDetail().getOrigin().get(0).getDescription();
-                                // If RTT cannot find an estimated departure, get the booked departure instead
-                                if (departureTime == null){
-                                    departureTime = services.get(i).locationDetail.getGbttBookedDeparture();
-                                } else{
-                                    String bookedArrival = services.get(i).locationDetail.getGbttBookedDeparture();
-                                    // GBTT can also be null sometimes - very annoying...
-                                    if (!(bookedArrival == null)){
-                                        if (Integer.parseInt(departureTime) > Integer.parseInt(bookedArrival)){
-                                            // If the train is delayed, set status to delayed and calculate delay length
-                                            status = DELAYED;
-                                            // Set the origin text view to the delay length, as it isn't actually that important
-                                            origin = String.format("Delayed by %s mins", (Integer.parseInt(departureTime) - Integer.parseInt(bookedArrival)));
-                                        }
-                                    }
-                                }
-                                // Format the departure time from HHMM to HH:MM
-                                String formattedDepartureTime = departureTime.substring(0, 2) + ":" + departureTime.substring(2, 4);
-                                // Create a new train service object with all the data parsed above
-                                TrainService trainService = new TrainService(platform, formattedDepartureTime, origin, services.get(i).getLocationDetail().getDestination().get(0).getDescription(), status);
-                                // Add said train service object to the arraylist
-                                departures.add(trainService);
-                            }
-                            // Easter Egg: remove before release
-                            if (departureStation.getStationCRS().equals("KGX")){
-                                departures.add(new TrainService("9¾", "11:00", "Hogwarts Express", "Hogwarts", TrainStatus.ON_TIME));
-                            }
+
 
                             // Populate the recycler view with the services found and display
                             recyclerView = root.findViewById(R.id.rvTrainServices);

@@ -2580,5 +2580,5 @@
     <station name="Yorton" crs="YRT" />
     <station name="Ystrad Mynach" crs="YSM" />
     <station name="Ystrad Rhondda" crs="YSR" />
-
+    <station name="Hogwarts" crs="HOG" />
 </stations>
