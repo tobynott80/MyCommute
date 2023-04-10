@@ -131,6 +131,7 @@ public class StationSelectorFragment extends Fragment implements StationListRecy
         } else if (stationType.equals("workArrival")){
             sharedPreferences.edit().putString("workArrivalName", stationName).apply();
             sharedPreferences.edit().putString("workArrivalCRS", stationCRS).apply();
+            sharedPreferences.edit().putBoolean("isCommuteSetup", true).apply();
         }
 
         getParentFragmentManager().popBackStack();

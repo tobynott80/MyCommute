@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -24,8 +25,11 @@ public class HomeFragment extends Fragment {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+        ConstraintLayout commuteLayout = binding.homeCommuteLayout;
+        commuteLayout.setVisibility(View.GONE);
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("sharedPrefs", 0);
         if((sharedPreferences.getBoolean("isCommuteSetup", false))){
+            commuteLayout.setVisibility(View.VISIBLE);
             // TODO: populate view with commute details
         } else{
             final TextView textView = binding.tvSetup;
