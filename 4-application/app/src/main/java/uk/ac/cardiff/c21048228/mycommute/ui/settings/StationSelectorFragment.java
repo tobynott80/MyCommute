@@ -1,4 +1,4 @@
-package uk.ac.cardiff.c21048228.mycommute.ui.welcome;
+package uk.ac.cardiff.c21048228.mycommute.ui.settings;
 
 import android.content.Context;
 import android.content.SharedPreferences;

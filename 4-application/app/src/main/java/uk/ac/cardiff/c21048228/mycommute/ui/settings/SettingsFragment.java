@@ -24,9 +24,18 @@ public class SettingsFragment extends Fragment {
 
         binding = FragmentSettingsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+        Button btnSetHomeDeparture = binding.btnHomeDeparture;
+        Button btnSetHomeArrival = binding.btnHomeArrival;
+        Button btnSetWorkDeparture = binding.btnWorkDeparture;
+        Button btnSetWorkArrival = binding.btnWorkArrival;
 
-//        final Button homeDeparture = binding.
-//        settingsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        btnSetHomeDeparture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
         return root;
     }
 
