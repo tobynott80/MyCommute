@@ -215,19 +215,20 @@ public class TimetableFragment extends Fragment {
 
             @Override
             public void onClick(View view) {
-                //update UI
-                String tempBtnText = btnTextArrival.getText().toString();
-                btnTextArrival.setText(btnTextDeparture.getText().toString());
-                btnTextDeparture.setText(tempBtnText);
+                if (!(arrivalStation == null || departureStation == null)){
+                    //update UI
+                    String tempBtnText = btnTextArrival.getText().toString();
+                    btnTextArrival.setText(btnTextDeparture.getText().toString());
+                    btnTextDeparture.setText(tempBtnText);
 
-                //update objects
-                String tempStationName = arrivalStation.getStationName();
-                String tempStationCRS = arrivalStation.getStationCRS();
-                arrivalStation.setStationName(departureStation.getStationName());
-                arrivalStation.setStationCRS(departureStation.getStationCRS());
-                departureStation.setStationName(tempStationName);
-                departureStation.setStationCRS(tempStationCRS);
-
+                    //update objects
+                    String tempStationName = arrivalStation.getStationName();
+                    String tempStationCRS = arrivalStation.getStationCRS();
+                    arrivalStation.setStationName(departureStation.getStationName());
+                    arrivalStation.setStationCRS(departureStation.getStationCRS());
+                    departureStation.setStationName(tempStationName);
+                    departureStation.setStationCRS(tempStationCRS);
+                }
             }
         });
 
