@@ -30,4 +30,5 @@
     <string name="timetablepara">Get live information on any train in the UK, with up-to-the-minute data from RealTimeTrains</string>
     <string name="stay_notified">Stay Notified</string>
     <string name="stay_notified_para">Sign up for notifications to get information about delays before you leave. You\'ll never miss a meeting again!</string>
+    <string name="settingsHelper1">Please enter the first leg of your journey</string>
 </resources>
