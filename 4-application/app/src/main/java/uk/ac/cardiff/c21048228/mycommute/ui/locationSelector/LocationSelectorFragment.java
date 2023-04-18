@@ -117,6 +117,8 @@ public class LocationSelectorFragment extends Fragment implements StationListRec
                 for(Station s: stationArrayList){
                     if (s.getStationName().toLowerCase().contains(newText.toLowerCase())){
                         filteredList.add(s);
+                    } else if (s.getStationCRS().toLowerCase().contains(newText.toLowerCase())){
+                        filteredList.add(s);
                     }
                 }
                 adapter.filterList(filteredList);

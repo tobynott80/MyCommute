@@ -94,6 +94,8 @@ public class StationSelectorFragment extends Fragment implements StationListRecy
                 for(Station s: stationArrayList){
                     if (s.getStationName().toLowerCase().contains(query.toLowerCase())){
                         filteredList.add(s);
+                    } else if (s.getStationCRS().toLowerCase().contains(query.toLowerCase())){
+                        filteredList.add(s);
                     }
                 }
                 adapter.filterList(filteredList);
