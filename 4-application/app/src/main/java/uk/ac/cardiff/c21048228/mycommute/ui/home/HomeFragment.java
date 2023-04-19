@@ -1,5 +1,8 @@
 package uk.ac.cardiff.c21048228.mycommute.ui.home;
 
+import static uk.ac.cardiff.c21048228.mycommute.ui.timetable.TrainStatus.DELAYED;
+import static uk.ac.cardiff.c21048228.mycommute.ui.timetable.TrainStatus.ON_TIME;
+
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -17,9 +20,17 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
 import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicReference;
 
+import retrofit2.Call;
 import uk.ac.cardiff.c21048228.mycommute.R;
 import uk.ac.cardiff.c21048228.mycommute.databinding.FragmentHomeBinding;
+import uk.ac.cardiff.c21048228.mycommute.retrofit.CommuteBuilder;
+import uk.ac.cardiff.c21048228.mycommute.retrofit.CommuteCallback;
+import uk.ac.cardiff.c21048228.mycommute.retrofit.RttMethods;
+import uk.ac.cardiff.c21048228.mycommute.retrofit.RttRetroFit;
+import uk.ac.cardiff.c21048228.mycommute.retrofit.SearchModel;
+import uk.ac.cardiff.c21048228.mycommute.ui.locationSelector.Station;
 import uk.ac.cardiff.c21048228.mycommute.ui.timetable.TrainService;
 import uk.ac.cardiff.c21048228.mycommute.ui.timetable.TrainStatus;
 
@@ -39,20 +50,33 @@ public class HomeFragment extends Fragment {
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("sharedPrefs", 0);
         if((sharedPreferences.getBoolean("isCommuteSetup", false))){
             commuteLayout.setVisibility(View.VISIBLE);
-            // TODO: populate view with commute details
-            ArrayList<TrainService> services = new ArrayList<>();
-
-            // Test Code, need to add actual API call
-            services.add(new TrainService("9", "12:30", "Cardiff Central", "barry", TrainStatus.ON_TIME));
-            services.add(new TrainService("8", "12:30", "Cardiff Central", "merthyr", TrainStatus.ON_TIME));
-            services.add(new TrainService("3", "12:30", "Cardiff Central", "queen steet", TrainStatus.ON_TIME));
-
-            Commute commute = new Commute("Cardiff Central", "Barry", services, true);
-            FragmentManager fragmentManager = getParentFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            CommuteFragment commuteFragment = new CommuteFragment(commute);
-            fragmentTransaction.replace(R.id.homeCommuteLayout, commuteFragment);
-            fragmentTransaction.commit();
+            CommuteBuilder commuteBuilder = new CommuteBuilder();
+            Station departureStation = new Station(sharedPreferences.getString("homeDepartureName", "Cardiff Central"), sharedPreferences.getString("homeDepartureCRS", "CDF"));
+            Station arrivalStation = new Station(sharedPreferences.getString("homeArrivalName", "Newport"), sharedPreferences.getString("homeArrivalCRS", "NWP"));
+            commuteBuilder.getCommute(departureStation, arrivalStation, new CommuteCallback() {
+                @Override
+                public void onCommuteLoaded(Commute commute) {
+                    // Load the fragment once the callback is complete
+                    FragmentManager fragmentManager = getParentFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    CommuteFragment commuteFragment = new CommuteFragment(commute);
+                    fragmentTransaction.replace(R.id.homeCommuteLayout, commuteFragment);
+                    fragmentTransaction.commit();
+                }
+            });
+            Station workDepartureStation = new Station(sharedPreferences.getString("workDepartureName", "Cardiff Central"), sharedPreferences.getString("workDepartureCRS", "CDF"));
+            Station workArrivalStation = new Station(sharedPreferences.getString("workArrivalName", "Newport"), sharedPreferences.getString("workArrivalCRS", "NWP"));
+            commuteBuilder.getCommute(workDepartureStation, workArrivalStation, new CommuteCallback() {
+                @Override
+                public void onCommuteLoaded(Commute commute) {
+                    // Load the fragment once the callback is complete
+                    FragmentManager fragmentManager = getParentFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    CommuteFragment commuteFragment = new CommuteFragment(commute);
+                    fragmentTransaction.replace(R.id.workCommuteLayout, commuteFragment);
+                    fragmentTransaction.commit();
+                }
+            });
 
         } else{
             final TextView textView = binding.tvSetup;
@@ -72,4 +96,5 @@ public class HomeFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
 }
