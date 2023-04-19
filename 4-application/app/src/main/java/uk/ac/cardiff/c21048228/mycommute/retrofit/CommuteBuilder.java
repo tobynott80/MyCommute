@@ -8,6 +8,9 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import java.time.Duration;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 import retrofit2.Call;
@@ -69,9 +72,14 @@ public class CommuteBuilder {
                                     if (Integer.parseInt(departureTime) > Integer.parseInt(bookedArrival)) {
                                         // If the train is delayed, set status to delayed and calculate delay length
                                         status = DELAYED;
+                                        LocalTime departureTimeLT = LocalTime.parse(departureTime, DateTimeFormatter.ofPattern("HHmm"));
+                                        LocalTime bookedArrivalLT = LocalTime.parse(bookedArrival, DateTimeFormatter.ofPattern("HHmm"));
+                                        Duration delayDuration = Duration.between(bookedArrivalLT, departureTimeLT);
+                                        long delayLength = delayDuration.toMinutes();
+
                                         // Set the origin text view to the delay length, as it isn't actually that important
-                                        origin = String.format("Delayed by %s mins", (Integer.parseInt(departureTime) - Integer.parseInt(bookedArrival)));
-                                    }
+                                        origin = String.format("Delayed by %s mins (%s)", delayLength, (bookedArrival.substring(0,2) + ":" + bookedArrival.substring(2,4)));
+                                    }                                 }
                                 }
                             }
                             // Format the departure time from HHMM to HH:MM

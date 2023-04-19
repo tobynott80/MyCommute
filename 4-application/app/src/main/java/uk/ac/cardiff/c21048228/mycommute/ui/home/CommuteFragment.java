@@ -37,7 +37,7 @@ public class CommuteFragment extends Fragment {
         if (commute.isValid) {
             if (commute.services.size() > 2) {
                 // Set route detail
-                binding.tvRouteDetails.setText(String.format("%s to %s", commute.Arrival, commute.Destination));
+                binding.tvRouteDetails.setText(String.format("%s to %s", commute.Destination, commute.Arrival));
                 // Set first departure UI
                 binding.tvDestination1.setText(commute.services.get(0).getDestination());
                 binding.tvOrigin1.setText(commute.services.get(0).getOrigin());
