@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvRouteDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvTime1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -24,10 +24,10 @@
         android:text="9:30"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvRouteDetails" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/tvTime2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -35,7 +35,7 @@
         android:text="9:30"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/tvAlsoAt" />
 
     <TextView
         android:id="@+id/tvTime3"
@@ -46,51 +46,52 @@
         android:text="9:30"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTime2" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/tvDestination1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="London Paddington"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintStart_toEndOf="@+id/tvTime1"
+        app:layout_constraintTop_toBottomOf="@+id/tvRouteDetails" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/tvOrigin1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Delayed by 10 Mins"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintStart_toEndOf="@+id/tvTime1"
+        app:layout_constraintTop_toBottomOf="@+id/tvDestination1" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/tvPlatformStatic1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:text="Platform"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="36dp" />
+        app:layout_constraintTop_toBottomOf="@+id/tvRouteDetails" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/tvPlatformNo2"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:gravity="center"
         android:text="Platform 9"
-        app:layout_constraintBottom_toBottomOf="@+id/textView13"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTime2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/tvAlsoAt" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/tvPlatformNo3"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
         android:layout_marginTop="8dp"
@@ -98,52 +99,52 @@
         android:gravity="center"
         android:text="Platform 10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime2"
         app:layout_constraintBottom_toBottomOf="@id/tvTime3"/>
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/tvPlatformNo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="9"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView9"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
-        tools:layout_editor_absoluteY="55dp" />
+        app:layout_constraintEnd_toEndOf="@+id/tvPlatformStatic1"
+        app:layout_constraintStart_toStartOf="@+id/tvPlatformStatic1"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlatformStatic1" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/tvAlsoAt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Also At:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/tvStatus1" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/tvStatus1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/delayed"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintEnd_toEndOf="@+id/tvTime1"
+        app:layout_constraintStart_toStartOf="@+id/tvTime1"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime1" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/tvDestination2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="London Brigde"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/textView13"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintStart_toEndOf="@+id/tvTime2"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlsoAt" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/tvDestination3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -151,26 +152,26 @@
         android:text="London Brigde"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/tvTime3"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTime2" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/tvOrigin2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Origin Text"
         android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/textView13"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintStart_toEndOf="@+id/tvTime2"
+        app:layout_constraintTop_toBottomOf="@+id/tvDestination2" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/tvOrigin3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Origin Text"
         android:textSize="10sp"
         app:layout_constraintStart_toEndOf="@+id/tvTime3"
-        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDestination3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
