@@ -79,7 +79,7 @@ public class CommuteBuilder {
 
                                         // Set the origin text view to the delay length, as it isn't actually that important
                                         origin = String.format("Delayed by %s mins (%s)", delayLength, (bookedArrival.substring(0,2) + ":" + bookedArrival.substring(2,4)));
-                                    }                                 }
+                                    }
                                 }
                             }
                             // Format the departure time from HHMM to HH:MM
@@ -97,8 +97,7 @@ public class CommuteBuilder {
                         builtCommute = new Commute(arrivalStation.getStationName(), departureStation.getStationName(), null, false);
                         callback.onCommuteLoaded(builtCommute);
                     }
-                }
-            }
+                }}
 
             @Override
             public void onFailure(Call<SearchModel> call, Throwable t) {
@@ -106,7 +105,6 @@ public class CommuteBuilder {
                 builtCommute = new Commute(arrivalStation.getStationName(), departureStation.getStationName(), null, false);
                 callback.onCommuteLoaded(builtCommute);
             }
-
         });
     }
 }
