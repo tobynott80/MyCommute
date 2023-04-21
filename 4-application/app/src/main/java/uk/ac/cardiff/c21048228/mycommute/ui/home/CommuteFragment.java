@@ -43,23 +43,8 @@ public class CommuteFragment extends Fragment {
         if (commute.isValid) {
                 // Set route detail
                 binding.tvRouteDetails.setText(String.format("%s to %s", commute.Destination, commute.Arrival));
-                // Set first departure UI
-                binding.tvDestination1.setText(commute.services.get(0).getDestination());
-                binding.tvOrigin1.setText(commute.services.get(0).getOrigin());
-                binding.tvPlatformNo1.setText(commute.services.get(0).getPlatform());
-                binding.tvTime1.setText(commute.services.get(0).getDepartureTime());
-                if(commute.services.get(0).getStatus().equals(ON_TIME)){
-                    binding.tvStatus1.setText(R.string.on_time);
-                    binding.tvStatus1.setTextColor(Color.parseColor("#4CAF50"));
-                } else if (commute.services.get(0).getStatus().equals(DELAYED)){
-                    binding.tvStatus1.setText(R.string.delayed);
-                    binding.tvStatus1.setTextColor(Color.parseColor("#FFC107"));
-                } else {
-                    binding.tvStatus1.setText(R.string.cancelled);
-                    binding.tvStatus1.setTextColor(Color.parseColor("#F44336"));
-                }
+
                 ArrayList<TrainService> remainingServices = commute.services;
-//                remainingServices.remove(0);
                 RecyclerView recyclerView = binding.rvCommuteServices;
                 recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                 CommuteListRecyclerAdapter adapter = new CommuteListRecyclerAdapter(remainingServices);

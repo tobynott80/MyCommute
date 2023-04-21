@@ -15,87 +15,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvTime1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="9:30"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRouteDetails" />
-
-    <TextView
-        android:id="@+id/tvDestination1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="London Paddington"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/tvTime1"
-        app:layout_constraintTop_toBottomOf="@+id/tvRouteDetails" />
-
-    <TextView
-        android:id="@+id/tvOrigin1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="Delayed by 10 Mins"
-        app:layout_constraintStart_toEndOf="@+id/tvTime1"
-        app:layout_constraintTop_toBottomOf="@+id/tvDestination1" />
-
-    <TextView
-        android:id="@+id/tvPlatformStatic1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="Platform"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRouteDetails" />
-
-    <TextView
-        android:id="@+id/tvPlatformNo1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="9"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/tvPlatformStatic1"
-        app:layout_constraintStart_toStartOf="@+id/tvPlatformStatic1"
-        app:layout_constraintTop_toBottomOf="@+id/tvPlatformStatic1" />
-
-    <TextView
-        android:id="@+id/tvAlsoAt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="Also At:"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvStatus1" />
-
-    <TextView
-        android:id="@+id/tvStatus1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/delayed"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/tvTime1"
-        app:layout_constraintStart_toStartOf="@+id/tvTime1"
-        app:layout_constraintTop_toBottomOf="@+id/tvTime1" />
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvCommuteServices"
         android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_height="300dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAlsoAt"
+        app:layout_constraintTop_toBottomOf="@+id/tvRouteDetails"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
