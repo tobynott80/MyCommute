@@ -70,34 +70,6 @@ public class CommuteFragment extends Fragment {
                 TrainServiceRecyclerAdapter adapter = new TrainServiceRecyclerAdapter(remainingServices);
                 recyclerView.setAdapter(adapter);
 
-
-
-
-//                // Set second departure UI
-//                binding.tvDestination2.setText(commute.services.get(1).getDestination());
-//                binding.tvOrigin2.setText(commute.services.get(1).getOrigin());
-//                binding.tvPlatformNo2.setText("Platform " + commute.services.get(1).getPlatform());
-//                binding.tvTime2.setText(commute.services.get(1).getDepartureTime());
-//                if(commute.services.get(1).getStatus().equals(ON_TIME)){
-//                    binding.tvOrigin2.setTextColor(Color.parseColor("#4CAF50"));
-//                } else if (commute.services.get(1).getStatus().equals(DELAYED)){
-//                    binding.tvOrigin2.setTextColor(Color.parseColor("#FFC107"));
-//                } else {
-//                    binding.tvOrigin2.setTextColor(Color.parseColor("#F44336"));
-//                }
-//
-//                // Set third departure UI
-//                binding.tvDestination3.setText(commute.services.get(2).getDestination());
-//                binding.tvOrigin3.setText(commute.services.get(2).getOrigin());
-//                binding.tvPlatformNo3.setText("Platform " + commute.services.get(2).getPlatform());
-//                binding.tvTime3.setText(commute.services.get(2).getDepartureTime());
-//                if(commute.services.get(2).getStatus().equals(ON_TIME)){
-//                    binding.tvOrigin3.setTextColor(Color.parseColor("#4CAF50"));
-//                } else if (commute.services.get(2).getStatus().equals(DELAYED)){
-//                    binding.tvOrigin3.setTextColor(Color.parseColor("#FFC107"));
-//                } else {
-//                    binding.tvOrigin3.setTextColor(Color.parseColor("#F44336"));
-//                }
             }
         } else {
             binding.tvRouteDetails.setText("No services found");
