@@ -14,5 +14,9 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="Widget.App.Chip" parent="Widget.Material3.MaterialTimePicker.Display">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
     <color name="blue">#3F51B5</color>
 </resources>

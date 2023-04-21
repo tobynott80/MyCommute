@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -95,6 +96,7 @@ public class SettingsFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
+
 
         return root;
     }
