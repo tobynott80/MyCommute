@@ -42,7 +42,7 @@ public class CommuteBuilder {
                     //if no services are available - notify with toast
                     if (!(services == null)) {
                         // Create Train Service objects for the first 3 departures
-                        for (int i = 0; i < 3; i++) {
+                        for (int i = 0; i < 6; i++) {
                             // Create enum holder for service status
                             TrainStatus status;
                             // RTT api sometimes returns false isCall for delayed services
