@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import uk.ac.cardiff.c21048228.mycommute.R;
 import uk.ac.cardiff.c21048228.mycommute.databinding.FragmentCommuteHomeBinding;
 import uk.ac.cardiff.c21048228.mycommute.ui.timetable.TrainService;
-import uk.ac.cardiff.c21048228.mycommute.ui.timetable.TrainServiceRecyclerAdapter;
+import uk.ac.cardiff.c21048228.mycommute.ui.home.CommuteListRecyclerAdapter;
 
 public class CommuteFragment extends Fragment {
     FragmentCommuteHomeBinding binding;
@@ -34,11 +34,6 @@ public class CommuteFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentCommuteHomeBinding.inflate(inflater, container, false);
-        // Set an empty adapter for the RecyclerView
-        RecyclerView recyclerView = binding.rvCommuteHome;
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(new TrainServiceRecyclerAdapter(new ArrayList<>()));
-
         return binding.getRoot();
     }
 
@@ -46,7 +41,6 @@ public class CommuteFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         if (commute.isValid) {
-            if (commute.services.size() > 2) {
                 // Set route detail
                 binding.tvRouteDetails.setText(String.format("%s to %s", commute.Destination, commute.Arrival));
                 // Set first departure UI
@@ -65,14 +59,15 @@ public class CommuteFragment extends Fragment {
                     binding.tvStatus1.setTextColor(Color.parseColor("#F44336"));
                 }
                 ArrayList<TrainService> remainingServices = commute.services;
-                remainingServices.remove(0);
-                RecyclerView recyclerView = binding.rvCommuteHome;
-                TrainServiceRecyclerAdapter adapter = new TrainServiceRecyclerAdapter(remainingServices);
+//                remainingServices.remove(0);
+                RecyclerView recyclerView = binding.rvCommuteServices;
+                recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                CommuteListRecyclerAdapter adapter = new CommuteListRecyclerAdapter(remainingServices);
                 recyclerView.setAdapter(adapter);
 
-            }
         } else {
             binding.tvRouteDetails.setText("No services found");
         }
     }
+
 }

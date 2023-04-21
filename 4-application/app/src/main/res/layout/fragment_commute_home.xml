@@ -86,14 +86,16 @@
         app:layout_constraintStart_toStartOf="@+id/tvTime1"
         app:layout_constraintTop_toBottomOf="@+id/tvTime1" />
 
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCommuteHome"
+        android:id="@+id/rvCommuteServices"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="200dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAlsoAt" />
+        app:layout_constraintTop_toBottomOf="@+id/tvAlsoAt"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
