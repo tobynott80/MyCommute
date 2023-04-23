@@ -20,15 +20,12 @@ public class NotificationHelper {
             return;
         }
 
-        // Create a notification channel for Android O and above
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            NotificationChannel notificationChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "MyCommute Notifications", NotificationManager.IMPORTANCE_HIGH);
-            notificationChannel.setDescription("Notifications for MyCommute app");
-            notificationChannel.enableLights(true);
-            notificationChannel.setLightColor(Color.BLUE);
-            notificationChannel.enableVibration(true);
-            notificationManager.createNotificationChannel(notificationChannel);
-        }
+        NotificationChannel notificationChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "Daily Commute Notifications", NotificationManager.IMPORTANCE_HIGH);
+        notificationChannel.setDescription("Notifications for MyCommute app");
+        notificationChannel.enableLights(true);
+        notificationChannel.setLightColor(Color.BLUE);
+        notificationChannel.enableVibration(true);
+        notificationManager.createNotificationChannel(notificationChannel);
 
         // Create the notification
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, NOTIFICATION_CHANNEL_ID)
@@ -36,6 +33,7 @@ public class NotificationHelper {
                 .setContentTitle(title)
                 .setContentText(message)
                 .setAutoCancel(true);
+
 
         Notification notification = builder.build();
         notificationManager.notify(0, notification);
