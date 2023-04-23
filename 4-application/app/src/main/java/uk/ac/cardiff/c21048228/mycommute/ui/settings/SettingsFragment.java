@@ -45,6 +45,18 @@ public class SettingsFragment extends Fragment {
         btnSetWorkArrival.setText(sharedPreferences.getString("workArrivalName", "Arrival"));
         btnHomeCTime.setText(sharedPreferences.getString("homeTime", "Home"));
         btnWorkCTime.setText(sharedPreferences.getString("workTime", "Work"));
+        if (sharedPreferences.getString("homeTime", "Home").equals("Home")) {
+            btnHomeCTime.setText(R.string.home);
+        } else {
+            String homeTime = sharedPreferences.getString("homeTime", "Home");
+            btnHomeCTime.setText(String.format(getResources().getString(R.string.time), (homeTime.substring(0, 2)), (homeTime.substring(2))));
+        }
+        if (sharedPreferences.getString("workTime", "Work").equals("Work")) {
+            btnWorkCTime.setText(R.string.work);
+        } else {
+            String workTime = sharedPreferences.getString("workTime", "Work");
+            btnWorkCTime.setText(String.format(getResources().getString(R.string.time), (workTime.substring(0, 2)), (workTime.substring(2))));
+        }
 
 
         btnSetHomeDeparture.setOnClickListener(new View.OnClickListener() {

@@ -36,5 +36,9 @@
     <string name="cancel">Cancel</string>
     <string name="homeTimeTitle">Set Home Commute Time</string>
     <string name="workTimeTitle">Set Work Commute Time</string>
+    <string name="home">Home</string>
+    <string name="work">Work</string>
+    <string name="time">%1$s:%2$s</string>
+
 
 </resources>
