@@ -214,7 +214,7 @@ public class SettingsFragment extends Fragment {
                 now.set(Calendar.SECOND,00);
                 now.set(Calendar.MILLISECOND,00);
                 alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, homeNotificationTime.getTimeInMillis(),
-                        AlarmManager.INTERVAL_FIFTEEN_MINUTES, homePendingIntent);
+                        AlarmManager.INTERVAL_DAY, homePendingIntent);
             }
 
             if (workNotificationTime != null) {
@@ -226,7 +226,7 @@ public class SettingsFragment extends Fragment {
                 now.set(Calendar.SECOND,00);
                 now.set(Calendar.MILLISECOND,00);
                 alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, workNotificationTime.getTimeInMillis(),
-                        1000 * 60 * 20, workPendingIntent);
+                        AlarmManager.INTERVAL_DAY, workPendingIntent);
             }
         } else {
             // Cancel daily notifications
