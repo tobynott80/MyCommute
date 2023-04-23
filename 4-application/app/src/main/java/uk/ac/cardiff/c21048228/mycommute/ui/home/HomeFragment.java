@@ -19,7 +19,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.concurrent.atomic.AtomicReference;
 
 import retrofit2.Call;
@@ -53,26 +55,41 @@ public class HomeFragment extends Fragment {
             CommuteBuilder commuteBuilder = new CommuteBuilder();
             Station departureStation = new Station(sharedPreferences.getString("homeDepartureName", "Cardiff Central"), sharedPreferences.getString("homeDepartureCRS", "CDF"));
             Station arrivalStation = new Station(sharedPreferences.getString("homeArrivalName", "Newport"), sharedPreferences.getString("homeArrivalCRS", "NWP"));
-            commuteBuilder.getCommute(departureStation, arrivalStation, new CommuteCallback() {
+            String departureTime = sharedPreferences.getString("homeTime", "Home");
+            if(departureTime.equals("Home")){
+                // If home departure time not set, use current time
+                SimpleDateFormat sdf = new SimpleDateFormat("HHmm");
+                departureTime = sdf.format(new Date());
+            }
+            String finalDepartureTime = departureTime;
+            commuteBuilder.getCommute(departureStation, arrivalStation, departureTime, new CommuteCallback() {
                 @Override
                 public void onCommuteLoaded(Commute commute) {
                     // Load the fragment once the callback is complete
                     FragmentManager fragmentManager = getParentFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    CommuteFragment commuteFragment = new CommuteFragment(commute);
+                    CommuteFragment commuteFragment = new CommuteFragment(commute, finalDepartureTime);
                     fragmentTransaction.replace(R.id.homeCommuteLayout, commuteFragment);
                     fragmentTransaction.commit();
                 }
             });
             Station workDepartureStation = new Station(sharedPreferences.getString("workDepartureName", "Cardiff Central"), sharedPreferences.getString("workDepartureCRS", "CDF"));
             Station workArrivalStation = new Station(sharedPreferences.getString("workArrivalName", "Newport"), sharedPreferences.getString("workArrivalCRS", "NWP"));
-            commuteBuilder.getCommute(workDepartureStation, workArrivalStation, new CommuteCallback() {
+            String workDepartureTime = sharedPreferences.getString("workTime", "Work");
+            if(departureTime.equals("Work")){
+                // If home departure time not set, use current time
+                SimpleDateFormat sdf = new SimpleDateFormat("HHmm");
+                workDepartureTime = sdf.format(new Date());
+            }
+
+            String finalWorkDepartureTime = workDepartureTime;
+            commuteBuilder.getCommute(workDepartureStation, workArrivalStation, workDepartureTime, new CommuteCallback() {
                 @Override
                 public void onCommuteLoaded(Commute commute) {
                     // Load the fragment once the callback is complete
                     FragmentManager fragmentManager = getParentFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    CommuteFragment commuteFragment = new CommuteFragment(commute);
+                    CommuteFragment commuteFragment = new CommuteFragment(commute, finalWorkDepartureTime);
                     fragmentTransaction.replace(R.id.workCommuteLayout, commuteFragment);
                     fragmentTransaction.commit();
                 }

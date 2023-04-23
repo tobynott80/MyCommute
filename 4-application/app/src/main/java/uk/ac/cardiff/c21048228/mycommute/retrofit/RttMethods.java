@@ -9,4 +9,7 @@ public interface RttMethods {
 
     @GET("search/{from}/to/{to}")
     Call<SearchModel> getAllData(@Path("from") String from, @Path("to") String to, @Header("Authorization") String auth);
+
+    @GET("search/{from}/to/{to}/{year}/{month}/{day}/{time}")
+    Call<SearchModel> getAllDataWithTime(@Path("from") String from, @Path("to") String to, @Path("year") String year, @Path("month") String month, @Path("day") String day, @Path("time") String time, @Header("Authorization") String auth);
 }

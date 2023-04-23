@@ -26,7 +26,7 @@ public class CommuteBuilder {
 
     Commute builtCommute; //The commute that is to be returned
 
-    public void getCommute(Station departureStation, Station arrivalStation, CommuteCallback callback) {
+    public void getCommute(Station departureStation, Station arrivalStation, String departureTime, CommuteCallback callback) {
 
         //Instantiate the Retrofit instance
         RttMethods rttMethods = RttRetroFit.getRetrofitInstance().create(RttMethods.class);

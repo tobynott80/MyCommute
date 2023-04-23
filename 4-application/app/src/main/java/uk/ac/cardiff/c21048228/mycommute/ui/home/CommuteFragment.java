@@ -3,6 +3,8 @@ package uk.ac.cardiff.c21048228.mycommute.ui.home;
 import static uk.ac.cardiff.c21048228.mycommute.ui.timetable.TrainStatus.DELAYED;
 import static uk.ac.cardiff.c21048228.mycommute.ui.timetable.TrainStatus.ON_TIME;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -25,9 +27,11 @@ import uk.ac.cardiff.c21048228.mycommute.ui.home.CommuteListRecyclerAdapter;
 public class CommuteFragment extends Fragment {
     FragmentCommuteHomeBinding binding;
     Commute commute;
+    String departureTime;
 
-    public CommuteFragment(Commute commute) {
+    public CommuteFragment(Commute commute, String departureTime) {
         this.commute = commute;
+        this.departureTime = departureTime;
     }
 
     @Nullable
@@ -41,14 +45,14 @@ public class CommuteFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         if (commute.isValid) {
-                // Set route detail
-                binding.tvRouteDetails.setText(String.format("%s to %s", commute.Destination, commute.Arrival));
+            // Set route detail
+            binding.tvRouteDetails.setText(String.format("%s to %s from %s:%s", commute.Destination, commute.Arrival, departureTime.substring(0, 2), departureTime.substring(2)));
 
-                ArrayList<TrainService> remainingServices = commute.services;
-                RecyclerView recyclerView = binding.rvCommuteServices;
-                recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-                CommuteListRecyclerAdapter adapter = new CommuteListRecyclerAdapter(remainingServices);
-                recyclerView.setAdapter(adapter);
+            ArrayList<TrainService> remainingServices = commute.services;
+            RecyclerView recyclerView = binding.rvCommuteServices;
+            recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+            CommuteListRecyclerAdapter adapter = new CommuteListRecyclerAdapter(remainingServices);
+            recyclerView.setAdapter(adapter);
 
         } else {
             binding.tvRouteDetails.setText("No services found");
