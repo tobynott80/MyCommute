@@ -92,7 +92,8 @@
             android:src="@drawable/ic_baseline_arrow_downward_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnHomeDeparture" />
+            app:layout_constraintTop_toBottomOf="@+id/btnHomeDeparture"
+            android:contentDescription="@string/arrow_downwards" />
 
         <TextView
             android:id="@+id/tvHelpHint"
@@ -121,9 +122,10 @@
             android:src="@drawable/ic_baseline_arrow_downward_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnWorkDeparture" />
+            app:layout_constraintTop_toBottomOf="@+id/btnWorkDeparture"
+            android:contentDescription="@string/arrow_downwards" />
 
-        <Switch
+        <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/switch1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -134,17 +136,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnWorkArrival" />
 
-        <EditText
-            android:id="@+id/editTextTime3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:ems="10"
-            android:hint="@string/platform"
-            android:inputType="time"
-            android:minHeight="48dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/switch1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
