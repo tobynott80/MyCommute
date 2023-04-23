@@ -188,14 +188,6 @@ public class SettingsFragment extends Fragment {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putBoolean("notification", b);
                 editor.apply();
-                // test notification
-//                AlarmManager alarmManager = (AlarmManager) getContext().getSystemService(Context.ALARM_SERVICE);
-//                Intent intent = new Intent(getContext(), DailyNotificationReceiver.class);
-//                PendingIntent pendingIntent = PendingIntent.getBroadcast(getContext(), 0, intent, PendingIntent.FLAG_IMMUTABLE);
-//                Calendar calendar = Calendar.getInstance();
-//                // set alarm to 1 seconds from now
-//                calendar.add(Calendar.SECOND, 1);
-//                alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
             }
 
         });
@@ -204,10 +196,13 @@ public class SettingsFragment extends Fragment {
     }
     private void setDailyNotification(boolean isEnabled, Calendar homeNotificationTime, Calendar workNotificationTime) {
         AlarmManager alarmManager = (AlarmManager) getContext().getSystemService(Context.ALARM_SERVICE);
-        Intent intent = new Intent(getContext(), DailyNotificationReceiver.class);
+        Intent homeIntent = new Intent(getContext(), DailyNotificationReceiver.class);
+        Intent workIntent = new Intent(getContext(), DailyNotificationReceiver.class);
+        homeIntent.setAction("homeNotification");
+        workIntent.setAction("workNotification");
+        PendingIntent homePendingIntent = PendingIntent.getBroadcast(getContext(), 0, homeIntent, PendingIntent.FLAG_IMMUTABLE);
+        PendingIntent workPendingIntent = PendingIntent.getBroadcast(getContext(), 1, workIntent, PendingIntent.FLAG_IMMUTABLE);
 
-        PendingIntent homePendingIntent = PendingIntent.getBroadcast(getContext(), 0, intent, PendingIntent.FLAG_IMMUTABLE);
-        PendingIntent workPendingIntent = PendingIntent.getBroadcast(getContext(), 1, intent, PendingIntent.FLAG_IMMUTABLE);
 
         if (isEnabled) {
             if (homeNotificationTime != null) {

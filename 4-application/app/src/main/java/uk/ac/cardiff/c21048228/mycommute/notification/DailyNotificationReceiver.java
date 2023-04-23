@@ -18,9 +18,9 @@ public class DailyNotificationReceiver extends BroadcastReceiver {
         Station departureStation;
         Station arrivalStation;
         SharedPreferences sharedPreferences = context.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE);
-        if (intent.getAction().equals("uk.ac.cardiff.c21048228.mycommute.DAILY_HOME_NOTIFICATION")) {
+        if (intent.getAction().equals("homeNotification")) {
             notificationType = "home";
-        } else if (intent.getAction().equals("uk.ac.cardiff.c21048228.mycommute.DAILY_WORK_NOTIFICATION")) {
+        } else if (intent.getAction().equals("workNotification")) {
             notificationType = "work";
         } else {
             System.out.println("Unknown notification type, defaulting to home");
