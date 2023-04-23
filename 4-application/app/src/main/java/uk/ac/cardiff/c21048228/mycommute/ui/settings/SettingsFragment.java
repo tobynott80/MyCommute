@@ -103,6 +103,33 @@ public class SettingsFragment extends Fragment {
             }
         });
 
+        btnHomeCTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Open time selector frag
+                FragmentManager fragmentManager = getParentFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                TimeSelectorFragment timeSelectorFragment = new TimeSelectorFragment("homeTime");
+                fragmentTransaction.replace(R.id.nav_host_fragment_activity_main, timeSelectorFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.setReorderingAllowed(true);
+                fragmentTransaction.commit();
+            }
+        });
+
+        btnWorkCTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Open time selector frag
+                FragmentManager fragmentManager = getParentFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                TimeSelectorFragment timeSelectorFragment = new TimeSelectorFragment("workTime");
+                fragmentTransaction.replace(R.id.nav_host_fragment_activity_main, timeSelectorFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.setReorderingAllowed(true);
+                fragmentTransaction.commit();
+            }
+        });
 
         return root;
     }
