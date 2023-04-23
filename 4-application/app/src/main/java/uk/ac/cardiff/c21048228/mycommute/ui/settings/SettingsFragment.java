@@ -35,11 +35,17 @@ public class SettingsFragment extends Fragment {
         Button btnSetHomeArrival = binding.btnHomeArrival;
         Button btnSetWorkDeparture = binding.btnWorkDeparture;
         Button btnSetWorkArrival = binding.btnWorkArrival;
+        Button btnHomeCTime = binding.btnHomeCTime;
+        Button btnWorkCTime = binding.btnWorkCTime;
+
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE);
         btnSetHomeDeparture.setText(sharedPreferences.getString("homeDepartureName", "Departure"));
         btnSetHomeArrival.setText(sharedPreferences.getString("homeArrivalName", "Arrival"));
         btnSetWorkDeparture.setText(sharedPreferences.getString("workDepartureName", "Departure"));
         btnSetWorkArrival.setText(sharedPreferences.getString("workArrivalName", "Arrival"));
+        btnHomeCTime.setText(sharedPreferences.getString("homeTime", "Home"));
+        btnWorkCTime.setText(sharedPreferences.getString("workTime", "Work"));
+
 
         btnSetHomeDeparture.setOnClickListener(new View.OnClickListener() {
             @Override
