@@ -34,4 +34,7 @@
     <string name="arrow_downwards">Arrow Downwards</string>
     <string name="submit">Submit</string>
     <string name="cancel">Cancel</string>
+    <string name="homeTimeTitle">Set Home Commute Time</string>
+    <string name="workTimeTitle">Set Work Commute Time</string>
+
 </resources>
