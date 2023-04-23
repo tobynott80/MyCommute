@@ -1,5 +1,6 @@
 package uk.ac.cardiff.c21048228.mycommute.retrofit;
 
+import static uk.ac.cardiff.c21048228.mycommute.ui.timetable.TrainStatus.CANCELLED;
 import static uk.ac.cardiff.c21048228.mycommute.ui.timetable.TrainStatus.DELAYED;
 import static uk.ac.cardiff.c21048228.mycommute.ui.timetable.TrainStatus.ON_TIME;
 
@@ -47,8 +48,20 @@ public class CommuteBuilder {
                     ArrayList<TrainService> departures = new ArrayList<>();
                     //if no services are available - notify with toast
                     if (!(services == null)) {
-                        // Create Train Service objects for the first 3 departures
-                        for (int i = 0; i < 6; i++) {
+                        // Sort services by departure time
+                        services.sort((o1, o2) -> {
+                            String time1 = o1.getLocationDetail().getRealtimeDeparture();
+                            String time2 = o2.getLocationDetail().getRealtimeDeparture();
+                            if (time1 == null) {
+                                time1 = o1.getLocationDetail().getGbttBookedDeparture();
+                            }
+                            if (time2 == null) {
+                                time2 = o2.getLocationDetail().getGbttBookedDeparture();
+                            }
+                            return time1.compareTo(time2);
+                        });
+                        // Create Train Service objects for all departures
+                        for (int i = 0; i < services.size(); i++) {
                             // Create enum holder for service status
                             TrainStatus status;
                             // RTT api sometimes returns false isCall for delayed services
@@ -87,6 +100,16 @@ public class CommuteBuilder {
                                         origin = String.format("Delayed by %s mins (%s)", delayLength, (bookedArrival.substring(0,2) + ":" + bookedArrival.substring(2,4)));
                                     }
                                 }
+                            }
+                            // Find if train is cancelled
+                            if (services.get(i).getLocationDetail().getDisplayAs().equals("CANCELLED_CALL")){
+                                status = CANCELLED;
+                                origin = "Cancelled: " + services.get(i).locationDetail.getCancelReasonShortText();
+                            }
+                            // Find if train is replacement bus
+                            if (services.get(i).getServiceType().equals("bus")){
+                                platform = "Bus";
+                                origin = "Replacement Bus";
                             }
                             // Format the departure time from HHMM to HH:MM
                             String formattedDepartureTime = departureTime.substring(0, 2) + ":" + departureTime.substring(2, 4);

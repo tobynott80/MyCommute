@@ -1,5 +1,6 @@
 package uk.ac.cardiff.c21048228.mycommute.ui.timetable;
 
+import static uk.ac.cardiff.c21048228.mycommute.ui.timetable.TrainStatus.CANCELLED;
 import static uk.ac.cardiff.c21048228.mycommute.ui.timetable.TrainStatus.DELAYED;
 import static uk.ac.cardiff.c21048228.mycommute.ui.timetable.TrainStatus.ON_TIME;
 
@@ -175,6 +176,16 @@ public class TimetableFragment extends Fragment {
                                             }
                                         }
                                     }
+                                    // Find if train is cancelled
+                                    if (services.get(i).getLocationDetail().getDisplayAs().equals("CANCELLED_CALL")){
+                                        status = CANCELLED;
+                                        origin = "Cancelled: " + services.get(i).locationDetail.getCancelReasonShortText();
+                                    }
+                                    // Find if train is replacement bus
+                                    if (services.get(i).getServiceType().equals("bus")){
+                                        platform = "Bus";
+                                        origin = "Replacement Bus";
+                                    }
                                     // Format the departure time from HHMM to HH:MM
                                     String formattedDepartureTime = departureTime.substring(0, 2) + ":" + departureTime.substring(2, 4);
                                     // Create a new train service object with all the data parsed above
@@ -190,8 +201,6 @@ public class TimetableFragment extends Fragment {
                                 binding.progressBar.setVisibility(View.GONE);
                                 return;
                             }
-
-
 
                             // Populate the recycler view with the services found and display
                             recyclerView = root.findViewById(R.id.rvTrainServices);
