@@ -1,13 +1,18 @@
 package uk.ac.cardiff.c21048228.mycommute.ui.settings;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
@@ -16,13 +21,23 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.google.android.material.materialswitch.MaterialSwitch;
+import com.google.android.material.switchmaterial.SwitchMaterial;
+
+import java.util.Calendar;
+
 import uk.ac.cardiff.c21048228.mycommute.R;
 import uk.ac.cardiff.c21048228.mycommute.databinding.FragmentSettingsBinding;
+import uk.ac.cardiff.c21048228.mycommute.notification.DailyNotificationReceiver;
+import uk.ac.cardiff.c21048228.mycommute.notification.NotificationHelper;
 import uk.ac.cardiff.c21048228.mycommute.ui.locationSelector.LocationSelectorFragment;
 
 public class SettingsFragment extends Fragment {
 
     private FragmentSettingsBinding binding;
+    private Calendar homeNotificationTime;
+    private Calendar workNotificationTime;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -37,6 +52,7 @@ public class SettingsFragment extends Fragment {
         Button btnSetWorkArrival = binding.btnWorkArrival;
         Button btnHomeCTime = binding.btnHomeCTime;
         Button btnWorkCTime = binding.btnWorkCTime;
+        SwitchMaterial switchNotification = binding.swNotification;
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE);
         btnSetHomeDeparture.setText(sharedPreferences.getString("homeDepartureName", "Departure"));
@@ -45,17 +61,31 @@ public class SettingsFragment extends Fragment {
         btnSetWorkArrival.setText(sharedPreferences.getString("workArrivalName", "Arrival"));
         btnHomeCTime.setText(sharedPreferences.getString("homeTime", "Home"));
         btnWorkCTime.setText(sharedPreferences.getString("workTime", "Work"));
+
+        if (sharedPreferences.getBoolean("notification", false)) {
+            switchNotification.setChecked(true);
+        } else {
+            switchNotification.setChecked(false);
+        }
         if (sharedPreferences.getString("homeTime", "Home").equals("Home")) {
             btnHomeCTime.setText(R.string.home);
         } else {
             String homeTime = sharedPreferences.getString("homeTime", "Home");
             btnHomeCTime.setText(String.format(getResources().getString(R.string.time), (homeTime.substring(0, 2)), (homeTime.substring(2))));
+            homeNotificationTime = Calendar.getInstance();
+            homeNotificationTime.set(Calendar.HOUR_OF_DAY, Integer.parseInt(homeTime.substring(0, 2)));
+            homeNotificationTime.set(Calendar.MINUTE, Integer.parseInt(homeTime.substring(2)));
+            homeNotificationTime.set(Calendar.SECOND, 0);
         }
         if (sharedPreferences.getString("workTime", "Work").equals("Work")) {
             btnWorkCTime.setText(R.string.work);
         } else {
             String workTime = sharedPreferences.getString("workTime", "Work");
             btnWorkCTime.setText(String.format(getResources().getString(R.string.time), (workTime.substring(0, 2)), (workTime.substring(2))));
+            workNotificationTime = Calendar.getInstance();
+            workNotificationTime.set(Calendar.HOUR_OF_DAY, Integer.parseInt(workTime.substring(0, 2)));
+            workNotificationTime.set(Calendar.MINUTE, Integer.parseInt(workTime.substring(2)));
+            workNotificationTime.set(Calendar.SECOND, 0);
         }
 
 
@@ -143,8 +173,74 @@ public class SettingsFragment extends Fragment {
             }
         });
 
+        switchNotification.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b && homeNotificationTime == null && workNotificationTime == null){
+                    Toast.makeText(getContext(), "Please set a time for home and work", Toast.LENGTH_SHORT).show();
+                    switchNotification.setChecked(false);
+                } else {
+                    setDailyNotification(b, homeNotificationTime, workNotificationTime);
+                    if(b){
+                        NotificationHelper.showNotification(getContext(), "MyCommute", "This is how you will be notified");
+                    }
+                }
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putBoolean("notification", b);
+                editor.apply();
+                // test notification
+//                AlarmManager alarmManager = (AlarmManager) getContext().getSystemService(Context.ALARM_SERVICE);
+//                Intent intent = new Intent(getContext(), DailyNotificationReceiver.class);
+//                PendingIntent pendingIntent = PendingIntent.getBroadcast(getContext(), 0, intent, PendingIntent.FLAG_IMMUTABLE);
+//                Calendar calendar = Calendar.getInstance();
+//                // set alarm to 1 seconds from now
+//                calendar.add(Calendar.SECOND, 1);
+//                alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+            }
+
+        });
+
         return root;
     }
+    private void setDailyNotification(boolean isEnabled, Calendar homeNotificationTime, Calendar workNotificationTime) {
+        AlarmManager alarmManager = (AlarmManager) getContext().getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent(getContext(), DailyNotificationReceiver.class);
+
+        PendingIntent homePendingIntent = PendingIntent.getBroadcast(getContext(), 0, intent, PendingIntent.FLAG_IMMUTABLE);
+        PendingIntent workPendingIntent = PendingIntent.getBroadcast(getContext(), 1, intent, PendingIntent.FLAG_IMMUTABLE);
+
+        if (isEnabled) {
+            if (homeNotificationTime != null) {
+                // Schedule daily notification for home commute
+                Calendar now = Calendar.getInstance();
+                if (now.after(homeNotificationTime)) {
+                    homeNotificationTime.add(Calendar.DAY_OF_MONTH, 1);
+                }
+                alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, homeNotificationTime.getTimeInMillis(),
+                        AlarmManager.INTERVAL_DAY, homePendingIntent);
+            }
+
+            if (workNotificationTime != null) {
+                // Schedule daily notification for work commute
+                Calendar now = Calendar.getInstance();
+                if (now.after(workNotificationTime)) {
+                    workNotificationTime.add(Calendar.DAY_OF_MONTH, 1);
+                }
+                alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, workNotificationTime.getTimeInMillis(),
+                        AlarmManager.INTERVAL_DAY, workPendingIntent);
+            }
+        } else {
+            // Cancel daily notifications
+            if (homePendingIntent != null) {
+                alarmManager.cancel(homePendingIntent);
+            }
+
+            if (workPendingIntent != null) {
+                alarmManager.cancel(workPendingIntent);
+            }
+        }
+    }
+
 
     @Override
     public void onDestroyView() {

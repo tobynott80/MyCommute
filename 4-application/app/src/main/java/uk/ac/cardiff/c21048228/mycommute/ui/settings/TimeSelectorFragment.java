@@ -14,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import java.util.Locale;
+
 import uk.ac.cardiff.c21048228.mycommute.R;
 import uk.ac.cardiff.c21048228.mycommute.databinding.FragmentTimeSelectorBinding;
 
@@ -49,21 +51,17 @@ public class TimeSelectorFragment extends Fragment {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //save time to shared prefs
+                // Save the selected time to shared preferences
                 SharedPreferences sharedPreferences = getActivity().getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE);
-                switch (timeTarget) {
-                    case "homeTime":
-                        //save home time
-                        sharedPreferences.edit().putString("homeTime", String.valueOf(timePicker.getHour()) + String.valueOf(timePicker.getMinute())).apply();
-                        break;
-                    case "workTime":
-                        //save work time
-                        sharedPreferences.edit().putString("workTime", String.valueOf(timePicker.getHour()) + String.valueOf(timePicker.getMinute())).apply();
-                        break;
-                }
-                //return to settings fragment
+                int hour = timePicker.getHour();
+                int minute = timePicker.getMinute();
+                String timeString = String.format(Locale.US, "%02d%02d", hour, minute);
+                sharedPreferences.edit().putString(timeTarget, timeString).apply();
+
+                // Return to settings fragment
                 getActivity().getSupportFragmentManager().popBackStack();
             }
         });
+
     }
 }
