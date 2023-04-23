@@ -7,6 +7,11 @@ import uk.ac.cardiff.c21048228.mycommute.ui.timetable.TrainService;
 public class Commute {
     String Arrival;
     String Destination;
+
+    public ArrayList<TrainService> getServices() {
+        return services;
+    }
+
     ArrayList<TrainService> services;
     Boolean isValid;
 

@@ -216,8 +216,10 @@ public class SettingsFragment extends Fragment {
                 if (now.after(homeNotificationTime)) {
                     homeNotificationTime.add(Calendar.DAY_OF_MONTH, 1);
                 }
+                now.set(Calendar.SECOND,00);
+                now.set(Calendar.MILLISECOND,00);
                 alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, homeNotificationTime.getTimeInMillis(),
-                        AlarmManager.INTERVAL_DAY, homePendingIntent);
+                        AlarmManager.INTERVAL_FIFTEEN_MINUTES, homePendingIntent);
             }
 
             if (workNotificationTime != null) {
@@ -226,8 +228,10 @@ public class SettingsFragment extends Fragment {
                 if (now.after(workNotificationTime)) {
                     workNotificationTime.add(Calendar.DAY_OF_MONTH, 1);
                 }
+                now.set(Calendar.SECOND,00);
+                now.set(Calendar.MILLISECOND,00);
                 alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, workNotificationTime.getTimeInMillis(),
-                        AlarmManager.INTERVAL_DAY, workPendingIntent);
+                        1000 * 60 * 20, workPendingIntent);
             }
         } else {
             // Cancel daily notifications
