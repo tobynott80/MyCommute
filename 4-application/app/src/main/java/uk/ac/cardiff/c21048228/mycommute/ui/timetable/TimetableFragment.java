@@ -26,6 +26,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import java.time.Duration;
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -135,6 +136,26 @@ public class TimetableFragment extends Fragment {
                             departures = new ArrayList<>();
                             //if no services are available - notify with toast
                             if (!(services == null)){
+                                // Sort services by departure time
+                                services.sort((o1, o2) -> {
+                                    String time1 = o1.getLocationDetail().getRealtimeDeparture();
+                                    String time2 = o2.getLocationDetail().getRealtimeDeparture();
+                                    if (time1 == null) {
+                                        time1 = o1.getLocationDetail().getGbttBookedDeparture();
+                                    }
+                                    if (time2 == null) {
+                                        time2 = o2.getLocationDetail().getGbttBookedDeparture();
+                                    }
+                                    return time1.compareTo(time2);
+                                });
+                                // Sort services by departure date
+                                services.sort((o1, o2) -> {
+                                    String date1 = o1.getRunDate();
+                                    String date2 = o2.getRunDate();
+                                    LocalDate date1Local = LocalDate.parse(date1);
+                                    LocalDate date2Local = LocalDate.parse(date2);
+                                    return date1Local.compareTo(date2Local);
+                                });
                                 // Create Train Service objects for each returned departure in the response body
                                 for (int i = 0; i < services.size(); i++) {
                                     // Create enum holder for service status
