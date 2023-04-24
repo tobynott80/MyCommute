@@ -9,8 +9,8 @@
     <string name="search_hint">Gorslas</string>
     <string name="on_time">Ar Amser</string>
     <string name="platform">Llwyfan</string>
-    <string name="delayed">Wedi\'i Hwyrhoi</string>
-    <string name="cancelled">Wedi\'i Ganslo</string>
+    <string name="delayed">Delslo</string>
+    <string name="cancelled">Ganslo</string>
     <string name="no_information">Dim Gwybodaeth</string>
     <string name="arrival">Cyrraedd</string>
     <string name="departure">Gadael</string>
@@ -52,4 +52,6 @@
     <string name="home_commute_time">Amser Nithdaith Cartref</string>
     <string name="work_commute_time">Amser Nithdaith Gwaith</string>
     <string name="daily_commute_notifications">Dalio Commutiog Nogliddcadon</string>
+    <string name="sample_notification">Cymru am byth!</string>
+    <string name="no_time_set">Calon lan yn llawn daioni</string>
 </resources>
