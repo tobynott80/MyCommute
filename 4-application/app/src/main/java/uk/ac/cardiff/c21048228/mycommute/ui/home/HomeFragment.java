@@ -46,6 +46,7 @@ public class HomeFragment extends Fragment {
                 new ViewModelProvider(this).get(HomeViewModel.class);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
+        binding.progressBar.setVisibility(View.VISIBLE);
         View root = binding.getRoot();
         ConstraintLayout commuteLayout = binding.homeCommuteLayout;
         commuteLayout.setVisibility(View.GONE);
@@ -65,6 +66,7 @@ public class HomeFragment extends Fragment {
             commuteBuilder.getCommute(departureStation, arrivalStation, departureTime, new CommuteCallback() {
                 @Override
                 public void onCommuteLoaded(Commute commute) {
+                    binding.progressBar.setVisibility(View.GONE);
                     // Load the fragment once the callback is complete
                     FragmentManager fragmentManager = getParentFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -98,6 +100,7 @@ public class HomeFragment extends Fragment {
         } else{
             final TextView textView = binding.tvSetup;
             homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+            binding.progressBar.setVisibility(View.GONE);
         }
         return root;
     }
