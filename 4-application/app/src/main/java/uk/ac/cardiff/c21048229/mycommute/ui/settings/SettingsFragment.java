@@ -51,10 +51,27 @@ public class SettingsFragment extends Fragment {
         SwitchMaterial switchNotification = binding.swNotification;
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE);
-        btnSetHomeDeparture.setText(sharedPreferences.getString("homeDepartureName", "Departure"));
-        btnSetHomeArrival.setText(sharedPreferences.getString("homeArrivalName", "Arrival"));
-        btnSetWorkDeparture.setText(sharedPreferences.getString("workDepartureName", "Departure"));
-        btnSetWorkArrival.setText(sharedPreferences.getString("workArrivalName", "Arrival"));
+        // Set button text based on shared preferences
+        if(sharedPreferences.getString("homeDepartureName", "Departure").equals("Departure")){
+            btnSetHomeDeparture.setText(getString(R.string.departure));
+        } else {
+            btnSetHomeDeparture.setText(sharedPreferences.getString("homeDepartureName", "Departure"));
+        }
+        if(sharedPreferences.getString("homeArrivalName", "Arrival").equals("Arrival")){
+            btnSetHomeArrival.setText(getString(R.string.arrival));
+        } else {
+            btnSetHomeArrival.setText(sharedPreferences.getString("homeArrivalName", "Arrival"));
+        }
+        if(sharedPreferences.getString("workDepartureName", "Departure").equals("Departure")){
+            btnSetWorkDeparture.setText(getString(R.string.departure));
+        } else {
+            btnSetWorkDeparture.setText(sharedPreferences.getString("workDepartureName", "Departure"));
+        }
+        if(sharedPreferences.getString("workArrivalName", "Arrival").equals("Arrival")){
+            btnSetWorkArrival.setText(getString(R.string.arrival));
+        } else {
+            btnSetWorkArrival.setText(sharedPreferences.getString("workArrivalName", "Arrival"));
+        }
         btnHomeCTime.setText(sharedPreferences.getString("homeTime", "Home"));
         btnWorkCTime.setText(sharedPreferences.getString("workTime", "Work"));
 
@@ -170,12 +187,12 @@ public class SettingsFragment extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(b && homeNotificationTime == null && workNotificationTime == null){
-                    Toast.makeText(getContext(), "Please set a time for home and work", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), getString(R.string.no_time_set), Toast.LENGTH_SHORT).show();
                     switchNotification.setChecked(false);
                 } else {
                     setDailyNotification(b, homeNotificationTime, workNotificationTime);
                     if(b){
-                        NotificationHelper.showNotification(getContext(), "MyCommute", "This is how you will be notified");
+                        NotificationHelper.showNotification(getContext(), "MyCommute", getString(R.string.sample_notification));
                     }
                 }
                 SharedPreferences.Editor editor = sharedPreferences.edit();

@@ -173,7 +173,7 @@ public class TimetableFragment extends Fragment {
                                     String departureTime = services.get(i).locationDetail.getRealtimeDeparture();
 
                                     // Get the origin (not super necessary, but it looks nicer in the UI lol)
-                                    String origin = "Arriving From: " + services.get(i).getLocationDetail().getOrigin().get(0).getDescription();
+                                    String origin = getString(R.string.arr_from_colon) + services.get(i).getLocationDetail().getOrigin().get(0).getDescription();
                                     // If RTT cannot find an estimated departure, get the booked departure instead
                                     if (departureTime == null){
                                         departureTime = services.get(i).locationDetail.getGbttBookedDeparture();
@@ -190,19 +190,21 @@ public class TimetableFragment extends Fragment {
                                                 long delayLength = delayDuration.toMinutes();
 
                                                 // Set the origin text view to the delay length, as it isn't actually that important
-                                                origin = String.format("Delayed by %s mins (%s)", delayLength, (bookedArrival.substring(0,2) + ":" + bookedArrival.substring(2,4)));
+                                                String delayedByFormat = getString(R.string.delayed_by);
+                                                String delayLengthString = Long.toString(delayLength);
+                                                origin = String.format(delayedByFormat, delayLengthString, (bookedArrival.substring(0,2) + ":" + bookedArrival.substring(2,4)));
                                             }
                                         }
                                     }
                                     // Find if train is cancelled
                                     if (services.get(i).getLocationDetail().getDisplayAs().equals("CANCELLED_CALL")){
                                         status = CANCELLED;
-                                        origin = "Cancelled: " + services.get(i).locationDetail.getCancelReasonShortText();
+                                        origin = getString(R.string.cancelled_colon) + services.get(i).locationDetail.getCancelReasonShortText();
                                     }
                                     // Find if train is replacement bus
                                     if (services.get(i).getServiceType().equals("bus")){
-                                        platform = "Bus";
-                                        origin = "Replacement Bus";
+                                        platform = getString(R.string.bus);
+                                        origin = getString(R.string.replacement_bus);
                                     }
                                     // Format the departure time from HHMM to HH:MM
                                     String formattedDepartureTime = departureTime.substring(0, 2) + ":" + departureTime.substring(2, 4);
@@ -215,7 +217,7 @@ public class TimetableFragment extends Fragment {
                                 // Easter egg: remove before release
                                 departures.add(new TrainService("9¾", "11:00", "Hogwarts Express", "Hogwarts", TrainStatus.ON_TIME));
                             }else{
-                                Toast.makeText(binding.getRoot().getContext(), "No Departures Available", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(binding.getRoot().getContext(), getContext().getText(R.string.no_departures_available), Toast.LENGTH_SHORT).show();
                                 binding.progressBar.setVisibility(View.GONE);
                                 return;
                             }
@@ -232,7 +234,7 @@ public class TimetableFragment extends Fragment {
 
                         @Override
                         public void onFailure(Call<SearchModel> call, Throwable t) {
-                            Toast.makeText(binding.getRoot().getContext(), "Error: API unavailable", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(binding.getRoot().getContext(), getContext().getText(R.string.err_api_unavailable), Toast.LENGTH_SHORT).show();
                             binding.progressBar.setVisibility(View.GONE);
                         }
                     });
@@ -240,7 +242,7 @@ public class TimetableFragment extends Fragment {
                 }
                 else{
                     //show error toast
-                    Toast.makeText(binding.getRoot().getContext(), "Please select an Arrival and Departure station", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(binding.getRoot().getContext(), getContext().getText(R.string.select_arr_and_dep_stnt), Toast.LENGTH_SHORT).show();
                     binding.progressBar.setVisibility(View.GONE);
                 }
             }

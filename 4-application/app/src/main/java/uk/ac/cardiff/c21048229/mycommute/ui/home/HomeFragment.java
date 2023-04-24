@@ -17,6 +17,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 import uk.ac.cardiff.c21048229.mycommute.R;
 import uk.ac.cardiff.c21048229.mycommute.databinding.FragmentHomeBinding;
@@ -30,8 +31,7 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         binding.progressBar.setVisibility(View.VISIBLE);
@@ -41,13 +41,14 @@ public class HomeFragment extends Fragment {
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("sharedPrefs", 0);
         if((sharedPreferences.getBoolean("isCommuteSetup", false))){
             commuteLayout.setVisibility(View.VISIBLE);
+            binding.tvSetup.setVisibility(View.GONE);
             CommuteBuilder commuteBuilder = new CommuteBuilder();
             Station departureStation = new Station(sharedPreferences.getString("homeDepartureName", "Cardiff Central"), sharedPreferences.getString("homeDepartureCRS", "CDF"));
             Station arrivalStation = new Station(sharedPreferences.getString("homeArrivalName", "Newport"), sharedPreferences.getString("homeArrivalCRS", "NWP"));
             String departureTime = sharedPreferences.getString("homeTime", "Home");
             if(departureTime.equals("Home")){
                 // If home departure time not set, use current time
-                SimpleDateFormat sdf = new SimpleDateFormat("HHmm");
+                SimpleDateFormat sdf = new SimpleDateFormat("HHmm", Locale.US);
                 departureTime = sdf.format(new Date());
             }
             String finalDepartureTime = departureTime;
@@ -66,9 +67,9 @@ public class HomeFragment extends Fragment {
             Station workDepartureStation = new Station(sharedPreferences.getString("workDepartureName", "Cardiff Central"), sharedPreferences.getString("workDepartureCRS", "CDF"));
             Station workArrivalStation = new Station(sharedPreferences.getString("workArrivalName", "Newport"), sharedPreferences.getString("workArrivalCRS", "NWP"));
             String workDepartureTime = sharedPreferences.getString("workTime", "Work");
-            if(departureTime.equals("Work")){
+            if(workDepartureTime.equals("Work")){
                 // If home departure time not set, use current time
-                SimpleDateFormat sdf = new SimpleDateFormat("HHmm");
+                SimpleDateFormat sdf = new SimpleDateFormat("HHmm", Locale.US);
                 workDepartureTime = sdf.format(new Date());
             }
 
@@ -86,8 +87,7 @@ public class HomeFragment extends Fragment {
             });
 
         } else{
-            final TextView textView = binding.tvSetup;
-            homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+            binding.tvSetup.setText(getString(R.string.home_init));
             binding.progressBar.setVisibility(View.GONE);
         }
         return root;
