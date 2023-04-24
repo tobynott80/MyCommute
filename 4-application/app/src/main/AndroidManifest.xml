@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="uk.ac.cardiff.c21048228.mycommute">
+    package="uk.ac.cardiff.c21048229.mycommute">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
@@ -18,10 +18,10 @@
         android:theme="@style/Theme.MyCommute"
         tools:targetApi="31">
         <activity
-            android:name=".ui.welcome.WelcomeActivity"
+            android:name="uk.ac.cardiff.c21048229.mycommute.ui.welcome.WelcomeActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="uk.ac.cardiff.c21048229.mycommute.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +30,7 @@
             </intent-filter>
         </activity>
         <receiver
-            android:name=".notification.DailyNotificationReceiver"
+            android:name="uk.ac.cardiff.c21048229.mycommute.notification.DailyNotificationReceiver"
             android:enabled="true"
             android:exported="false" />
     </application>

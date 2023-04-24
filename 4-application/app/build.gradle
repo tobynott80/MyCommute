@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'uk.ac.cardiff.c21048228.mycommute'
+    namespace 'uk.ac.cardiff.c21048229.mycommute'
     compileSdk 32
 
     defaultConfig {
-        applicationId "uk.ac.cardiff.c21048228.mycommute"
+        applicationId "uk.ac.cardiff.c21048229.mycommute"
         minSdk 28
         targetSdk 32
         versionCode 1

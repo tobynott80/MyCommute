@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="uk.ac.cardiff.c21048228.mycommute.ui.home.HomeFragment"
+        android:name="uk.ac.cardiff.c21048229.mycommute.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_timetable"
-        android:name="uk.ac.cardiff.c21048228.mycommute.ui.timetable.TimetableFragment"
+        android:name="uk.ac.cardiff.c21048229.mycommute.ui.timetable.TimetableFragment"
         android:label="@string/title_timetable"
         tools:layout="@layout/fragment_timetable" >
         <action
@@ -24,12 +24,12 @@
 
     <fragment
         android:id="@+id/navigation_settings"
-        android:name="uk.ac.cardiff.c21048228.mycommute.ui.settings.SettingsFragment"
+        android:name="uk.ac.cardiff.c21048229.mycommute.ui.settings.SettingsFragment"
         android:label="@string/title_settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/locationSelectorFragment2"
-        android:name="uk.ac.cardiff.c21048228.mycommute.ui.locationSelector.LocationSelectorFragment"
+        android:name="uk.ac.cardiff.c21048229.mycommute.ui.locationSelector.LocationSelectorFragment"
         android:label="LocationSelectorFragment"
         tools:layout="@layout/fragment_location_selector">
         <action
