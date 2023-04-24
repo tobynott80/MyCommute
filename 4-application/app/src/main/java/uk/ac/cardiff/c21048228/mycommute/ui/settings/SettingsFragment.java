@@ -62,11 +62,8 @@ public class SettingsFragment extends Fragment {
         btnHomeCTime.setText(sharedPreferences.getString("homeTime", "Home"));
         btnWorkCTime.setText(sharedPreferences.getString("workTime", "Work"));
 
-        if (sharedPreferences.getBoolean("notification", false)) {
-            switchNotification.setChecked(true);
-        } else {
-            switchNotification.setChecked(false);
-        }
+        switchNotification.setChecked(sharedPreferences.getBoolean("notification", false));
+
         if (sharedPreferences.getString("homeTime", "Home").equals("Home")) {
             btnHomeCTime.setText(R.string.home);
         } else {
@@ -87,7 +84,7 @@ public class SettingsFragment extends Fragment {
             workNotificationTime.set(Calendar.MINUTE, Integer.parseInt(workTime.substring(2)));
             workNotificationTime.set(Calendar.SECOND, 0);
         }
-
+        setDailyNotification(sharedPreferences.getBoolean("notification", false), homeNotificationTime, workNotificationTime);
 
         btnSetHomeDeparture.setOnClickListener(new View.OnClickListener() {
             @Override
