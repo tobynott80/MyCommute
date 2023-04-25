@@ -45,7 +45,7 @@ public class HomeFragment extends Fragment {
             CommuteBuilder commuteBuilder = new CommuteBuilder();
             Station departureStation = new Station(sharedPreferences.getString("homeDepartureName", "Cardiff Central"), sharedPreferences.getString("homeDepartureCRS", "CDF"));
             Station arrivalStation = new Station(sharedPreferences.getString("homeArrivalName", "Newport"), sharedPreferences.getString("homeArrivalCRS", "NWP"));
-            String departureTime = sharedPreferences.getString("homeTime", "Home");
+            String departureTime = sharedPreferences.getString("homeCTime", "Home");
             if(departureTime.equals("Home")){
                 // If home departure time not set, use current time
                 SimpleDateFormat sdf = new SimpleDateFormat("HHmm", Locale.US);
@@ -66,7 +66,7 @@ public class HomeFragment extends Fragment {
             });
             Station workDepartureStation = new Station(sharedPreferences.getString("workDepartureName", "Cardiff Central"), sharedPreferences.getString("workDepartureCRS", "CDF"));
             Station workArrivalStation = new Station(sharedPreferences.getString("workArrivalName", "Newport"), sharedPreferences.getString("workArrivalCRS", "NWP"));
-            String workDepartureTime = sharedPreferences.getString("workTime", "Work");
+            String workDepartureTime = sharedPreferences.getString("workCTime", "Work");
             if(workDepartureTime.equals("Work")){
                 // If home departure time not set, use current time
                 SimpleDateFormat sdf = new SimpleDateFormat("HHmm", Locale.US);

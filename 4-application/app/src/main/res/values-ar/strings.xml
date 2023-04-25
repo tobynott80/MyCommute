@@ -54,4 +54,5 @@
     <string name="daily_commute_notifications">إشعارات التنقل اليومي</string>
     <string name="sample_notification">هكذا سيتم إبلاغك</string>
     <string name="no_time_set">يرجى تعيين وقت للمنزل والعمل</string>
+    <string name="time_plain">Time</string>
 </resources>

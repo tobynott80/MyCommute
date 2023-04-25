@@ -42,9 +42,9 @@ public class TimeSelectorFragment extends Fragment {
         Button btnCancel = binding.btnCancel;
         TimePicker timePicker = binding.timePicker;
         TextView tvTitle = binding.tvTitle;
-        if (timeTarget.equals("homeTime")) {
+        if (timeTarget.equals("homeTime") || timeTarget.equals("homeCTime")) {
             tvTitle.setText(R.string.homeTimeTitle);
-        } else if (timeTarget.equals("workTime")) {
+        } else if (timeTarget.equals("workTime") || timeTarget.equals("workCTime")) {
             tvTitle.setText(R.string.workTimeTitle);
         }
         timePicker.setIs24HourView(true);

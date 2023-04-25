@@ -7,7 +7,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             tools:context=".ui.settings.SettingsFragment">
 
                 <TextView
@@ -38,10 +38,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginEnd="2dp"
                     android:background="@drawable/station_search_button"
                     android:text="@string/departure"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnWCtime"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvHelpHint2" />
 
@@ -50,26 +50,26 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
                     android:background="@drawable/station_search_button"
                     android:text="@string/arrival"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnWCtime"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                    app:layout_constraintTop_toBottomOf="@+id/btnWorkDeparture" />
 
                 <Button
                     android:id="@+id/btnHomeArrival"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
                     android:background="@drawable/station_search_button"
                     android:text="@string/arrival"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnHCtime"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                    app:layout_constraintTop_toBottomOf="@+id/btnHomeDeparture" />
 
                 <Button
                     android:id="@+id/btnHomeDeparture"
@@ -77,24 +77,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginEnd="2dp"
                     android:background="@drawable/station_search_button"
                     android:text="@string/departure"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnHCtime"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tvHelpHint"
-                    tools:layout_editor_absoluteY="43dp" />
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:contentDescription="@string/arrow_downwards"
-                    android:src="@drawable/ic_baseline_arrow_downward_24"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btnHomeDeparture" />
+                    app:layout_constraintTop_toBottomOf="@id/tvHelpHint" />
 
                 <TextView
                     android:id="@+id/tvHelpHint"
@@ -115,17 +103,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tvWorkCommute" />
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:contentDescription="@string/arrow_downwards"
-                    android:src="@drawable/ic_baseline_arrow_downward_24"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btnWorkDeparture" />
-
                 <com.google.android.material.switchmaterial.SwitchMaterial
                     android:id="@+id/swNotification"
                     android:layout_width="wrap_content"
@@ -142,6 +119,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_marginTop="8dp"
+                    android:background="@drawable/station_search_button"
                     android:text="@string/home"
                     app:layout_constraintEnd_toStartOf="@+id/tvWorkCTime"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -154,6 +132,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
+                    android:background="@drawable/station_search_button"
                     android:text="@string/work"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -191,6 +170,28 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/btnHomeCTime"
                     app:layout_constraintTop_toBottomOf="@+id/swNotification" />
+
+                <Button
+                    android:id="@+id/btnHCtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/station_search_button"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnHomeArrival"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvHelpHint" />
+
+                <Button
+                    android:id="@+id/btnWCtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/station_search_button"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnWorkArrival"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvHelpHint2" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

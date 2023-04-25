@@ -49,6 +49,8 @@ public class SettingsFragment extends Fragment {
         Button btnHomeCTime = binding.btnHomeCTime;
         Button btnWorkCTime = binding.btnWorkCTime;
         SwitchMaterial switchNotification = binding.swNotification;
+        Button btnHCtime = binding.btnHCtime;
+        Button btnWCtime = binding.btnWCtime;
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE);
         // Set button text based on shared preferences
@@ -72,8 +74,20 @@ public class SettingsFragment extends Fragment {
         } else {
             btnSetWorkArrival.setText(sharedPreferences.getString("workArrivalName", "Arrival"));
         }
-        btnHomeCTime.setText(sharedPreferences.getString("homeTime", "Home"));
-        btnWorkCTime.setText(sharedPreferences.getString("workTime", "Work"));
+
+        if(sharedPreferences.getString("homeCTime", "Home").equals("Home")){
+            btnHCtime.setText(getString(R.string.time_plain));
+        }else{
+            String homeCtime = sharedPreferences.getString("homeCTime", "Home");
+            btnHCtime.setText(String.format(getString(R.string.time), homeCtime.substring(0,2), homeCtime.substring(2)));
+        }
+
+        if(sharedPreferences.getString("workCTime", "Work").equals("Work")){
+            btnWCtime.setText(getString(R.string.time_plain));
+        }else{
+            String workCtime = sharedPreferences.getString("workCTime", "Work");
+            btnWCtime.setText(String.format(getString(R.string.time), (workCtime.substring(0,2)), (workCtime.substring(2))));
+        }
 
         switchNotification.setChecked(sharedPreferences.getBoolean("notification", false));
 
@@ -183,6 +197,32 @@ public class SettingsFragment extends Fragment {
             }
         });
 
+        btnHCtime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getParentFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                TimeSelectorFragment timeSelectorFragment = new TimeSelectorFragment("homeCTime");
+                fragmentTransaction.replace(R.id.nav_host_fragment_activity_main, timeSelectorFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.setReorderingAllowed(true);
+                fragmentTransaction.commit();
+            }
+        });
+
+        btnWCtime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getParentFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                TimeSelectorFragment timeSelectorFragment = new TimeSelectorFragment("workCTime");
+                fragmentTransaction.replace(R.id.nav_host_fragment_activity_main, timeSelectorFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.setReorderingAllowed(true);
+                fragmentTransaction.commit();
+            }
+        });
+
         switchNotification.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -195,6 +235,8 @@ public class SettingsFragment extends Fragment {
                         NotificationHelper.showNotification(getContext(), "MyCommute", getString(R.string.sample_notification));
                     }
                 }
+                binding.btnWorkCTime.setEnabled(b);
+                binding.btnHomeCTime.setEnabled(b);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putBoolean("notification", b);
                 editor.apply();
@@ -256,4 +298,5 @@ public class SettingsFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
 }

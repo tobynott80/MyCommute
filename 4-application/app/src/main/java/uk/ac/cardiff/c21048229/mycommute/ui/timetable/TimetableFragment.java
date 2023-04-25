@@ -75,6 +75,7 @@ public class TimetableFragment extends Fragment {
 
         binding = FragmentTimetableBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+        setRetainInstance(true);
 
         btnTextDeparture = binding.btnTextDeparture;
         btnTextArrival = binding.btnTextArrival;
