@@ -12,6 +12,10 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
+
 import uk.ac.cardiff.c21048229.mycommute.databinding.ActivityMainBinding;
 import uk.ac.cardiff.c21048229.mycommute.ui.welcome.WelcomeActivity;
 
@@ -22,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // App Center onCreate
+        AppCenter.start(getApplication(), "ca57d954-0b52-4b80-ba00-65ffb28cb983",
+                Analytics.class, Crashes.class);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
