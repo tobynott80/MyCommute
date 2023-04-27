@@ -19,3 +19,7 @@ CI/CD provided by MS AppCenter. [Download latest release](https://install.appcen
   - Currently Supported: English, Welsh, Arabic, Esperanto
 - Landscape orientation supported
 - Full compatability with screen-readers
+
+## Limitiations
+
+Due to the limitations of the Free RTT API service, MyCommute can only search for direct routes. This means that jouneys with multiple legs need to be split (E.g Cardiff Queen Street --> Cardiff Central --> Newport).
