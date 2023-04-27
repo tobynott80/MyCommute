@@ -41,6 +41,7 @@
                     android:layout_marginEnd="2dp"
                     android:background="@drawable/station_search_button"
                     android:text="@string/departure"
+                    android:textColor="@color/white"
                     app:layout_constraintEnd_toStartOf="@+id/btnWCtime"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvHelpHint2" />
@@ -54,6 +55,7 @@
                     android:layout_marginEnd="2dp"
                     android:background="@drawable/station_search_button"
                     android:text="@string/arrival"
+                    android:textColor="@color/white"
                     app:layout_constraintEnd_toStartOf="@+id/btnWCtime"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/btnWorkDeparture" />
@@ -67,6 +69,7 @@
                     android:layout_marginEnd="2dp"
                     android:background="@drawable/station_search_button"
                     android:text="@string/arrival"
+                    android:textColor="@color/white"
                     app:layout_constraintEnd_toStartOf="@+id/btnHCtime"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/btnHomeDeparture" />
@@ -80,6 +83,7 @@
                     android:layout_marginEnd="2dp"
                     android:background="@drawable/station_search_button"
                     android:text="@string/departure"
+                    android:textColor="@color/white"
                     app:layout_constraintEnd_toStartOf="@+id/btnHCtime"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tvHelpHint" />
@@ -121,6 +125,7 @@
                     android:layout_marginTop="8dp"
                     android:background="@drawable/station_search_button"
                     android:text="@string/home"
+                    android:textColor="@color/white"
                     app:layout_constraintEnd_toStartOf="@+id/tvWorkCTime"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/tvHomeCTime"
@@ -178,6 +183,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/station_search_button"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/btnHomeArrival"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvHelpHint" />
@@ -189,6 +195,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/station_search_button"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/btnWorkArrival"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvHelpHint2" />

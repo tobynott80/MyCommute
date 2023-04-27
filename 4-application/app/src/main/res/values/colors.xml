@@ -11,4 +11,7 @@
     <color name="DelayedYellow">#FFC107</color>
     <color name="CancelledRed">#F44336</color>
     <color name="blue_primary">#455ACC</color>
+    <color name="dark_blue">#243178</color>
+    <color name="dark_blue_secondary">#2E3D8F</color>
+
 </resources>

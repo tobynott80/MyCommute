@@ -20,13 +20,10 @@
         android:id="@+id/rvCommuteServices"
         android:layout_width="0dp"
         android:layout_height="300dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRouteDetails"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/tvRouteDetails" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
