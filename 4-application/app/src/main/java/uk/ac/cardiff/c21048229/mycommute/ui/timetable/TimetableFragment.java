@@ -23,6 +23,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.analytics.EventProperties;
+
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -117,6 +120,12 @@ public class TimetableFragment extends Fragment {
             public void onClick(View v) {
                 // Set progress bar to visible while the api is called and the data is parsed into the recyclerview
                 binding.progressBar.setVisibility(View.VISIBLE);
+                // AppCenter Analytics
+                EventProperties eventProperties = new EventProperties();
+                eventProperties.set("Departure", departureStation.getStationName());
+                eventProperties.set("Arrival", arrivalStation.getStationName());
+
+                Analytics.trackEvent("Searched Timetable", eventProperties);
                 if (getDepartureStation() != null && getArrivalStation() != null && getArrivalStation() != getDepartureStation()) {
                     //search with api using our retrofit instance
                     RttMethods rttMethods = RttRetroFit.getRetrofitInstance().create(RttMethods.class);
