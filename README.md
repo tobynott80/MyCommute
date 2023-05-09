@@ -23,3 +23,9 @@ CI/CD provided by MS AppCenter. [Download latest release](https://install.appcen
 ## Limitiations
 
 Due to the limitations of the Free RTT API service, MyCommute can only search for direct routes. This means that jouneys with multiple legs need to be split (E.g Cardiff Queen Street --> Cardiff Central --> Newport).
+
+## Localisation
+
+Currently 100% Translation for English, Welsh, Arabic and Esperanto.
+
+[Translation Progress](https://poeditor.com/projects/view?id=617857)
