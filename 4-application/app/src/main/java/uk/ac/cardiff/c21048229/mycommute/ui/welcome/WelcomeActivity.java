@@ -1,6 +1,7 @@
 package uk.ac.cardiff.c21048229.mycommute.ui.welcome;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,10 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
         Button btnContinue = findViewById(R.id.btnContinue);
+        ViewPager2 viewPager2 = findViewById(R.id.ViewPagerWelcome);
+
+        // Setup viewpager
+
 
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -6,184 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".ui.welcome.WelcomeActivity">
 
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/WelcomeText1"
-        android:textAlignment="center"
-        android:textSize="48sp"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/ViewPagerWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-
-
-
-    <TextView
-        android:id="@+id/tvWelcome2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:text="@string/welcometext2"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="172dp" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/tvDailyCommute"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline3"
-        app:srcCompat="@drawable/ic_baseline_train_24"
-        android:contentDescription="@string/train_icon" />
-
-    <TextView
-        android:id="@+id/tvDailyCommute"
-        android:layout_width="122dp"
-        android:layout_height="wrap_content"
-        android:text="@string/daily_commute"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView4"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@id/guideline3"
-        tools:layout_editor_absoluteY="200dp" />
-
-    <TextView
-        android:id="@+id/tvDailyCommute2"
-        android:layout_width="125dp"
-        android:layout_height="50dp"
-        android:text="@string/timetable"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/guideline4"
-        app:layout_constraintEnd_toStartOf="@+id/textView5"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        tools:layout_editor_absoluteY="320dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="165dp"
-        android:layout_height="81dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/dailycommutepara"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvDailyCommute"
-        app:layout_constraintTop_toBottomOf="@id/guideline3" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="279dp" />
-
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/tvDailyCommute2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline4"
-        app:srcCompat="@drawable/ic_baseline_compare_arrows_24"
-        tools:layout_editor_absoluteY="303dp" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="155dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/guideline4"
-        android:text="@string/timetablepara"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvDailyCommute2"
-        tools:layout_editor_absoluteY="311dp" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/tvDailyCommute3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline5"
-        app:srcCompat="@drawable/ic_notifications_black_24dp" />
-    <TextView
-        android:id="@+id/tvDailyCommute3"
-        android:layout_width="127dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/stay_notified"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@id/guideline5"
-        app:layout_constraintEnd_toStartOf="@+id/textView6"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        tools:layout_editor_absoluteY="410dp" />
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="155dp"
-        android:layout_height="84dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/stay_notified_para"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintTop_toBottomOf="@id/guideline5"
-        app:layout_constraintStart_toEndOf="@+id/tvDailyCommute3"
-        tools:layout_editor_absoluteY="404dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="373dp" />
+    </androidx.viewpager2.widget.ViewPager2>
 
     <Button
         android:id="@+id/btnContinue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="@string/continueString"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline6"
-        />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="478dp" />
-
-
+        app:layout_constraintTop_toBottomOf="@id/ViewPagerWelcome"></Button>
 </androidx.constraintlayout.widget.ConstraintLayout>
