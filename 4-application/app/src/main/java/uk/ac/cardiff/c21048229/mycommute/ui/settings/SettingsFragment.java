@@ -235,8 +235,6 @@ public class SettingsFragment extends Fragment {
                         NotificationHelper.showNotification(getContext(), "MyCommute", getString(R.string.sample_notification));
                     }
                 }
-                binding.btnWorkCTime.setEnabled(b);
-                binding.btnHomeCTime.setEnabled(b);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putBoolean("notification", b);
                 editor.apply();
