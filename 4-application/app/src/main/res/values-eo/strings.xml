@@ -55,4 +55,5 @@
     <string name="sample_notification">Tiel vi estos sciigita</string>
     <string name="no_time_set">Bonvolu agordi hejman kaj laborservo tempon</string>
     <string name="time_plain">Tempo</string>
+    <string name="swap">Swap</string>
 </resources>

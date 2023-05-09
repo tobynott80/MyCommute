@@ -55,4 +55,5 @@
     <string name="sample_notification">Cymru am byth!</string>
     <string name="no_time_set">Calon lan yn llawn daioni</string>
     <string name="time_plain">Timiaw</string>
+    <string name="swap">Swap</string>
 </resources>
