@@ -4,35 +4,35 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.lifecycle.Lifecycle;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.ViewHolder>{
-    List<Integer> images;
-    List<Integer> pagagraphs;
+public class ViewPagerAdapter extends FragmentStateAdapter {
+    private ArrayList<WelcomeItemFragment> fragments = new ArrayList<>();
+
+    public ViewPagerAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
+        super(fragmentManager, lifecycle);
+    }
 
 
     @NonNull
     @Override
-    public ViewPagerAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull ViewPagerAdapter.ViewHolder holder, int position) {
-
+    public Fragment createFragment(int position) {
+        return fragments.get(position);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return fragments.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-        }
+    public void addFragment(WelcomeItemFragment fragment) {
+        fragments.add(fragment);
     }
 }
