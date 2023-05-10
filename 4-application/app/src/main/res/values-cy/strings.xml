@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">"MyCommute"</string>
     <string name="title_home">"Cartref"</string>
     <string name="title_timetable">"Amserlen"</string>
     <string name="title_settings">"Gosodiadau"</string>
