@@ -91,7 +91,7 @@ public class TimetableFragment extends Fragment {
                 //open location selector fragment
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                LocationSelectorFragment locationSelectorFragment = new LocationSelectorFragment("departure");
+                LocationSelectorFragment locationSelectorFragment = LocationSelectorFragment.newInstance("departure");
                 fragmentTransaction.replace(R.id.nav_host_fragment_activity_main, locationSelectorFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.setReorderingAllowed(true);
@@ -106,7 +106,7 @@ public class TimetableFragment extends Fragment {
                 //open location selector fragment
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                LocationSelectorFragment locationSelectorFragment = new LocationSelectorFragment("arrival");
+                LocationSelectorFragment locationSelectorFragment = LocationSelectorFragment.newInstance("arrival");
                 fragmentTransaction.replace(R.id.nav_host_fragment_activity_main, locationSelectorFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.setReorderingAllowed(true);

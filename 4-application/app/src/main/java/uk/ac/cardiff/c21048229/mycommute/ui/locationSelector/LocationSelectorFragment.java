@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
@@ -36,11 +37,25 @@ public class LocationSelectorFragment extends Fragment implements StationListRec
     private TimetableViewModel timetableViewModel;
 
 
-    public LocationSelectorFragment(String stationType){
-        this.StationType = stationType;
+    public LocationSelectorFragment() {
     }
 
+    public static LocationSelectorFragment newInstance(String stationType) {
+        LocationSelectorFragment fragment = new LocationSelectorFragment();
+        Bundle args = new Bundle();
+        args.putString("stationType", stationType);
+        fragment.setArguments(args);
+        return fragment;
+    }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            StationType = getArguments().getString("stationType");
+        }
+
+    }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
