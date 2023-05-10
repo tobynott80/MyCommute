@@ -55,4 +55,5 @@
     <string name="sample_notification">"This is how you will be notified"</string>
     <string name="no_time_set">"Please set a time for home and work"</string>
     <string name="time_plain">"Time"</string>
+    <string name="swap" translatable="false">swap</string>
 </resources>
