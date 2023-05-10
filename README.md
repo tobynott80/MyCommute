@@ -26,6 +26,6 @@ Due to the limitations of the Free RTT API service, MyCommute can only search fo
 
 ## Localisation
 
-Currently 100% Translation for English, Welsh, Arabic and Esperanto.
+Currently, 100% Translation for English, Welsh, Ukrainian, Chinese (Simplified), Dutch, Hindi, French, German, Arabic (RTL Supported), Bengali, Italian, Japanese, Korean, Swedish, Norwegian, Polish, Portugese, Spanish, Turkish and Esperanto.
 
 [Translation Progress](https://poeditor.com/projects/view?id=617857)
