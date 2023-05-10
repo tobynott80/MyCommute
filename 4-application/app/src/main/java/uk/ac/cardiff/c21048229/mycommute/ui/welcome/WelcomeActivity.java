@@ -1,6 +1,7 @@
 package uk.ac.cardiff.c21048229.mycommute.ui.welcome;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,15 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
         Button btnContinue = findViewById(R.id.btnContinue);
+        ViewPager2 viewPager2 = findViewById(R.id.ViewPagerWelcome);
+
+        // Setup viewpager
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager(), getLifecycle());
+        viewPager2.setAdapter(adapter);
+        adapter.addFragment(new WelcomeItemFragment(getDrawable(R.drawable.ic_baseline_search_24), getString(R.string.timetablepara)));
+        adapter.addFragment(new WelcomeItemFragment(getDrawable(R.drawable.ic_notifications_black_24dp), getString(R.string.stay_notified_para)));
+        adapter.addFragment(new WelcomeItemFragment(getDrawable(R.drawable.ic_baseline_train_24), getString(R.string.dailycommutepara)));
+
 
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
