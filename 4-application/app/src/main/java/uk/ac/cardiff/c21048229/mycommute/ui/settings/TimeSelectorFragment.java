@@ -63,5 +63,13 @@ public class TimeSelectorFragment extends Fragment {
             }
         });
 
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Return to settings fragment
+                getActivity().getSupportFragmentManager().popBackStack();
+            }
+        });
+
     }
 }
