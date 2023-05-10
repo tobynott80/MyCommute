@@ -4,7 +4,6 @@ import static uk.ac.cardiff.c21048229.mycommute.ui.timetable.TrainStatus.CANCELL
 import static uk.ac.cardiff.c21048229.mycommute.ui.timetable.TrainStatus.DELAYED;
 import static uk.ac.cardiff.c21048229.mycommute.ui.timetable.TrainStatus.ON_TIME;
 
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;

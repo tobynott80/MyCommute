@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import uk.ac.cardiff.c21048229.mycommute.R;
 import uk.ac.cardiff.c21048229.mycommute.databinding.FragmentCommuteHomeBinding;
 import uk.ac.cardiff.c21048229.mycommute.ui.timetable.TrainService;
 

@@ -1,8 +1,6 @@
 package uk.ac.cardiff.c21048229.mycommute.ui.welcome;
 
-import android.graphics.Picture;
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
