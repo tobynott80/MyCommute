@@ -56,4 +56,6 @@
     <string name="no_time_set">"Please set a time for home and work"</string>
     <string name="time_plain">"Time"</string>
     <string name="swap" translatable="false">swap</string>
+    <string name="station_to_station" translatable="false">Station to Station</string>
+    <string name="no_services_found" translatable="false">No services found</string>
 </resources>

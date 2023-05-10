@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import uk.ac.cardiff.c21048229.mycommute.R;
 import uk.ac.cardiff.c21048229.mycommute.databinding.FragmentCommuteHomeBinding;
 import uk.ac.cardiff.c21048229.mycommute.ui.timetable.TrainService;
 
@@ -47,7 +48,7 @@ public class CommuteFragment extends Fragment {
             recyclerView.setAdapter(adapter);
 
         } else {
-            binding.tvRouteDetails.setText("No services found");
+            binding.tvRouteDetails.setText(R.string.no_services_found);
         }
     }
 
