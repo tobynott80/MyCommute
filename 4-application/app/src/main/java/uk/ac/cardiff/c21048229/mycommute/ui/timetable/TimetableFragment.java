@@ -131,9 +131,10 @@ public class TimetableFragment extends Fragment {
                     Call<SearchModel> call = rttMethods.getAllData(departureStation.getStationCRS(), arrivalStation.getStationCRS(), "XX-API-KEY-XX==");
                     call.enqueue(new retrofit2.Callback<SearchModel>() {
                         @Override
-                        public void onResponse(Call<SearchModel> call, retrofit2.Response<SearchModel> response) {
+                        public void onResponse(@NonNull Call<SearchModel> call, @NonNull retrofit2.Response<SearchModel> response) {
                             System.out.println("Successful call " + response.code());
                             if (response.isSuccessful()) {
+                                assert response.body() != null;
                                 populateRecyclerView(response.body());
                             }
                         }
