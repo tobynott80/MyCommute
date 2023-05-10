@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("sharedPrefs", MODE_PRIVATE);
         Boolean isFirstRun = sharedPreferences.getBoolean("isFirstRun", true);
         if (isFirstRun) {
+            Analytics.trackEvent("First Open");
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putBoolean("isFirstRun", false);
             editor.apply();

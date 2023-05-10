@@ -52,4 +52,16 @@ public class CommuteFragment extends Fragment {
         }
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        // Reset binding
+        binding = null;
+        // Reset commute
+        commute = null;
+        // Cancel async tasks
+
+    }
+
+
 }

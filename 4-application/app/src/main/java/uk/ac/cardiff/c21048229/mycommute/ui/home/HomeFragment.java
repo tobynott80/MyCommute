@@ -28,6 +28,7 @@ import uk.ac.cardiff.c21048229.mycommute.ui.locationSelector.Station;
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
+    CommuteBuilder commuteBuilder = new CommuteBuilder();
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -42,7 +43,7 @@ public class HomeFragment extends Fragment {
         if((sharedPreferences.getBoolean("isCommuteSetup", false))){
             commuteLayout.setVisibility(View.VISIBLE);
             binding.tvSetup.setVisibility(View.GONE);
-            CommuteBuilder commuteBuilder = new CommuteBuilder();
+
             Station departureStation = new Station(sharedPreferences.getString("homeDepartureName", "Cardiff Central"), sharedPreferences.getString("homeDepartureCRS", "CDF"));
             Station arrivalStation = new Station(sharedPreferences.getString("homeArrivalName", "Newport"), sharedPreferences.getString("homeArrivalCRS", "NWP"));
             String departureTime = sharedPreferences.getString("homeCTime", "Home");
@@ -103,6 +104,8 @@ public class HomeFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+        // Cancel async tasks
+        commuteBuilder.cancelAsyncTasks();
     }
 
 }

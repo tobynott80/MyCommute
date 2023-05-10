@@ -21,6 +21,7 @@ import uk.ac.cardiff.c21048229.mycommute.ui.timetable.TrainStatus;
 public class CommuteBuilder {
 
     Commute builtCommute; //The commute that is to be returned
+    Call<SearchModel> call; //The call to the API
 
     public void getCommute(Station departureStation, Station arrivalStation, String departureTime, CommuteCallback callback) {
 
@@ -31,7 +32,7 @@ public class CommuteBuilder {
         int month = calendar.get(Calendar.MONTH) + 1; // Add 1 to get the month in range 1-12
         int day = calendar.get(Calendar.DAY_OF_MONTH);
 
-        Call<SearchModel> call = rttMethods.getAllDataWithTime(departureStation.getStationCRS(), arrivalStation.getStationCRS(), String.valueOf(year),String.format("%02d", month),String.format("%02d", day),departureTime, "XX-API-KEY-XX==");
+        call = rttMethods.getAllDataWithTime(departureStation.getStationCRS(), arrivalStation.getStationCRS(), String.valueOf(year),String.format("%02d", month),String.format("%02d", day),departureTime, "XX-API-KEY-XX==");
         call.enqueue(new retrofit2.Callback<SearchModel>() {
             @Override
             public void onResponse(Call<SearchModel> call, retrofit2.Response<SearchModel> response) {
@@ -137,6 +138,14 @@ public class CommuteBuilder {
                 callback.onCommuteLoaded(builtCommute);
             }
         });
+    }
+
+    public void cancelAsyncTasks() {
+        if (call != null) {
+            call.cancel();
+            call = null;
+        }
+
     }
 }
 
