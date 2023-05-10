@@ -26,7 +26,7 @@
     <string name="train_icon">train icon</string>
     <string name="daily_commute">Daily Commute</string>
     <string name="timetable">Timetable</string>
-    <string name="dailycommutepara">Set and track the trains you take every day to keep up to date with any delays cancellations and platform changes</string>
+    <string name="dailycommutepara">Set and track the trains you take every day to keep up to date with any delays, cancellations and platform changes</string>
     <string name="timetablepara">Get live information on any train in the UK, with up-to-the-minute data from RealTimeTrains</string>
     <string name="stay_notified">Stay Notified</string>
     <string name="stay_notified_para">Sign up for notifications to get information about delays before you leave. You\'ll never miss a meeting again!</string>
