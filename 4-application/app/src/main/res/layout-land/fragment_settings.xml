@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.settings.SettingsFragment">
+
+
+    <TextView
+        android:id="@+id/tvHomeCommute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/home_commute"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvWorkCommute"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWorkCommute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/work_commute"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvHomeCommute"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnWorkDeparture"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/station_search_button"
+        android:text="@string/departure"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btnWCtime"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnHCtime"
+        app:layout_constraintTop_toBottomOf="@+id/tvHelpHint2" />
+
+    <Button
+        android:id="@+id/btnWorkArrival"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/station_search_button"
+        android:text="@string/arrival"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btnWCtime"
+        app:layout_constraintStart_toEndOf="@+id/btnHCtime"
+        app:layout_constraintTop_toBottomOf="@+id/btnWorkDeparture" />
+
+    <Button
+        android:id="@+id/btnHomeArrival"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/station_search_button"
+        android:text="@string/arrival"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btnHCtime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHomeDeparture" />
+
+    <Button
+        android:id="@+id/btnHomeDeparture"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/station_search_button"
+        android:text="@string/departure"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btnHCtime"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHelpHint" />
+
+    <TextView
+        android:id="@+id/tvHelpHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settingsHelper1"
+        app:layout_constraintEnd_toEndOf="@+id/tvHomeCommute"
+        app:layout_constraintStart_toStartOf="@+id/tvHomeCommute"
+        app:layout_constraintTop_toBottomOf="@+id/tvHomeCommute" />
+
+    <TextView
+        android:id="@+id/tvHelpHint2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settingsHelper1"
+        app:layout_constraintEnd_toEndOf="@+id/tvWorkCommute"
+        app:layout_constraintStart_toStartOf="@+id/tvWorkCommute"
+        app:layout_constraintTop_toBottomOf="@+id/tvWorkCommute" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/swNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:minHeight="48dp"
+        android:text="@string/daily_commute_notifications"
+        app:layout_constraintEnd_toStartOf="@+id/tvHomeCTime"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHCtime" />
+
+    <Button
+        android:id="@+id/btnHomeCTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/station_search_button"
+        android:text="@string/home"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tvHomeCTime"
+        app:layout_constraintEnd_toStartOf="@+id/tvWorkCTime"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvHomeCTime"
+        app:layout_constraintTop_toTopOf="@+id/tvHomeCTime" />
+
+    <Button
+        android:id="@+id/btnWorkCTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/station_search_button"
+        android:text="@string/work"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWorkCTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWorkCTime"
+        app:layout_constraintTop_toTopOf="@+id/tvWorkCTime" />
+
+    <TextView
+        android:id="@+id/tvHomeCTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/home_commute_time"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/swNotification"
+        app:layout_constraintEnd_toStartOf="@+id/btnHomeCTime"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/swNotification"
+        app:layout_constraintTop_toTopOf="@+id/swNotification" />
+
+    <TextView
+        android:id="@+id/tvWorkCTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/work_commute_time"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/btnHomeCTime"
+        app:layout_constraintEnd_toStartOf="@+id/btnWorkCTime"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnHomeCTime"
+        app:layout_constraintTop_toTopOf="@+id/btnHomeCTime" />
+
+    <Button
+        android:id="@+id/btnHCtime"
+        android:layout_width="wrap_content"
+        android:layout_height="98dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/station_search_button"
+        android:contentDescription="@string/home_commute_time"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btnWorkDeparture"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnHomeDeparture"
+        app:layout_constraintTop_toBottomOf="@+id/tvHelpHint" />
+
+    <Button
+        android:id="@+id/btnWCtime"
+        android:layout_width="wrap_content"
+        android:layout_height="98dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/station_search_button"
+        android:contentDescription="@string/work_commute_time"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnWorkDeparture"
+        app:layout_constraintTop_toBottomOf="@+id/tvHelpHint2" />
+
+    <TextView
+        android:id="@+id/tvWelcomeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/view_welcome_screen"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swNotification" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
