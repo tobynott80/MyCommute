@@ -6,4 +6,6 @@ I learnt how to use key Android APIs and third-party libraries, such as utilizin
 
 I initially planned to implement offline caching for saved commutes and timetables, but I instead focused on ensuring the app worked without bugs and fitted the [Android Accessibility Standards](https://stuff.mit.edu/afs/sipb/project/android/docs/guide/topics/ui/accessibility/checklist.html).
 
+I also have my API key in plain-text within the source-code, which is bad security practice- ideally I should store it outside of the git repository.
+
 In future development I would also like to implement a user service with Firebase to sync user data across devices and provide SMS notifications for daily commutes. I would also like to explore additional features such as journey planning, Google Maps integration and other transportation modes. I would also invest in implementing [material design 3](https://m3.material.io/) for a more modern UI that is consistent with other Material Design apps.
