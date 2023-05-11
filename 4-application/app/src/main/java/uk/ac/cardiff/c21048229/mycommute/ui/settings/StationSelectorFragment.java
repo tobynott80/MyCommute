@@ -35,9 +35,30 @@ public class StationSelectorFragment extends Fragment implements StationListRecy
     private RecyclerView recyclerView;
     private StationListRecyclerAdapter adapter;
 
-    public StationSelectorFragment(String stationType){
-        this.stationType = stationType;
+//    public StationSelectorFragment(String stationType){
+//        this.stationType = stationType;
+//    }
+
+    public StationSelectorFragment() {
+        // Required empty public constructor
     }
+
+    public static StationSelectorFragment newInstance(String stationType) {
+        StationSelectorFragment fragment = new StationSelectorFragment();
+        Bundle args = new Bundle();
+        args.putString("stationType", stationType);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            stationType = getArguments().getString("stationType");
+        }
+    }
+
 
     @Nullable
     @Override

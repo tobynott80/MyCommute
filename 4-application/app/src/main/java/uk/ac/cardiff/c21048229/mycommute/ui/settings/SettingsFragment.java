@@ -119,7 +119,7 @@ public class SettingsFragment extends Fragment {
                 //open location selector fragment
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                StationSelectorFragment stationSelectorFragment = new StationSelectorFragment("homeDeparture");
+                StationSelectorFragment stationSelectorFragment =  StationSelectorFragment.newInstance("homeDeparture");
                 fragmentTransaction.replace(R.id.nav_host_fragment_activity_main, stationSelectorFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.setReorderingAllowed(true);
@@ -133,7 +133,7 @@ public class SettingsFragment extends Fragment {
                 //open location selector fragment
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                StationSelectorFragment stationSelectorFragment = new StationSelectorFragment("homeArrival");
+                StationSelectorFragment stationSelectorFragment = StationSelectorFragment.newInstance("homeArrival");
                 fragmentTransaction.replace(R.id.nav_host_fragment_activity_main, stationSelectorFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.setReorderingAllowed(true);
@@ -147,7 +147,7 @@ public class SettingsFragment extends Fragment {
                 //open location selector fragment
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                StationSelectorFragment stationSelectorFragment = new StationSelectorFragment("workDeparture");
+                StationSelectorFragment stationSelectorFragment = StationSelectorFragment.newInstance("workDeparture");
                 fragmentTransaction.replace(R.id.nav_host_fragment_activity_main, stationSelectorFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.setReorderingAllowed(true);
@@ -161,7 +161,7 @@ public class SettingsFragment extends Fragment {
                 //open location selector fragment
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                StationSelectorFragment stationSelectorFragment = new StationSelectorFragment("workArrival");
+                StationSelectorFragment stationSelectorFragment = StationSelectorFragment.newInstance("workArrival");
                 fragmentTransaction.replace(R.id.nav_host_fragment_activity_main, stationSelectorFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.setReorderingAllowed(true);
@@ -175,7 +175,7 @@ public class SettingsFragment extends Fragment {
                 // Open time selector frag
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                TimeSelectorFragment timeSelectorFragment = new TimeSelectorFragment("homeTime");
+                TimeSelectorFragment timeSelectorFragment = TimeSelectorFragment.newInstance("homeTime");
                 fragmentTransaction.replace(R.id.nav_host_fragment_activity_main, timeSelectorFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.setReorderingAllowed(true);
@@ -189,7 +189,7 @@ public class SettingsFragment extends Fragment {
                 //Open time selector frag
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                TimeSelectorFragment timeSelectorFragment = new TimeSelectorFragment("workTime");
+                TimeSelectorFragment timeSelectorFragment = TimeSelectorFragment.newInstance("workTime");
                 fragmentTransaction.replace(R.id.nav_host_fragment_activity_main, timeSelectorFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.setReorderingAllowed(true);
@@ -202,7 +202,7 @@ public class SettingsFragment extends Fragment {
             public void onClick(View v) {
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                TimeSelectorFragment timeSelectorFragment = new TimeSelectorFragment("homeCTime");
+                TimeSelectorFragment timeSelectorFragment = TimeSelectorFragment.newInstance("homeCTime");
                 fragmentTransaction.replace(R.id.nav_host_fragment_activity_main, timeSelectorFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.setReorderingAllowed(true);
@@ -215,7 +215,7 @@ public class SettingsFragment extends Fragment {
             public void onClick(View v) {
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                TimeSelectorFragment timeSelectorFragment = new TimeSelectorFragment("workCTime");
+                TimeSelectorFragment timeSelectorFragment = TimeSelectorFragment.newInstance("workCTime");
                 fragmentTransaction.replace(R.id.nav_host_fragment_activity_main, timeSelectorFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.setReorderingAllowed(true);
