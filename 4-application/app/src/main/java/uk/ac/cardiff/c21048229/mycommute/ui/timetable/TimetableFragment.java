@@ -4,6 +4,10 @@ import static uk.ac.cardiff.c21048229.mycommute.ui.timetable.TrainStatus.CANCELL
 import static uk.ac.cardiff.c21048229.mycommute.ui.timetable.TrainStatus.DELAYED;
 import static uk.ac.cardiff.c21048229.mycommute.ui.timetable.TrainStatus.ON_TIME;
 
+
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +17,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
@@ -22,6 +27,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.google.android.material.snackbar.Snackbar;
 import com.microsoft.appcenter.analytics.Analytics;
 import com.microsoft.appcenter.analytics.EventProperties;
 
@@ -51,6 +57,10 @@ public class TimetableFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private TrainServiceRecyclerAdapter adapter;
+    private Snackbar snackbar;
+    private View root;
+
+    private ConstraintLayout timetableLayout;
 
     private ArrayList<TrainService> departures;
 
@@ -76,14 +86,16 @@ public class TimetableFragment extends Fragment {
                 new ViewModelProvider(this).get(TimetableViewModel.class);
 
         binding = FragmentTimetableBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        root = binding.getRoot();
         setRetainInstance(true);
+
 
         btnTextDeparture = binding.btnTextDeparture;
         btnTextArrival = binding.btnTextArrival;
         Button btnSearch = binding.btnSearch;
         Button btnSwap = binding.btnSwap;
         binding.progressBar.setVisibility(View.GONE);
+        timetableLayout = binding.fragmentTimetable;
 
         btnTextDeparture.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -143,7 +155,7 @@ public class TimetableFragment extends Fragment {
                             ArrayList<SearchModel.Service> services = searchModel.getServices();
                             departures = new ArrayList<>();
                             //if no services are available - notify with toast
-                            if (!(services == null)){
+                            if (!(services == null)) {
                                 // Sort services by departure time
                                 services.sort((o1, o2) -> {
                                     String time1 = o1.getLocationDetail().getRealtimeDeparture();
@@ -169,15 +181,15 @@ public class TimetableFragment extends Fragment {
                                     // Create enum holder for service status
                                     TrainStatus status;
                                     // RTT api sometimes returns false isCall for delayed services
-                                    if (services.get(i).getLocationDetail().isCall){
+                                    if (services.get(i).getLocationDetail().isCall) {
                                         status = ON_TIME;
-                                    }else {
+                                    } else {
                                         status = DELAYED;
                                     }
                                     // Get platform from service
                                     String platform = services.get(i).getLocationDetail().getPlatform();
                                     // RTT often cannot find the platform for various reasons, so the platform is just set as -- instead
-                                    if (platform == null || platform.equals("DPL")){
+                                    if (platform == null || platform.equals("DPL")) {
                                         platform = "--";
                                     }
                                     // Get the estimated departure time (departureTime). This can sometimes be null if RTT is unsure
@@ -186,13 +198,13 @@ public class TimetableFragment extends Fragment {
                                     // Get the origin (not super necessary, but it looks nicer in the UI lol)
                                     String origin = getString(R.string.arr_from_colon) + services.get(i).getLocationDetail().getOrigin().get(0).getDescription();
                                     // If RTT cannot find an estimated departure, get the booked departure instead
-                                    if (departureTime == null){
+                                    if (departureTime == null) {
                                         departureTime = services.get(i).locationDetail.getGbttBookedDeparture();
-                                    } else{
+                                    } else {
                                         String bookedArrival = services.get(i).locationDetail.getGbttBookedDeparture();
                                         // GBTT can also be null sometimes - very annoying...
-                                        if (!(bookedArrival == null)){
-                                            if (Integer.parseInt(departureTime) > Integer.parseInt(bookedArrival)){
+                                        if (!(bookedArrival == null)) {
+                                            if (Integer.parseInt(departureTime) > Integer.parseInt(bookedArrival)) {
                                                 // If the train is delayed, set status to delayed and calculate delay length
                                                 status = DELAYED;
                                                 LocalTime departureTimeLT = LocalTime.parse(departureTime, DateTimeFormatter.ofPattern("HHmm"));
@@ -203,17 +215,17 @@ public class TimetableFragment extends Fragment {
                                                 // Set the origin text view to the delay length, as it isn't actually that important
                                                 String delayedByFormat = getString(R.string.delayed_by);
                                                 String delayLengthString = Long.toString(delayLength);
-                                                origin = String.format(delayedByFormat, delayLengthString, (bookedArrival.substring(0,2) + ":" + bookedArrival.substring(2,4)));
+                                                origin = String.format(delayedByFormat, delayLengthString, (bookedArrival.substring(0, 2) + ":" + bookedArrival.substring(2, 4)));
                                             }
                                         }
                                     }
                                     // Find if train is cancelled
-                                    if (services.get(i).getLocationDetail().getDisplayAs().equals("CANCELLED_CALL")){
+                                    if (services.get(i).getLocationDetail().getDisplayAs().equals("CANCELLED_CALL")) {
                                         status = CANCELLED;
                                         origin = getString(R.string.cancelled_colon) + services.get(i).locationDetail.getCancelReasonShortText();
                                     }
                                     // Find if train is replacement bus
-                                    if (services.get(i).getServiceType().equals("bus")){
+                                    if (services.get(i).getServiceType().equals("bus")) {
                                         platform = getString(R.string.bus);
                                         origin = getString(R.string.replacement_bus);
                                     }
@@ -224,10 +236,10 @@ public class TimetableFragment extends Fragment {
                                     // Add said train service object to the arraylist
                                     departures.add(trainService);
                                 }
-                            }else if (departureStation.getStationCRS().equals("KGX") && arrivalStation.getStationCRS().equals("HOG")){
+                            } else if (departureStation.getStationCRS().equals("KGX") && arrivalStation.getStationCRS().equals("HOG")) {
                                 // Easter egg: remove before release
                                 departures.add(new TrainService("9¾", "11:00", "Hogwarts Express", "Hogwarts", TrainStatus.ON_TIME));
-                            }else{
+                            } else {
                                 Toast.makeText(binding.getRoot().getContext(), getContext().getText(R.string.no_departures_available), Toast.LENGTH_SHORT).show();
                                 binding.progressBar.setVisibility(View.GONE);
                                 return;
@@ -250,8 +262,7 @@ public class TimetableFragment extends Fragment {
                         }
                     });
 
-                }
-                else{
+                } else {
                     //show error toast
                     Toast.makeText(binding.getRoot().getContext(), getContext().getText(R.string.select_arr_and_dep_stnt), Toast.LENGTH_SHORT).show();
                     binding.progressBar.setVisibility(View.GONE);
@@ -263,7 +274,7 @@ public class TimetableFragment extends Fragment {
 
             @Override
             public void onClick(View view) {
-                if (!(arrivalStation == null || departureStation == null)){
+                if (!(arrivalStation == null || departureStation == null)) {
                     //update UI
                     String tempBtnText = btnTextArrival.getText().toString();
                     btnTextArrival.setText(btnTextDeparture.getText().toString());
@@ -288,6 +299,7 @@ public class TimetableFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         TimetableViewModel timetableViewModel = new ViewModelProvider(requireParentFragment()).get(TimetableViewModel.class);
         timetableViewModel.getSelectedDepartureStation().observe(getViewLifecycleOwner(), new Observer<Station>() {
             @Override
@@ -310,11 +322,35 @@ public class TimetableFragment extends Fragment {
 
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        snackbar = Snackbar.make(timetableLayout, R.string.you_are_currently_offline, Snackbar.LENGTH_SHORT);
+        checkNetwork();
+    }
+
+    private void checkNetwork() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = connectivityManager.getActiveNetworkInfo();
+        boolean isConnected = activeNetwork != null && activeNetwork.isConnectedOrConnecting();
+
+        if (!isConnected) {
+            showSnackbar();
+        }
+    }
+
+    private void showSnackbar() {
+        snackbar.show();
+    }
+
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+        if (snackbar != null) {
+            snackbar.dismiss();
+        }
     }
 
 

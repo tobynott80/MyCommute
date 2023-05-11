@@ -30,7 +30,11 @@ public class WelcomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //open MainActivity
-                finish();
+                if(viewPager2.getCurrentItem() != (adapter.getItemCount() -1)){
+                    viewPager2.setCurrentItem(viewPager2.getCurrentItem() + 1);
+                } else {
+                    finish(); //Exit to main activity if viewpager is finished
+                }
             }
         });
 

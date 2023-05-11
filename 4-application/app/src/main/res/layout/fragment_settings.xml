@@ -184,6 +184,7 @@
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/station_search_button"
                     android:textColor="@color/white"
+                    android:contentDescription="@string/home_commute_time"
                     app:layout_constraintBottom_toBottomOf="@+id/btnHomeArrival"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvHelpHint" />
@@ -196,9 +197,21 @@
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/station_search_button"
                     android:textColor="@color/white"
+                    android:contentDescription="@string/work_commute_time"
                     app:layout_constraintBottom_toBottomOf="@+id/btnWorkArrival"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvHelpHint2" />
+
+                <TextView
+                    android:id="@+id/tvWelcomeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/view_welcome_screen"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnHomeCTime" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

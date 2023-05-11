@@ -58,4 +58,6 @@
     <string name="swap" translatable="false">swap</string>
     <string name="station_to_station" translatable="false">Station to Station</string>
     <string name="no_services_found" translatable="false">No services found</string>
+    <string name="you_are_currently_offline" translatable="false">You are currently offline</string>
+    <string name="view_welcome_screen" translatable="false">View Welcome Screen</string>
 </resources>
