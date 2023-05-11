@@ -325,7 +325,7 @@ public class TimetableFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        snackbar = Snackbar.make(timetableLayout, "You are currently offline", Snackbar.LENGTH_SHORT);
+        snackbar = Snackbar.make(timetableLayout, R.string.you_are_currently_offline, Snackbar.LENGTH_SHORT);
         checkNetwork();
     }
 
