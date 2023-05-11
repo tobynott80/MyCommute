@@ -4,7 +4,6 @@ import static uk.ac.cardiff.c21048229.mycommute.ui.timetable.TrainStatus.CANCELL
 import static uk.ac.cardiff.c21048229.mycommute.ui.timetable.TrainStatus.DELAYED;
 import static uk.ac.cardiff.c21048229.mycommute.ui.timetable.TrainStatus.ON_TIME;
 
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -92,7 +91,7 @@ public class TimetableFragment extends Fragment {
                 //open location selector fragment
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                LocationSelectorFragment locationSelectorFragment = new LocationSelectorFragment("departure");
+                LocationSelectorFragment locationSelectorFragment = LocationSelectorFragment.newInstance("departure");
                 fragmentTransaction.replace(R.id.nav_host_fragment_activity_main, locationSelectorFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.setReorderingAllowed(true);
@@ -107,7 +106,7 @@ public class TimetableFragment extends Fragment {
                 //open location selector fragment
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                LocationSelectorFragment locationSelectorFragment = new LocationSelectorFragment("arrival");
+                LocationSelectorFragment locationSelectorFragment = LocationSelectorFragment.newInstance("arrival");
                 fragmentTransaction.replace(R.id.nav_host_fragment_activity_main, locationSelectorFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.setReorderingAllowed(true);
@@ -132,9 +131,10 @@ public class TimetableFragment extends Fragment {
                     Call<SearchModel> call = rttMethods.getAllData(departureStation.getStationCRS(), arrivalStation.getStationCRS(), "XX-API-KEY-XX==");
                     call.enqueue(new retrofit2.Callback<SearchModel>() {
                         @Override
-                        public void onResponse(Call<SearchModel> call, retrofit2.Response<SearchModel> response) {
+                        public void onResponse(@NonNull Call<SearchModel> call, @NonNull retrofit2.Response<SearchModel> response) {
                             System.out.println("Successful call " + response.code());
                             if (response.isSuccessful()) {
+                                assert response.body() != null;
                                 populateRecyclerView(response.body());
                             }
                         }

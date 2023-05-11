@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -38,6 +37,9 @@ public class HomeFragment extends Fragment {
         binding.progressBar.setVisibility(View.VISIBLE);
         View root = binding.getRoot();
         ConstraintLayout commuteLayout = binding.homeCommuteLayout;
+
+        HomeViewModel homeViewModel = new ViewModelProvider(requireActivity()).get(HomeViewModel.class);
+
         commuteLayout.setVisibility(View.GONE);
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("sharedPrefs", 0);
         if((sharedPreferences.getBoolean("isCommuteSetup", false))){
@@ -60,7 +62,9 @@ public class HomeFragment extends Fragment {
                     // Load the fragment once the callback is complete
                     FragmentManager fragmentManager = getParentFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    CommuteFragment commuteFragment = new CommuteFragment(commute, finalDepartureTime);
+                    homeViewModel.setHomeCommute(commute);
+                    homeViewModel.setHomeDepartureTime(finalDepartureTime);
+                    CommuteFragment commuteFragment = CommuteFragment.newInstance("Home");
                     fragmentTransaction.replace(R.id.homeCommuteLayout, commuteFragment);
                     fragmentTransaction.commit();
                 }
@@ -81,7 +85,9 @@ public class HomeFragment extends Fragment {
                     // Load the fragment once the callback is complete
                     FragmentManager fragmentManager = getParentFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    CommuteFragment commuteFragment = new CommuteFragment(commute, finalWorkDepartureTime);
+                    homeViewModel.setWorkCommute(commute);
+                    homeViewModel.setWorkDepartureTime(finalWorkDepartureTime);
+                    CommuteFragment commuteFragment = CommuteFragment.newInstance("Work");
                     fragmentTransaction.replace(R.id.workCommuteLayout, commuteFragment);
                     fragmentTransaction.commit();
                 }

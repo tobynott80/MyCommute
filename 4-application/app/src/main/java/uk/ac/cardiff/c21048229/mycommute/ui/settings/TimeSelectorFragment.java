@@ -23,9 +23,32 @@ public class TimeSelectorFragment extends Fragment {
     FragmentTimeSelectorBinding binding;
     String timeTarget;
 
-    public TimeSelectorFragment(String timeTarget) {
-        this.timeTarget = timeTarget;
+//    public TimeSelectorFragment(String timeTarget) {
+//        this.timeTarget = timeTarget;
+//    }
+
+    public TimeSelectorFragment() {
+        // Required empty public constructor
     }
+
+    public static TimeSelectorFragment newInstance(String timeTarget) {
+        TimeSelectorFragment fragment = new TimeSelectorFragment();
+        Bundle args = new Bundle();
+        args.putString("timeTarget", timeTarget);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            timeTarget = getArguments().getString("timeTarget");
+        }
+
+    }
+
+
 
     @Nullable
     @Override
@@ -58,6 +81,14 @@ public class TimeSelectorFragment extends Fragment {
                 String timeString = String.format(Locale.US, "%02d%02d", hour, minute);
                 sharedPreferences.edit().putString(timeTarget, timeString).apply();
 
+                // Return to settings fragment
+                getActivity().getSupportFragmentManager().popBackStack();
+            }
+        });
+
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 // Return to settings fragment
                 getActivity().getSupportFragmentManager().popBackStack();
             }

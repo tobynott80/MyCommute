@@ -11,21 +11,20 @@ CI/CD provided by MS AppCenter. [Download latest release](https://install.appcen
 ## Features
 
 - Daily commute notifications
-  - Set up daily notifcations to trigger at specific times to get the latest depature information for your commute
+  - Set up daily notifications to trigger at specific times to get the latest departure information for your commute
 - View live times
   - Check departures for any single leg route in the UK. Find platform numbers, delays/cancellations and real time departure times (provided by [RTT](https://www.realtimetrains.co.uk/))
 - Dark Mode
-- Localisation
-  - Currently Supported: English, Welsh, Arabic, Esperanto
+- Localisation (see below)
 - Landscape orientation supported
-- Full compatability with screen-readers
+- Full compatibility with screen-readers
 
-## Limitiations
+## Limitations
 
-Due to the limitations of the Free RTT API service, MyCommute can only search for direct routes. This means that jouneys with multiple legs need to be split (E.g Cardiff Queen Street --> Cardiff Central --> Newport).
+Due to the limitations of the Free RTT API service, MyCommute can only search for direct routes. This means that journeys with multiple legs need to be split (E.g Cardiff Queen Street --> Cardiff Central --> Newport).
 
 ## Localisation
 
-Currently 100% Translation for English, Welsh, Arabic and Esperanto.
+Currently, 100% Translation for English, Welsh, Ukrainian, Chinese (Simplified), Dutch, Hindi, French, German, Arabic (RTL Supported), Bengali, Italian, Japanese, Korean, Swedish, Norwegian, Polish, Portuguese, Spanish, Turkish and Esperanto.
 
 [Translation Progress](https://poeditor.com/projects/view?id=617857)

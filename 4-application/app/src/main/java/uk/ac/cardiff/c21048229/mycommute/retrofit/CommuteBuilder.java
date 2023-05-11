@@ -10,6 +10,7 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Locale;
 
 import retrofit2.Call;
 import uk.ac.cardiff.c21048229.mycommute.R;
@@ -32,7 +33,7 @@ public class CommuteBuilder {
         int month = calendar.get(Calendar.MONTH) + 1; // Add 1 to get the month in range 1-12
         int day = calendar.get(Calendar.DAY_OF_MONTH);
 
-        call = rttMethods.getAllDataWithTime(departureStation.getStationCRS(), arrivalStation.getStationCRS(), String.valueOf(year),String.format("%02d", month),String.format("%02d", day),departureTime, "XX-API-KEY-XX==");
+        call = rttMethods.getAllDataWithTime(departureStation.getStationCRS(), arrivalStation.getStationCRS(), String.valueOf(year),String.format(Locale.US,"%02d", month),String.format(Locale.US,"%02d", day),departureTime, "XX-API-KEY-XX==");
         call.enqueue(new retrofit2.Callback<SearchModel>() {
             @Override
             public void onResponse(Call<SearchModel> call, retrofit2.Response<SearchModel> response) {
