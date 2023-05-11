@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -27,6 +28,7 @@ import uk.ac.cardiff.c21048229.mycommute.R;
 import uk.ac.cardiff.c21048229.mycommute.databinding.FragmentSettingsBinding;
 import uk.ac.cardiff.c21048229.mycommute.notification.DailyNotificationReceiver;
 import uk.ac.cardiff.c21048229.mycommute.notification.NotificationHelper;
+import uk.ac.cardiff.c21048229.mycommute.ui.welcome.WelcomeActivity;
 
 public class SettingsFragment extends Fragment {
 
@@ -51,6 +53,7 @@ public class SettingsFragment extends Fragment {
         SwitchMaterial switchNotification = binding.swNotification;
         Button btnHCtime = binding.btnHCtime;
         Button btnWCtime = binding.btnWCtime;
+        TextView welcomePageButton = binding.tvWelcomeButton;
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE);
         // Set button text based on shared preferences
@@ -220,6 +223,15 @@ public class SettingsFragment extends Fragment {
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.setReorderingAllowed(true);
                 fragmentTransaction.commit();
+            }
+        });
+
+        welcomePageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // open welcome activity
+                Intent intent = new Intent(getContext(), WelcomeActivity.class);
+                startActivity(intent);
             }
         });
 
