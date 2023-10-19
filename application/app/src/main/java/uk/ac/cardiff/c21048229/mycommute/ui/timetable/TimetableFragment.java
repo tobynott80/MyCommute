@@ -38,6 +38,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 import retrofit2.Call;
+import uk.ac.cardiff.c21048229.mycommute.BuildConfig;
 import uk.ac.cardiff.c21048229.mycommute.R;
 import uk.ac.cardiff.c21048229.mycommute.databinding.FragmentTimetableBinding;
 import uk.ac.cardiff.c21048229.mycommute.retrofit.RttMethods;
@@ -136,11 +137,13 @@ public class TimetableFragment extends Fragment {
                 eventProperties.set("Departure", departureStation.getStationName());
                 eventProperties.set("Arrival", arrivalStation.getStationName());
 
+                String authKey = BuildConfig.RTT_API_KEY;
+
                 Analytics.trackEvent("Searched Timetable", eventProperties);
                 if (getDepartureStation() != null && getArrivalStation() != null && getArrivalStation() != getDepartureStation()) {
                     //search with api using our retrofit instance
                     RttMethods rttMethods = RttRetroFit.getRetrofitInstance().create(RttMethods.class);
-                    Call<SearchModel> call = rttMethods.getAllData(departureStation.getStationCRS(), arrivalStation.getStationCRS(), "XX-API-KEY-XX==");
+                    Call<SearchModel> call = rttMethods.getAllData(departureStation.getStationCRS(), arrivalStation.getStationCRS(), authKey);
                     call.enqueue(new retrofit2.Callback<SearchModel>() {
                         @Override
                         public void onResponse(@NonNull Call<SearchModel> call, @NonNull retrofit2.Response<SearchModel> response) {

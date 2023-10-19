@@ -13,6 +13,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 import retrofit2.Call;
+import uk.ac.cardiff.c21048229.mycommute.BuildConfig;
 import uk.ac.cardiff.c21048229.mycommute.R;
 import uk.ac.cardiff.c21048229.mycommute.ui.home.Commute;
 import uk.ac.cardiff.c21048229.mycommute.ui.locationSelector.Station;
@@ -24,6 +25,8 @@ public class CommuteBuilder {
     Commute builtCommute; //The commute that is to be returned
     Call<SearchModel> call; //The call to the API
 
+    String authKey = BuildConfig.RTT_API_KEY;
+
     public void getCommute(Station departureStation, Station arrivalStation, String departureTime, CommuteCallback callback) {
 
         //Instantiate the Retrofit instance
@@ -33,7 +36,7 @@ public class CommuteBuilder {
         int month = calendar.get(Calendar.MONTH) + 1; // Add 1 to get the month in range 1-12
         int day = calendar.get(Calendar.DAY_OF_MONTH);
 
-        call = rttMethods.getAllDataWithTime(departureStation.getStationCRS(), arrivalStation.getStationCRS(), String.valueOf(year),String.format(Locale.US,"%02d", month),String.format(Locale.US,"%02d", day),departureTime, "XX-API-KEY-XX==");
+        call = rttMethods.getAllDataWithTime(departureStation.getStationCRS(), arrivalStation.getStationCRS(), String.valueOf(year),String.format(Locale.US,"%02d", month),String.format(Locale.US,"%02d", day),departureTime, authKey);
         call.enqueue(new retrofit2.Callback<SearchModel>() {
             @Override
             public void onResponse(Call<SearchModel> call, retrofit2.Response<SearchModel> response) {
