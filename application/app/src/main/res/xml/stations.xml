@@ -1,0 +1,2584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stations>
+    <station name="Abbey Wood" crs="ABW" />
+    <station name="Aber" crs="ABE" />
+    <station name="Abercynon" crs="ACY" />
+    <station name="Aberdare" crs="ABA" />
+    <station name="Aberdeen" crs="ABD" />
+    <station name="Aberdour" crs="AUR" />
+    <station name="Aberdovey" crs="AVY" />
+    <station name="Abererch" crs="ABH" />
+    <station name="Abergavenny" crs="AGV" />
+    <station name="Abergele &amp; Pensarn" crs="AGL" />
+    <station name="Aberystwyth" crs="AYW" />
+    <station name="Accrington" crs="ACR" />
+    <station name="Achanalt" crs="AAT" />
+    <station name="Achnasheen" crs="ACN" />
+    <station name="Achnashellach" crs="ACH" />
+    <station name="Acklington" crs="ACK" />
+    <station name="Acle" crs="ACL" />
+    <station name="Acocks Green" crs="ACG" />
+    <station name="Acton Bridge (Cheshire)" crs="ACB" />
+    <station name="Acton Central" crs="ACC" />
+    <station name="Acton Main Line" crs="AML" />
+    <station name="Adderley Park" crs="ADD" />
+    <station name="Addiewell" crs="ADW" />
+    <station name="Addlestone" crs="ASN" />
+    <station name="Adisham" crs="ADM" />
+    <station name="Adlington (Cheshire)" crs="ADC" />
+    <station name="Adlington (Lancs)" crs="ADL" />
+    <station name="Adwick" crs="AWK" />
+    <station name="Aigburth" crs="AIG" />
+    <station name="Ainsdale" crs="ANS" />
+    <station name="Aintree" crs="AIN" />
+    <station name="Airbles" crs="AIR" />
+    <station name="Airdrie" crs="ADR" />
+    <station name="Albany Park" crs="AYP" />
+    <station name="Albrighton" crs="ALB" />
+    <station name="Alderley Edge" crs="ALD" />
+    <station name="Aldermaston" crs="AMT" />
+    <station name="Aldershot" crs="AHT" />
+    <station name="Aldrington" crs="AGT" />
+    <station name="Alexandra Palace" crs="AAP" />
+    <station name="Alexandra Parade" crs="AXP" />
+    <station name="Alexandria" crs="ALX" />
+    <station name="Alfreton" crs="ALF" />
+    <station name="Allens West" crs="ALW" />
+    <station name="Alloa" crs="ALO" />
+    <station name="Alness" crs="ASS" />
+    <station name="Alnmouth" crs="ALM" />
+    <station name="Alresford (Essex)" crs="ALR" />
+    <station name="Alsager" crs="ASG" />
+    <station name="Althorne (Essex)" crs="ALN" />
+    <station name="Althorpe" crs="ALP" />
+    <station name="Altnabreac" crs="ABC" />
+    <station name="Alton" crs="AON" />
+    <station name="Altrincham" crs="ALT" />
+    <station name="Alvechurch" crs="ALV" />
+    <station name="Ambergate" crs="AMB" />
+    <station name="Amberley" crs="AMY" />
+    <station name="Amersham" crs="AMR" />
+    <station name="Ammanford" crs="AMF" />
+    <station name="Ancaster" crs="ANC" />
+    <station name="Anderston" crs="AND" />
+    <station name="Andover" crs="ADV" />
+    <station name="Anerley" crs="ANZ" />
+    <station name="Angmering" crs="ANG" />
+    <station name="Annan" crs="ANN" />
+    <station name="Anniesland" crs="ANL" />
+    <station name="Ansdell &amp; Fairhaven" crs="AFV" />
+    <station name="Apperley Bridge" crs="APY" />
+    <station name="Appleby" crs="APP" />
+    <station name="Appledore (Kent)" crs="APD" />
+    <station name="Appleford" crs="APF" />
+    <station name="Appley Bridge" crs="APB" />
+    <station name="Apsley" crs="APS" />
+    <station name="Arbroath" crs="ARB" />
+    <station name="Ardgay" crs="ARD" />
+    <station name="Ardlui" crs="AUI" />
+    <station name="Ardrossan Harbour" crs="ADS" />
+    <station name="Ardrossan South Beach" crs="ASB" />
+    <station name="Ardrossan Town" crs="ADN" />
+    <station name="Ardwick" crs="ADK" />
+    <station name="Argyle Street" crs="AGS" />
+    <station name="Arisaig" crs="ARG" />
+    <station name="Arlesey" crs="ARL" />
+    <station name="Armadale (West Lothian)" crs="ARM" />
+    <station name="Armathwaite" crs="AWT" />
+    <station name="Arnside" crs="ARN" />
+    <station name="Arram" crs="ARR" />
+    <station name="Arrochar &amp; Tarbet" crs="ART" />
+    <station name="Arundel" crs="ARU" />
+    <station name="Ascot (Berks)" crs="ACT" />
+    <station name="Ascott-under-Wychwood" crs="AUW" />
+    <station name="Ash" crs="ASH" />
+    <station name="Ash Vale" crs="AHV" />
+    <station name="Ashburys" crs="ABY" />
+    <station name="Ashchurch for Tewkesbury" crs="ASC" />
+    <station name="Ashfield" crs="ASF" />
+    <station name="Ashford (Surrey)" crs="AFS" />
+    <station name="Ashford International" crs="AFK" />
+    <station name="Ashford International (Eurostar)" crs="ASI" />
+    <station name="Ashley" crs="ASY" />
+    <station name="Ashtead" crs="AHD" />
+    <station name="Ashton-under-Lyne" crs="AHN" />
+    <station name="Ashurst (Kent)" crs="AHS" />
+    <station name="Ashurst New Forest" crs="ANF" />
+    <station name="Ashwell &amp; Morden" crs="AWM" />
+    <station name="Askam" crs="ASK" />
+    <station name="Aslockton" crs="ALK" />
+    <station name="Aspatria" crs="ASP" />
+    <station name="Aspley Guise" crs="APG" />
+    <station name="Aston" crs="AST" />
+    <station name="Atherstone" crs="ATH" />
+    <station name="Atherton" crs="ATN" />
+    <station name="Attadale" crs="ATT" />
+    <station name="Attenborough" crs="ATB" />
+    <station name="Attleborough" crs="ATL" />
+    <station name="Auchinleck" crs="AUK" />
+    <station name="Audley End" crs="AUD" />
+    <station name="Aughton Park" crs="AUG" />
+    <station name="Aviemore" crs="AVM" />
+    <station name="Avoncliff" crs="AVF" />
+    <station name="Avonmouth" crs="AVN" />
+    <station name="Axminster" crs="AXM" />
+    <station name="Aylesbury" crs="AYS" />
+    <station name="Aylesbury Vale Parkway" crs="AVP" />
+    <station name="Aylesford" crs="AYL" />
+    <station name="Aylesham" crs="AYH" />
+    <station name="Ayr" crs="AYR" />
+    <station name="Bache" crs="BAC" />
+    <station name="Baglan" crs="BAJ" />
+    <station name="Bagshot" crs="BAG" />
+    <station name="Baildon" crs="BLD" />
+    <station name="Baillieston" crs="BIO" />
+    <station name="Balcombe" crs="BAB" />
+    <station name="Baldock" crs="BDK" />
+    <station name="Balham" crs="BAL" />
+    <station name="Balloch" crs="BHC" />
+    <station name="Balmossie" crs="BSI" />
+    <station name="Bamber Bridge" crs="BMB" />
+    <station name="Bamford" crs="BAM" />
+    <station name="Banavie" crs="BNV" />
+    <station name="Banbury" crs="BAN" />
+    <station name="Bangor (Gwynedd)" crs="BNG" />
+    <station name="Bank Hall" crs="BAH" />
+    <station name="Banstead" crs="BAD" />
+    <station name="Barassie" crs="BSS" />
+    <station name="Barbican" crs="ZBB" />
+    <station name="Bardon Mill" crs="BLL" />
+    <station name="Bare Lane" crs="BAR" />
+    <station name="Bargeddie" crs="BGI" />
+    <station name="Bargoed" crs="BGD" />
+    <station name="Barking" crs="BKG" />
+    <station name="Barlaston" crs="BRT" />
+    <station name="Barming" crs="BMG" />
+    <station name="Barmouth" crs="BRM" />
+    <station name="Barnehurst" crs="BNH" />
+    <station name="Barnes" crs="BNS" />
+    <station name="Barnes Bridge" crs="BNI" />
+    <station name="Barnetby" crs="BTB" />
+    <station name="Barnham" crs="BAA" />
+    <station name="Barnhill" crs="BNL" />
+    <station name="Barnsley" crs="BNY" />
+    <station name="Barnstaple" crs="BNP" />
+    <station name="Barnt Green" crs="BTG" />
+    <station name="Barrhead" crs="BRR" />
+    <station name="Barrhill" crs="BRL" />
+    <station name="Barrow Haven" crs="BAV" />
+    <station name="Barrow-in-Furness" crs="BIF" />
+    <station name="Barrow-Upon-Soar" crs="BWS" />
+    <station name="Barry" crs="BRY" />
+    <station name="Barry Docks" crs="BYD" />
+    <station name="Barry Island" crs="BYI" />
+    <station name="Barry Links" crs="BYL" />
+    <station name="Barton-on-Humber" crs="BAU" />
+    <station name="Basildon" crs="BSO" />
+    <station name="Basingstoke" crs="BSK" />
+    <station name="Bat &amp; Ball" crs="BBL" />
+    <station name="Bath Spa" crs="BTH" />
+    <station name="Bathgate" crs="BHG" />
+    <station name="Batley" crs="BTL" />
+    <station name="Battersby" crs="BTT" />
+    <station name="Battersea Park" crs="BAK" />
+    <station name="Battle" crs="BAT" />
+    <station name="Battlesbridge" crs="BLB" />
+    <station name="Bayford" crs="BAY" />
+    <station name="Beaconsfield" crs="BCF" />
+    <station name="Bearley" crs="BER" />
+    <station name="Bearsden" crs="BRN" />
+    <station name="Bearsted" crs="BSD" />
+    <station name="Beasdale" crs="BSL" />
+    <station name="Beaulieu Road" crs="BEU" />
+    <station name="Beauly" crs="BEL" />
+    <station name="Bebington" crs="BEB" />
+    <station name="Beccles" crs="BCC" />
+    <station name="Beckenham Hill" crs="BEC" />
+    <station name="Beckenham Junction" crs="BKJ" />
+    <station name="Bedford" crs="BDM" />
+    <station name="Bedford St Johns" crs="BSJ" />
+    <station name="Bedhampton" crs="BDH" />
+    <station name="Bedminster" crs="BMT" />
+    <station name="Bedworth" crs="BEH" />
+    <station name="Bedwyn" crs="BDW" />
+    <station name="Beeston" crs="BEE" />
+    <station name="Bekesbourne" crs="BKS" />
+    <station name="Belle Vue" crs="BLV" />
+    <station name="Bellgrove" crs="BLG" />
+    <station name="Bellingham" crs="BGM" />
+    <station name="Bellshill" crs="BLH" />
+    <station name="Belmont" crs="BLM" />
+    <station name="Belper" crs="BLP" />
+    <station name="Beltring" crs="BEG" />
+    <station name="Belvedere" crs="BVD" />
+    <station name="Bempton" crs="BEM" />
+    <station name="Ben Rhydding" crs="BEY" />
+    <station name="Benfleet" crs="BEF" />
+    <station name="Bentham" crs="BEN" />
+    <station name="Bentley (Hants)" crs="BTY" />
+    <station name="Bentley (South Yorks)" crs="BYK" />
+    <station name="Bere Alston" crs="BAS" />
+    <station name="Bere Ferrers" crs="BFE" />
+    <station name="Berkhamsted" crs="BKM" />
+    <station name="Berkswell" crs="BKW" />
+    <station name="Bermuda Park" crs="BEP" />
+    <station name="Berney Arms" crs="BYA" />
+    <station name="Berry Brow" crs="BBW" />
+    <station name="Berrylands" crs="BRS" />
+    <station name="Berwick (Sussex)" crs="BRK" />
+    <station name="Berwick-upon-Tweed" crs="BWK" />
+    <station name="Bescar Lane" crs="BES" />
+    <station name="Bescot Stadium" crs="BSC" />
+    <station name="Betchworth" crs="BTO" />
+    <station name="Bethnal Green" crs="BET" />
+    <station name="Betws-y-Coed" crs="BYC" />
+    <station name="Beverley" crs="BEV" />
+    <station name="Bexhill" crs="BEX" />
+    <station name="Bexley" crs="BXY" />
+    <station name="Bexleyheath" crs="BXH" />
+    <station name="Bicester North" crs="BCS" />
+    <station name="Bicester Village" crs="BIT" />
+    <station name="Bickley" crs="BKL" />
+    <station name="Bidston" crs="BID" />
+    <station name="Biggleswade" crs="BIW" />
+    <station name="Bilbrook" crs="BBK" />
+    <station name="Billericay" crs="BIC" />
+    <station name="Billingham (Cleveland)" crs="BIL" />
+    <station name="Billingshurst" crs="BIG" />
+    <station name="Bingham" crs="BIN" />
+    <station name="Bingley" crs="BIY" />
+    <station name="Birchgrove" crs="BCG" />
+    <station name="Birchington-on-sea" crs="BCH" />
+    <station name="Birchwood" crs="BWD" />
+    <station name="Birkbeck" crs="BIK" />
+    <station name="Birkdale" crs="BDL" />
+    <station name="Birkenhead Central" crs="BKC" />
+    <station name="Birkenhead Hamilton Square" crs="BKQ" />
+    <station name="Birkenhead North" crs="BKN" />
+    <station name="Birkenhead Park" crs="BKP" />
+    <station name="Birmingham International" crs="BHI" />
+    <station name="Birmingham Moor Street" crs="BMO" />
+    <station name="Birmingham New Street" crs="BHM" />
+    <station name="Birmingham Snow Hill" crs="BSW" />
+    <station name="Bishop Auckland" crs="BIA" />
+    <station name="Bishopbriggs" crs="BBG" />
+    <station name="Bishops Stortford" crs="BIS" />
+    <station name="Bishopstone (Sussex)" crs="BIP" />
+    <station name="Bishopton (Strathclyde)" crs="BPT" />
+    <station name="Bitterne" crs="BTE" />
+    <station name="Blackburn" crs="BBN" />
+    <station name="Blackheath" crs="BKH" />
+    <station name="Blackhorse Road" crs="BHO" />
+    <station name="Blackpool North" crs="BPN" />
+    <station name="Blackpool Pleasure Beach" crs="BPB" />
+    <station name="Blackpool South" crs="BPS" />
+    <station name="Blackridge" crs="BKR" />
+    <station name="Blackrod" crs="BLK" />
+    <station name="Blackwater" crs="BAW" />
+    <station name="Blaenau Ffestiniog" crs="BFF" />
+    <station name="Blair Atholl" crs="BLA" />
+    <station name="Blairhill" crs="BAI" />
+    <station name="Blake Street" crs="BKT" />
+    <station name="Blakedown" crs="BKD" />
+    <station name="Blantyre" crs="BLT" />
+    <station name="Blaydon" crs="BLO" />
+    <station name="Bleasby" crs="BSB" />
+    <station name="Bletchley" crs="BLY" />
+    <station name="Bloxwich" crs="BLX" />
+    <station name="Bloxwich North" crs="BWN" />
+    <station name="Blundellsands &amp; Crosby" crs="BLN" />
+    <station name="Blythe Bridge" crs="BYB" />
+    <station name="Bodmin Parkway" crs="BOD" />
+    <station name="Bodorgan" crs="BOR" />
+    <station name="Bognor Regis" crs="BOG" />
+    <station name="Bogston" crs="BGS" />
+    <station name="Bolton" crs="BON" />
+    <station name="Bolton-Upon-Dearne" crs="BTD" />
+    <station name="Bookham" crs="BKA" />
+    <station name="Bootle (Cumbria)" crs="BOC" />
+    <station name="Bootle New Strand" crs="BNW" />
+    <station name="Bootle Oriel Road" crs="BOT" />
+    <station name="Bordesley" crs="BBS" />
+    <station name="Borough Green &amp; Wrotham" crs="BRG" />
+    <station name="Borth" crs="BRH" />
+    <station name="Bosham" crs="BOH" />
+    <station name="Boston" crs="BSN" />
+    <station name="Botley" crs="BOE" />
+    <station name="Bottesford" crs="BTF" />
+    <station name="Bourne End" crs="BNE" />
+    <station name="Bournemouth" crs="BMH" />
+    <station name="Bournville" crs="BRV" />
+    <station name="Bow Brickhill" crs="BWB" />
+    <station name="Bowes Park" crs="BOP" />
+    <station name="Bowling" crs="BWG" />
+    <station name="Box Hill &amp; Westhumble" crs="BXW" />
+    <station name="Bracknell" crs="BCE" />
+    <station name="Bradford Forster Square" crs="BDQ" />
+    <station name="Bradford Interchange" crs="BDI" />
+    <station name="Bradford-on-Avon" crs="BOA" />
+    <station name="Brading" crs="BDN" />
+    <station name="Braintree" crs="BTR" />
+    <station name="Braintree Freeport" crs="BTP" />
+    <station name="Bramhall" crs="BML" />
+    <station name="Bramley (Hants)" crs="BMY" />
+    <station name="Bramley (W Yorks)" crs="BLE" />
+    <station name="Brampton (Cumbria)" crs="BMP" />
+    <station name="Brampton (Suffolk)" crs="BRP" />
+    <station name="Branchton" crs="BCN" />
+    <station name="Brandon" crs="BND" />
+    <station name="Branksome" crs="BSM" />
+    <station name="Braystones (Cumbria)" crs="BYS" />
+    <station name="Bredbury" crs="BDY" />
+    <station name="Breich" crs="BRC" />
+    <station name="Brentford" crs="BFD" />
+    <station name="Brentwood" crs="BRE" />
+    <station name="Bricket Wood" crs="BWO" />
+    <station name="Bridge of Allan" crs="BEA" />
+    <station name="Bridge of Orchy" crs="BRO" />
+    <station name="Bridgend" crs="BGN" />
+    <station name="Bridgeton" crs="BDG" />
+    <station name="Bridgwater" crs="BWT" />
+    <station name="Bridlington" crs="BDT" />
+    <station name="Brierfield" crs="BRF" />
+    <station name="Brigg" crs="BGG" />
+    <station name="Brighouse" crs="BGH" />
+    <station name="Brighton (East Sussex)" crs="BTN" />
+    <station name="Brimsdown" crs="BMD" />
+    <station name="Brinnington" crs="BNT" />
+    <station name="Bristol Parkway" crs="BPW" />
+    <station name="Bristol Temple Meads" crs="BRI" />
+    <station name="Brithdir" crs="BHD" />
+    <station name="Briton Ferry" crs="BNF" />
+    <station name="Brixton" crs="BRX" />
+    <station name="Broad Green" crs="BGE" />
+    <station name="Broadbottom" crs="BDB" />
+    <station name="Broadstairs" crs="BSR" />
+    <station name="Brockenhurst" crs="BCU" />
+    <station name="Brockholes" crs="BHS" />
+    <station name="Brockley" crs="BCY" />
+    <station name="Bromborough" crs="BOM" />
+    <station name="Bromborough Rake" crs="BMR" />
+    <station name="Bromley Cross (Lancs)" crs="BMC" />
+    <station name="Bromley North" crs="BMN" />
+    <station name="Bromley South" crs="BMS" />
+    <station name="Bromsgrove" crs="BMV" />
+    <station name="Brondesbury" crs="BSY" />
+    <station name="Brondesbury Park" crs="BSP" />
+    <station name="Brookmans Park" crs="BPK" />
+    <station name="Brookwood" crs="BKO" />
+    <station name="Broome" crs="BME" />
+    <station name="Broomfleet" crs="BMF" />
+    <station name="Brora" crs="BRA" />
+    <station name="Brough" crs="BUH" />
+    <station name="Broughty Ferry" crs="BYF" />
+    <station name="Broxbourne" crs="BXB" />
+    <station name="Bruce Grove" crs="BCV" />
+    <station name="Brundall" crs="BDA" />
+    <station name="Brundall Gardens" crs="BGA" />
+    <station name="Brunstane" crs="BSU" />
+    <station name="Brunswick" crs="BRW" />
+    <station name="Bruton" crs="BRU" />
+    <station name="Bryn" crs="BYN" />
+    <station name="Buckenham (Norfolk)" crs="BUC" />
+    <station name="Buckley" crs="BCK" />
+    <station name="Bucknell" crs="BUK" />
+    <station name="Buckshaw Parkway" crs="BSV" />
+    <station name="Bugle" crs="BGL" />
+    <station name="Builth Road" crs="BHR" />
+    <station name="Bulwell" crs="BLW" />
+    <station name="Bures" crs="BUE" />
+    <station name="Burgess Hill" crs="BUG" />
+    <station name="Burley Park" crs="BUY" />
+    <station name="Burley-in-Wharfedale" crs="BUW" />
+    <station name="Burnage" crs="BNA" />
+    <station name="Burneside (Cumbria)" crs="BUD" />
+    <station name="Burnham (Bucks)" crs="BNM" />
+    <station name="Burnham-on-Crouch" crs="BUU" />
+    <station name="Burnley Barracks" crs="BUB" />
+    <station name="Burnley Central" crs="BNC" />
+    <station name="Burnley Manchester Road" crs="BYM" />
+    <station name="Burnside (Strathclyde)" crs="BUI" />
+    <station name="Burntisland" crs="BTS" />
+    <station name="Burscough Bridge" crs="BCB" />
+    <station name="Burscough Junction" crs="BCJ" />
+    <station name="Bursledon" crs="BUO" />
+    <station name="Burton Joyce" crs="BUJ" />
+    <station name="Burton-on-Trent" crs="BUT" />
+    <station name="Bury St Edmunds" crs="BSE" />
+    <station name="Busby" crs="BUS" />
+    <station name="Bush Hill Park" crs="BHK" />
+    <station name="Bushey" crs="BSH" />
+    <station name="Butlers Lane" crs="BUL" />
+    <station name="Buxted" crs="BXD" />
+    <station name="Buxton" crs="BUX" />
+    <station name="Byfleet &amp; New Haw" crs="BFN" />
+    <station name="Bynea" crs="BYE" />
+    <station name="Cadoxton" crs="CAD" />
+    <station name="Caergwrle" crs="CGW" />
+    <station name="Caerphilly" crs="CPH" />
+    <station name="Caersws" crs="CWS" />
+    <station name="Caldercruix" crs="CAC" />
+    <station name="Caldicot" crs="CDT" />
+    <station name="Caledonian Rd &amp; Barnsbury" crs="CIR" />
+    <station name="Calstock" crs="CSK" />
+    <station name="Cam &amp; Dursley" crs="CDU" />
+    <station name="Camberley" crs="CAM" />
+    <station name="Camborne" crs="CBN" />
+    <station name="Cambridge" crs="CBG" />
+    <station name="Cambridge Heath" crs="CBH" />
+    <station name="Cambridge North" crs="CMB" />
+    <station name="Cambuslang" crs="CBL" />
+    <station name="Camden Road" crs="CMD" />
+    <station name="Camelon" crs="CMO" />
+    <station name="Canada Water" crs="ZCW" />
+    <station name="Canley" crs="CNL" />
+    <station name="Cannock" crs="CAO" />
+    <station name="Canonbury" crs="CNN" />
+    <station name="Canterbury East" crs="CBE" />
+    <station name="Canterbury West" crs="CBW" />
+    <station name="Cantley" crs="CNY" />
+    <station name="Capenhurst" crs="CPU" />
+    <station name="Carbis Bay" crs="CBB" />
+    <station name="Cardenden" crs="CDD" />
+    <station name="Cardiff Bay" crs="CDB" />
+    <station name="Cardiff Central" crs="CDF" />
+    <station name="Cardiff Queen Street" crs="CDQ" />
+    <station name="Cardonald" crs="CDO" />
+    <station name="Cardross" crs="CDR" />
+    <station name="Carfin" crs="CRF" />
+    <station name="Cark &amp; Cartmel" crs="CAK" />
+    <station name="Carlisle" crs="CAR" />
+    <station name="Carlton" crs="CTO" />
+    <station name="Carluke" crs="CLU" />
+    <station name="Carmarthen" crs="CMN" />
+    <station name="Carmyle" crs="CML" />
+    <station name="Carnforth" crs="CNF" />
+    <station name="Carnoustie" crs="CAN" />
+    <station name="Carntyne" crs="CAY" />
+    <station name="Carpenders Park" crs="CPK" />
+    <station name="Carrbridge" crs="CAG" />
+    <station name="Carshalton" crs="CSH" />
+    <station name="Carshalton Beeches" crs="CSB" />
+    <station name="Carstairs" crs="CRS" />
+    <station name="Cartsdyke" crs="CDY" />
+    <station name="Castle Bar Park" crs="CBP" />
+    <station name="Castle Cary" crs="CLC" />
+    <station name="Castleford" crs="CFD" />
+    <station name="Castleton (Manchester)" crs="CAS" />
+    <station name="Castleton Moor" crs="CSM" />
+    <station name="Caterham" crs="CAT" />
+    <station name="Catford" crs="CTF" />
+    <station name="Catford Bridge" crs="CFB" />
+    <station name="Cathays" crs="CYS" />
+    <station name="Cathcart" crs="CCT" />
+    <station name="Cattal" crs="CTL" />
+    <station name="Causeland" crs="CAU" />
+    <station name="Cefn-y-Bedd" crs="CYB" />
+    <station name="Chadwell Heath" crs="CTH" />
+    <station name="Chafford Hundred Lakeside" crs="CFH" />
+    <station name="Chalfont &amp; Latimer" crs="CFO" />
+    <station name="Chalkwell" crs="CHW" />
+    <station name="Chandlers Ford" crs="CFR" />
+    <station name="Chapel-en-le-Frith" crs="CEF" />
+    <station name="Chapelton (Devon)" crs="CPN" />
+    <station name="Chapeltown (South Yorks)" crs="CLN" />
+    <station name="Chappel &amp; Wakes Colne" crs="CWC" />
+    <station name="Charing (Kent)" crs="CHG" />
+    <station name="Charing Cross (Glasgow)" crs="CHC" />
+    <station name="Charlbury" crs="CBY" />
+    <station name="Charlton" crs="CTN" />
+    <station name="Chartham" crs="CRT" />
+    <station name="Chassen Road" crs="CSR" />
+    <station name="Chatelherault" crs="CTE" />
+    <station name="Chatham" crs="CTM" />
+    <station name="Chathill" crs="CHT" />
+    <station name="Cheadle Hulme" crs="CHU" />
+    <station name="Cheam" crs="CHE" />
+    <station name="Cheddington" crs="CED" />
+    <station name="Chelford (Cheshire)" crs="CEL" />
+    <station name="Chelmsford" crs="CHM" />
+    <station name="Chelsfield" crs="CLD" />
+    <station name="Cheltenham Spa" crs="CNM" />
+    <station name="Chepstow" crs="CPW" />
+    <station name="Cherry Tree" crs="CYT" />
+    <station name="Chertsey" crs="CHY" />
+    <station name="Cheshunt" crs="CHN" />
+    <station name="Chessington North" crs="CSN" />
+    <station name="Chessington South" crs="CSS" />
+    <station name="Chester" crs="CTR" />
+    <station name="Chester Road" crs="CRD" />
+    <station name="Chesterfield" crs="CHD" />
+    <station name="Chester-le-Street" crs="CLS" />
+    <station name="Chestfield &amp; Swalecliffe" crs="CSW" />
+    <station name="Chetnole" crs="CNO" />
+    <station name="Chichester" crs="CCH" />
+    <station name="Chilham" crs="CIL" />
+    <station name="Chilworth" crs="CHL" />
+    <station name="Chingford" crs="CHI" />
+    <station name="Chinley" crs="CLY" />
+    <station name="Chippenham" crs="CPM" />
+    <station name="Chipstead" crs="CHP" />
+    <station name="Chirk" crs="CRK" />
+    <station name="Chislehurst" crs="CIT" />
+    <station name="Chiswick" crs="CHK" />
+    <station name="Cholsey" crs="CHO" />
+    <station name="Chorley" crs="CRL" />
+    <station name="Chorleywood" crs="CLW" />
+    <station name="Christchurch" crs="CHR" />
+    <station name="Christs Hospital" crs="CHH" />
+    <station name="Church &amp; Oswaldtwistle" crs="CTW" />
+    <station name="Church Fenton" crs="CHF" />
+    <station name="Church Stretton" crs="CTT" />
+    <station name="Cilmeri" crs="CIM" />
+    <station name="City Thameslink" crs="CTK" />
+    <station name="Clacton-on-Sea" crs="CLT" />
+    <station name="Clandon" crs="CLA" />
+    <station name="Clapham (North Yorkshire)" crs="CPY" />
+    <station name="Clapham High Street" crs="CLP" />
+    <station name="Clapham Junction" crs="CLJ" />
+    <station name="Clapton" crs="CPT" />
+    <station name="Clarbeston Road" crs="CLR" />
+    <station name="Clarkston" crs="CKS" />
+    <station name="Claverdon" crs="CLV" />
+    <station name="Claygate" crs="CLG" />
+    <station name="Cleethorpes" crs="CLE" />
+    <station name="Cleland" crs="CEA" />
+    <station name="Clifton (Manchester)" crs="CLI" />
+    <station name="Clifton Down" crs="CFN" />
+    <station name="Clitheroe" crs="CLH" />
+    <station name="Clock House" crs="CLK" />
+    <station name="Clunderwen" crs="CUW" />
+    <station name="Clydebank" crs="CYK" />
+    <station name="Coatbridge Central" crs="CBC" />
+    <station name="Coatbridge Sunnyside" crs="CBS" />
+    <station name="Coatdyke" crs="COA" />
+    <station name="Cobham &amp; Stoke d&apos;Abernon" crs="CSD" />
+    <station name="Codsall" crs="CSL" />
+    <station name="Cogan" crs="CGN" />
+    <station name="Colchester" crs="COL" />
+    <station name="Colchester Town" crs="CET" />
+    <station name="Coleshill Parkway" crs="CEH" />
+    <station name="Collingham" crs="CLM" />
+    <station name="Collington" crs="CLL" />
+    <station name="Colne" crs="CNE" />
+    <station name="Colwall" crs="CWL" />
+    <station name="Colwyn Bay" crs="CWB" />
+    <station name="Combe (Oxon)" crs="CME" />
+    <station name="Commondale" crs="COM" />
+    <station name="Congleton" crs="CNG" />
+    <station name="Conisbrough" crs="CNS" />
+    <station name="Connel Ferry" crs="CON" />
+    <station name="Conon Bridge" crs="CBD" />
+    <station name="Cononley" crs="CEY" />
+    <station name="Conway Park" crs="CNP" />
+    <station name="Conwy" crs="CNW" />
+    <station name="Cooden Beach" crs="COB" />
+    <station name="Cookham" crs="COO" />
+    <station name="Cooksbridge" crs="CBR" />
+    <station name="Coombe Junction Halt" crs="COE" />
+    <station name="Copplestone" crs="COP" />
+    <station name="Corbridge" crs="CRB" />
+    <station name="Corby" crs="COR" />
+    <station name="Corfe Castle" crs="CFC" />
+    <station name="Corkerhill" crs="CKH" />
+    <station name="Corkickle" crs="CKL" />
+    <station name="Corpach" crs="CPA" />
+    <station name="Corrour" crs="CRR" />
+    <station name="Coryton" crs="COY" />
+    <station name="Coseley" crs="CSY" />
+    <station name="Cosford" crs="COS" />
+    <station name="Cosham" crs="CSA" />
+    <station name="Cottingham" crs="CGM" />
+    <station name="Cottingley" crs="COT" />
+    <station name="Coulsdon South" crs="CDS" />
+    <station name="Coulsdon Town" crs="CDN" />
+    <station name="Coventry" crs="COV" />
+    <station name="Coventry Arena" crs="CAA" />
+    <station name="Cowden (Kent)" crs="CWN" />
+    <station name="Cowdenbeath" crs="COW" />
+    <station name="Cradley Heath" crs="CRA" />
+    <station name="Craigendoran" crs="CGD" />
+    <station name="Cramlington" crs="CRM" />
+    <station name="Cranbrook (Devon)" crs="CBK" />
+    <station name="Craven Arms" crs="CRV" />
+    <station name="Crawley" crs="CRW" />
+    <station name="Crayford" crs="CRY" />
+    <station name="Crediton" crs="CDI" />
+    <station name="Cressing (Essex)" crs="CES" />
+    <station name="Cressington" crs="CSG" />
+    <station name="Creswell" crs="CWD" />
+    <station name="Crewe" crs="CRE" />
+    <station name="Crewkerne" crs="CKN" />
+    <station name="Crews Hill" crs="CWH" />
+    <station name="Crianlarich" crs="CNR" />
+    <station name="Criccieth" crs="CCC" />
+    <station name="Cricklewood" crs="CRI" />
+    <station name="Croftfoot" crs="CFF" />
+    <station name="Crofton Park" crs="CFT" />
+    <station name="Cromer" crs="CMR" />
+    <station name="Cromford" crs="CMF" />
+    <station name="Crookston" crs="CKT" />
+    <station name="Cross Gates" crs="CRG" />
+    <station name="Crossflatts" crs="CFL" />
+    <station name="Crosshill" crs="COI" />
+    <station name="Crosskeys" crs="CKY" />
+    <station name="Crossmyloof" crs="CMY" />
+    <station name="Croston" crs="CSO" />
+    <station name="Crouch Hill" crs="CRH" />
+    <station name="Crowborough" crs="COH" />
+    <station name="Crowhurst" crs="CWU" />
+    <station name="Crowle" crs="CWE" />
+    <station name="Crowthorne" crs="CRN" />
+    <station name="Croy" crs="CRO" />
+    <station name="Crystal Palace" crs="CYP" />
+    <station name="Cuddington" crs="CUD" />
+    <station name="Cuffley" crs="CUF" />
+    <station name="Culham" crs="CUM" />
+    <station name="Culrain" crs="CUA" />
+    <station name="Cumbernauld" crs="CUB" />
+    <station name="Cupar" crs="CUP" />
+    <station name="Curriehill" crs="CUH" />
+    <station name="Cuxton" crs="CUX" />
+    <station name="Cwmbach" crs="CMH" />
+    <station name="Cwmbran" crs="CWM" />
+    <station name="Cynghordy" crs="CYN" />
+    <station name="Dagenham Dock" crs="DDK" />
+    <station name="Daisy Hill" crs="DSY" />
+    <station name="Dalgety Bay" crs="DAG" />
+    <station name="Dalmally" crs="DAL" />
+    <station name="Dalmarnock" crs="DAK" />
+    <station name="Dalmeny" crs="DAM" />
+    <station name="Dalmuir" crs="DMR" />
+    <station name="Dalreoch" crs="DLR" />
+    <station name="Dalry" crs="DLY" />
+    <station name="Dalston (Cumbria)" crs="DLS" />
+    <station name="Dalston Junction" crs="DLJ" />
+    <station name="Dalston Kingsland" crs="DLK" />
+    <station name="Dalton (Cumbria)" crs="DLT" />
+    <station name="Dalwhinnie" crs="DLW" />
+    <station name="Danby" crs="DNY" />
+    <station name="Danescourt" crs="DCT" />
+    <station name="Danzey" crs="DZY" />
+    <station name="Darlington" crs="DAR" />
+    <station name="Darnall" crs="DAN" />
+    <station name="Darsham" crs="DSM" />
+    <station name="Dartford" crs="DFD" />
+    <station name="Darton" crs="DRT" />
+    <station name="Darwen" crs="DWN" />
+    <station name="Datchet" crs="DAT" />
+    <station name="Davenport" crs="DVN" />
+    <station name="Dawlish" crs="DWL" />
+    <station name="Dawlish Warren" crs="DWW" />
+    <station name="Deal" crs="DEA" />
+    <station name="Dean (Wilts)" crs="DEN" />
+    <station name="Deansgate" crs="DGT" />
+    <station name="Deganwy" crs="DGY" />
+    <station name="Deighton" crs="DHN" />
+    <station name="Delamere" crs="DLM" />
+    <station name="Denby Dale" crs="DBD" />
+    <station name="Denham" crs="DNM" />
+    <station name="Denham Golf Club" crs="DGC" />
+    <station name="Denmark Hill" crs="DMK" />
+    <station name="Dent" crs="DNT" />
+    <station name="Denton" crs="DTN" />
+    <station name="Deptford" crs="DEP" />
+    <station name="Derby" crs="DBY" />
+    <station name="Derby Road (Ipswich)" crs="DBR" />
+    <station name="Devonport (Devon)" crs="DPT" />
+    <station name="Devonport Dockyard" crs="DOC" />
+    <station name="Dewsbury" crs="DEW" />
+    <station name="Didcot Parkway" crs="DID" />
+    <station name="Digby &amp; Sowton" crs="DIG" />
+    <station name="Dilton Marsh" crs="DMH" />
+    <station name="Dinas (Rhondda)" crs="DMG" />
+    <station name="Dinas Powys" crs="DNS" />
+    <station name="Dingle Road" crs="DGL" />
+    <station name="Dingwall" crs="DIN" />
+    <station name="Dinsdale" crs="DND" />
+    <station name="Dinting" crs="DTG" />
+    <station name="Disley" crs="DSL" />
+    <station name="Diss" crs="DIS" />
+    <station name="Dodworth" crs="DOD" />
+    <station name="Dolau" crs="DOL" />
+    <station name="Doleham" crs="DLH" />
+    <station name="Dolgarrog" crs="DLG" />
+    <station name="Dolwyddelan" crs="DWD" />
+    <station name="Doncaster" crs="DON" />
+    <station name="Dorchester South" crs="DCH" />
+    <station name="Dorchester West" crs="DCW" />
+    <station name="Dore &amp; Totley" crs="DOR" />
+    <station name="Dorking (Main)" crs="DKG" />
+    <station name="Dorking Deepdene" crs="DPD" />
+    <station name="Dorking West" crs="DKT" />
+    <station name="Dormans" crs="DMS" />
+    <station name="Dorridge" crs="DDG" />
+    <station name="Dove Holes" crs="DVH" />
+    <station name="Dover Priory" crs="DVP" />
+    <station name="Dovercourt" crs="DVC" />
+    <station name="Dovey Junction" crs="DVY" />
+    <station name="Downham Market" crs="DOW" />
+    <station name="Drayton Green" crs="DRG" />
+    <station name="Drayton Park" crs="DYP" />
+    <station name="Drem" crs="DRM" />
+    <station name="Driffield" crs="DRF" />
+    <station name="Drigg" crs="DRI" />
+    <station name="Droitwich Spa" crs="DTW" />
+    <station name="Dronfield" crs="DRO" />
+    <station name="Drumchapel" crs="DMC" />
+    <station name="Drumfrochar" crs="DFR" />
+    <station name="Drumgelloch" crs="DRU" />
+    <station name="Drumry" crs="DMY" />
+    <station name="Dublin Ferryport" crs="DFP" />
+    <station name="Dublin Port - Stena" crs="DPS" />
+    <station name="Duddeston" crs="DUD" />
+    <station name="Dudley Port" crs="DDP" />
+    <station name="Duffield" crs="DFI" />
+    <station name="Duirinish" crs="DRN" />
+    <station name="Duke Street" crs="DST" />
+    <station name="Dullingham" crs="DUL" />
+    <station name="Dumbarton Central" crs="DBC" />
+    <station name="Dumbarton East" crs="DBE" />
+    <station name="Dumbreck" crs="DUM" />
+    <station name="Dumfries" crs="DMF" />
+    <station name="Dumpton Park" crs="DMP" />
+    <station name="Dunbar" crs="DUN" />
+    <station name="Dunblane" crs="DBL" />
+    <station name="Duncraig" crs="DCG" />
+    <station name="Dundee" crs="DEE" />
+    <station name="Dunfermline Queen Margaret" crs="DFL" />
+    <station name="Dunfermline Town" crs="DFE" />
+    <station name="Dunkeld &amp; Birnam" crs="DKD" />
+    <station name="Dunlop" crs="DNL" />
+    <station name="Dunrobin Castle" crs="DNO" />
+    <station name="Dunston" crs="DOT" />
+    <station name="Dunton Green" crs="DNG" />
+    <station name="Durham" crs="DHM" />
+    <station name="Durrington-on-Sea" crs="DUR" />
+    <station name="Dyce" crs="DYC" />
+    <station name="Dyffryn Ardudwy" crs="DYF" />
+    <station name="Eaglescliffe" crs="EAG" />
+    <station name="Ealing Broadway" crs="EAL" />
+    <station name="Earlestown" crs="ERL" />
+    <station name="Earley" crs="EAR" />
+    <station name="Earlsfield" crs="EAD" />
+    <station name="Earlswood (Surrey)" crs="ELD" />
+    <station name="Earlswood (West Midlands)" crs="EWD" />
+    <station name="East Croydon" crs="ECR" />
+    <station name="East Didsbury" crs="EDY" />
+    <station name="East Dulwich" crs="EDW" />
+    <station name="East Farleigh" crs="EFL" />
+    <station name="East Garforth" crs="EGF" />
+    <station name="East Grinstead" crs="EGR" />
+    <station name="East Kilbride" crs="EKL" />
+    <station name="East Malling" crs="EML" />
+    <station name="East Midlands Parkway" crs="EMD" />
+    <station name="East Tilbury" crs="ETL" />
+    <station name="East Worthing" crs="EWR" />
+    <station name="Eastbourne" crs="EBN" />
+    <station name="Eastbrook" crs="EBK" />
+    <station name="Easterhouse" crs="EST" />
+    <station name="Eastham Rake" crs="ERA" />
+    <station name="Eastleigh" crs="ESL" />
+    <station name="Eastrington" crs="EGN" />
+    <station name="Ebbsfleet International" crs="EBD" />
+    <station name="Ebbw Vale Parkway" crs="EBV" />
+    <station name="Ebbw Vale Town" crs="EBB" />
+    <station name="Eccles (Manchester)" crs="ECC" />
+    <station name="Eccles Road" crs="ECS" />
+    <station name="Eccleston Park" crs="ECL" />
+    <station name="Edale" crs="EDL" />
+    <station name="Eden Park" crs="EDN" />
+    <station name="Edenbridge" crs="EBR" />
+    <station name="Edenbridge Town" crs="EBT" />
+    <station name="Edge Hill" crs="EDG" />
+    <station name="Edinburgh" crs="EDB" />
+    <station name="Edinburgh Gateway" crs="EGY" />
+    <station name="Edinburgh Park" crs="EDP" />
+    <station name="Edmonton Green" crs="EDR" />
+    <station name="Effingham Junction" crs="EFF" />
+    <station name="Eggesford" crs="EGG" />
+    <station name="Egham" crs="EGH" />
+    <station name="Egton" crs="EGT" />
+    <station name="Elephant &amp; Castle" crs="EPH" />
+    <station name="Elephant &amp; Castle (Underground)" crs="ZEL" />
+    <station name="Elgin" crs="ELG" />
+    <station name="Ellesmere Port" crs="ELP" />
+    <station name="Elmers End" crs="ELE" />
+    <station name="Elmstead Woods" crs="ESD" />
+    <station name="Elmswell" crs="ESW" />
+    <station name="Elsecar" crs="ELR" />
+    <station name="Elsenham (Essex)" crs="ESM" />
+    <station name="Elstree &amp; Borehamwood" crs="ELS" />
+    <station name="Eltham" crs="ELW" />
+    <station name="Elton &amp; Orston" crs="ELO" />
+    <station name="Ely" crs="ELY" />
+    <station name="Emerson Park" crs="EMP" />
+    <station name="Emsworth" crs="EMS" />
+    <station name="Energlyn &amp; Churchill Park" crs="ECP" />
+    <station name="Enfield Chase" crs="ENC" />
+    <station name="Enfield Lock" crs="ENL" />
+    <station name="Enfield Town" crs="ENF" />
+    <station name="Entwistle" crs="ENT" />
+    <station name="Epsom (Surrey)" crs="EPS" />
+    <station name="Epsom Downs" crs="EPD" />
+    <station name="Erdington" crs="ERD" />
+    <station name="Eridge" crs="ERI" />
+    <station name="Erith" crs="ERH" />
+    <station name="Esher" crs="ESH" />
+    <station name="Eskbank" crs="EKB" />
+    <station name="Essex Road" crs="EXR" />
+    <station name="Etchingham" crs="ETC" />
+    <station name="Euxton Balshaw Lane" crs="EBA" />
+    <station name="Evesham" crs="EVE" />
+    <station name="Ewell East" crs="EWE" />
+    <station name="Ewell West" crs="EWW" />
+    <station name="Exeter Central" crs="EXC" />
+    <station name="Exeter St David&apos;s" crs="EXD" />
+    <station name="Exeter St Thomas" crs="EXT" />
+    <station name="Exhibition Centre (Glasgow)" crs="EXG" />
+    <station name="Exmouth" crs="EXM" />
+    <station name="Exton" crs="EXN" />
+    <station name="Eynsford" crs="EYN" />
+    <station name="Fairbourne" crs="FRB" />
+    <station name="Fairfield" crs="FRF" />
+    <station name="Fairlie" crs="FRL" />
+    <station name="Fairwater" crs="FRW" />
+    <station name="Falconwood" crs="FCN" />
+    <station name="Falkirk Grahamston" crs="FKG" />
+    <station name="Falkirk High" crs="FKK" />
+    <station name="Falls of Cruachan" crs="FOC" />
+    <station name="Falmer" crs="FMR" />
+    <station name="Falmouth Docks" crs="FAL" />
+    <station name="Falmouth Town" crs="FMT" />
+    <station name="Fareham" crs="FRM" />
+    <station name="Farnborough (Main)" crs="FNB" />
+    <station name="Farnborough North" crs="FNN" />
+    <station name="Farncombe" crs="FNC" />
+    <station name="Farnham" crs="FNH" />
+    <station name="Farningham Road" crs="FNR" />
+    <station name="Farnworth" crs="FNW" />
+    <station name="Farringdon" crs="ZFD" />
+    <station name="Fauldhouse" crs="FLD" />
+    <station name="Faversham" crs="FAV" />
+    <station name="Faygate" crs="FGT" />
+    <station name="Fazakerley" crs="FAZ" />
+    <station name="Fearn" crs="FRN" />
+    <station name="Featherstone" crs="FEA" />
+    <station name="Felixstowe" crs="FLX" />
+    <station name="Feltham" crs="FEL" />
+    <station name="Feniton" crs="FNT" />
+    <station name="Fenny Stratford" crs="FEN" />
+    <station name="Fernhill" crs="FER" />
+    <station name="Ferriby" crs="FRY" />
+    <station name="Ferryside" crs="FYS" />
+    <station name="Ffairfach" crs="FFA" />
+    <station name="Filey" crs="FIL" />
+    <station name="Filton Abbey Wood" crs="FIT" />
+    <station name="Finchley Road &amp; Frognal" crs="FNY" />
+    <station name="Finsbury Park" crs="FPK" />
+    <station name="Finstock" crs="FIN" />
+    <station name="Fishbourne (Sussex)" crs="FSB" />
+    <station name="Fishersgate" crs="FSG" />
+    <station name="Fishguard &amp; Goodwick" crs="FGW" />
+    <station name="Fishguard Harbour" crs="FGH" />
+    <station name="Fiskerton" crs="FSK" />
+    <station name="Fitzwilliam" crs="FZW" />
+    <station name="Five Ways" crs="FWY" />
+    <station name="Fleet" crs="FLE" />
+    <station name="Flimby" crs="FLM" />
+    <station name="Flint" crs="FLN" />
+    <station name="Flitwick" crs="FLT" />
+    <station name="Flixton" crs="FLI" />
+    <station name="Flowery Field" crs="FLF" />
+    <station name="Folkestone Central" crs="FKC" />
+    <station name="Folkestone West" crs="FKW" />
+    <station name="Ford" crs="FOD" />
+    <station name="Forest Gate" crs="FOG" />
+    <station name="Forest Hill" crs="FOH" />
+    <station name="Formby" crs="FBY" />
+    <station name="Forres" crs="FOR" />
+    <station name="Forsinard" crs="FRS" />
+    <station name="Fort Matilda" crs="FTM" />
+    <station name="Fort William" crs="FTW" />
+    <station name="Four Oaks" crs="FOK" />
+    <station name="Foxfield" crs="FOX" />
+    <station name="Foxton" crs="FXN" />
+    <station name="Frant" crs="FRT" />
+    <station name="Fratton" crs="FTN" />
+    <station name="Freshfield" crs="FRE" />
+    <station name="Freshford" crs="FFD" />
+    <station name="Frimley" crs="FML" />
+    <station name="Frinton-on-Sea" crs="FRI" />
+    <station name="Frizinghall" crs="FZH" />
+    <station name="Frodsham" crs="FRD" />
+    <station name="Frome" crs="FRO" />
+    <station name="Fulwell" crs="FLW" />
+    <station name="Furness Vale" crs="FNV" />
+    <station name="Furze Platt" crs="FZP" />
+    <station name="Gainsborough Central" crs="GNB" />
+    <station name="Gainsborough Lea Road" crs="GBL" />
+    <station name="Galashiels" crs="GAL" />
+    <station name="Garelochhead" crs="GCH" />
+    <station name="Garforth" crs="GRF" />
+    <station name="Gargrave" crs="GGV" />
+    <station name="Garrowhill" crs="GAR" />
+    <station name="Garscadden" crs="GRS" />
+    <station name="Garsdale" crs="GSD" />
+    <station name="Garston (Hertfordshire)" crs="GSN" />
+    <station name="Garswood" crs="GSW" />
+    <station name="Gartcosh" crs="GRH" />
+    <station name="Garth (Mid Glamorgan)" crs="GMG" />
+    <station name="Garth (Powys)" crs="GTH" />
+    <station name="Garve" crs="GVE" />
+    <station name="Gathurst" crs="GST" />
+    <station name="Gatley" crs="GTY" />
+    <station name="Gatwick Airport" crs="GTW" />
+    <station name="Georgemas Junction" crs="GGJ" />
+    <station name="Gerrards Cross" crs="GER" />
+    <station name="Gidea Park" crs="GDP" />
+    <station name="Giffnock" crs="GFN" />
+    <station name="Giggleswick" crs="GIG" />
+    <station name="Gilberdyke" crs="GBD" />
+    <station name="Gilfach Fargoed" crs="GFF" />
+    <station name="Gillingham (Dorset)" crs="GIL" />
+    <station name="Gillingham (Kent)" crs="GLM" />
+    <station name="Gilshochill" crs="GSC" />
+    <station name="Gipsy Hill" crs="GIP" />
+    <station name="Girvan" crs="GIR" />
+    <station name="Glaisdale" crs="GLS" />
+    <station name="Glan Conwy" crs="GCW" />
+    <station name="Glasgow Central" crs="GLC" />
+    <station name="Glasgow Queen Street" crs="GLQ" />
+    <station name="Glasshoughton" crs="GLH" />
+    <station name="Glazebrook" crs="GLZ" />
+    <station name="Gleneagles" crs="GLE" />
+    <station name="Glenfinnan" crs="GLF" />
+    <station name="Glengarnock" crs="GLG" />
+    <station name="Glenrothes with Thornton" crs="GLT" />
+    <station name="Glossop" crs="GLO" />
+    <station name="Gloucester" crs="GCR" />
+    <station name="Glynde" crs="GLY" />
+    <station name="Gobowen" crs="GOB" />
+    <station name="Godalming" crs="GOD" />
+    <station name="Godley" crs="GDL" />
+    <station name="Godstone" crs="GDN" />
+    <station name="Goldthorpe" crs="GOE" />
+    <station name="Golf Street" crs="GOF" />
+    <station name="Golspie" crs="GOL" />
+    <station name="Gomshall" crs="GOM" />
+    <station name="Goodmayes" crs="GMY" />
+    <station name="Goole" crs="GOO" />
+    <station name="Goostrey" crs="GTR" />
+    <station name="Gordon Hill" crs="GDH" />
+    <station name="Gorebridge" crs="GBG" />
+    <station name="Goring &amp; Streatley" crs="GOR" />
+    <station name="Goring-by-Sea" crs="GBS" />
+    <station name="Gorton" crs="GTO" />
+    <station name="Gospel Oak" crs="GPO" />
+    <station name="Gourock" crs="GRK" />
+    <station name="Gowerton" crs="GWN" />
+    <station name="Goxhill" crs="GOX" />
+    <station name="Grange Park" crs="GPK" />
+    <station name="Grange-Over-Sands" crs="GOS" />
+    <station name="Grangetown (Cardiff)" crs="GTN" />
+    <station name="Grantham" crs="GRA" />
+    <station name="Grateley" crs="GRT" />
+    <station name="Gravelly Hill" crs="GVH" />
+    <station name="Gravesend" crs="GRV" />
+    <station name="Grays" crs="GRY" />
+    <station name="Great Ayton" crs="GTA" />
+    <station name="Great Bentley" crs="GRB" />
+    <station name="Great Chesterford" crs="GRC" />
+    <station name="Great Coates" crs="GCT" />
+    <station name="Great Malvern" crs="GMV" />
+    <station name="Great Missenden" crs="GMN" />
+    <station name="Great Yarmouth" crs="GYM" />
+    <station name="Green Lane" crs="GNL" />
+    <station name="Green Road" crs="GNR" />
+    <station name="Greenbank" crs="GBK" />
+    <station name="Greenfaulds" crs="GRL" />
+    <station name="Greenfield" crs="GNF" />
+    <station name="Greenford" crs="GFD" />
+    <station name="Greenhithe" crs="GNH" />
+    <station name="Greenock Central" crs="GKC" />
+    <station name="Greenock West" crs="GKW" />
+    <station name="Greenwich" crs="GNW" />
+    <station name="Gretna Green" crs="GEA" />
+    <station name="Grimsby Docks" crs="GMD" />
+    <station name="Grimsby Town" crs="GMB" />
+    <station name="Grindleford" crs="GRN" />
+    <station name="Grosmont" crs="GMT" />
+    <station name="Grove Park" crs="GRP" />
+    <station name="Guide Bridge" crs="GUI" />
+    <station name="Guildford" crs="GLD" />
+    <station name="Guiseley" crs="GSY" />
+    <station name="Gunnersbury" crs="GUN" />
+    <station name="Gunnislake" crs="GSL" />
+    <station name="Gunton" crs="GNT" />
+    <station name="Gwersyllt" crs="GWE" />
+    <station name="Gypsy Lane" crs="GYP" />
+    <station name="Habrough" crs="HAB" />
+    <station name="Hackbridge" crs="HCB" />
+    <station name="Hackney Central" crs="HKC" />
+    <station name="Hackney Downs" crs="HAC" />
+    <station name="Hackney Wick" crs="HKW" />
+    <station name="Haddenham &amp; Thame Parkway" crs="HDM" />
+    <station name="Haddiscoe" crs="HAD" />
+    <station name="Hadfield" crs="HDF" />
+    <station name="Hadley Wood" crs="HDW" />
+    <station name="Hag Fold" crs="HGF" />
+    <station name="Haggerston" crs="HGG" />
+    <station name="Hagley" crs="HAG" />
+    <station name="Hairmyres" crs="HMY" />
+    <station name="Hale (Manchester)" crs="HAL" />
+    <station name="Halesworth" crs="HAS" />
+    <station name="Halewood" crs="HED" />
+    <station name="Halifax" crs="HFX" />
+    <station name="Hall Green" crs="HLG" />
+    <station name="Hall Road" crs="HLR" />
+    <station name="Halling" crs="HAI" />
+    <station name="Hall-i&apos;-th&apos;-Wood" crs="HID" />
+    <station name="Haltwhistle" crs="HWH" />
+    <station name="Ham Street" crs="HMT" />
+    <station name="Hamble" crs="HME" />
+    <station name="Hamilton Central" crs="HNC" />
+    <station name="Hamilton West" crs="HNW" />
+    <station name="Hammerton" crs="HMM" />
+    <station name="Hampden Park (Sussex)" crs="HMD" />
+    <station name="Hampstead Heath" crs="HDH" />
+    <station name="Hampton (London)" crs="HMP" />
+    <station name="Hampton Court" crs="HMC" />
+    <station name="Hampton Wick" crs="HMW" />
+    <station name="Hampton-in-Arden" crs="HIA" />
+    <station name="Hamstead (Birmingham)" crs="HSD" />
+    <station name="Hamworthy" crs="HAM" />
+    <station name="Hanborough" crs="HND" />
+    <station name="Handforth" crs="HTH" />
+    <station name="Hanwell" crs="HAN" />
+    <station name="Hapton" crs="HPN" />
+    <station name="Harlech" crs="HRL" />
+    <station name="Harlesden" crs="HDN" />
+    <station name="Harling Road" crs="HRD" />
+    <station name="Harlington (Beds)" crs="HLN" />
+    <station name="Harlow Mill" crs="HWM" />
+    <station name="Harlow Town" crs="HWN" />
+    <station name="Harold Wood" crs="HRO" />
+    <station name="Harpenden" crs="HPD" />
+    <station name="Harrietsham" crs="HRM" />
+    <station name="Harringay" crs="HGY" />
+    <station name="Harringay Green Lanes" crs="HRY" />
+    <station name="Harrington" crs="HRR" />
+    <station name="Harrogate" crs="HGT" />
+    <station name="Harrow &amp; Wealdstone" crs="HRW" />
+    <station name="Harrow-on-the-Hill" crs="HOH" />
+    <station name="Hartford (Cheshire)" crs="HTF" />
+    <station name="Hartlebury" crs="HBY" />
+    <station name="Hartlepool" crs="HPL" />
+    <station name="Hartwood" crs="HTW" />
+    <station name="Harwich International" crs="HPQ" />
+    <station name="Harwich Town" crs="HWC" />
+    <station name="Haslemere" crs="HSL" />
+    <station name="Hassocks" crs="HSK" />
+    <station name="Hastings" crs="HGS" />
+    <station name="Hatch End" crs="HTE" />
+    <station name="Hatfield &amp; Stainforth" crs="HFS" />
+    <station name="Hatfield (Herts)" crs="HAT" />
+    <station name="Hatfield Peverel" crs="HAP" />
+    <station name="Hathersage" crs="HSG" />
+    <station name="Hattersley" crs="HTY" />
+    <station name="Hatton" crs="HTN" />
+    <station name="Havant" crs="HAV" />
+    <station name="Havenhouse" crs="HVN" />
+    <station name="Haverfordwest" crs="HVF" />
+    <station name="Hawarden" crs="HWD" />
+    <station name="Hawarden Bridge" crs="HWB" />
+    <station name="Hawkhead" crs="HKH" />
+    <station name="Haydon Bridge" crs="HDB" />
+    <station name="Haydons Road" crs="HYR" />
+    <station name="Hayes &amp; Harlington" crs="HAY" />
+    <station name="Hayes (Kent)" crs="HYS" />
+    <station name="Hayle" crs="HYL" />
+    <station name="Haymarket" crs="HYM" />
+    <station name="Haywards Heath" crs="HHE" />
+    <station name="Hazel Grove" crs="HAZ" />
+    <station name="Headcorn" crs="HCN" />
+    <station name="Headingley" crs="HDY" />
+    <station name="Headstone Lane" crs="HDL" />
+    <station name="Heald Green" crs="HDG" />
+    <station name="Healing" crs="HLI" />
+    <station name="Heath High Level" crs="HHL" />
+    <station name="Heath Low Level" crs="HLL" />
+    <station name="Heathrow Airport Terminal 4" crs="HAF" />
+    <station name="Heathrow Airport Terminal 5" crs="HWV" />
+    <station name="Heathrow Airport Terminals 1, 2 and 3" crs="HXX" />
+    <station name="Heaton Chapel" crs="HTC" />
+    <station name="Hebden Bridge" crs="HBD" />
+    <station name="Heckington" crs="HEC" />
+    <station name="Hedge End" crs="HDE" />
+    <station name="Hednesford" crs="HNF" />
+    <station name="Heighington" crs="HEI" />
+    <station name="Helensburgh Central" crs="HLC" />
+    <station name="Helensburgh Upper" crs="HLU" />
+    <station name="Hellifield" crs="HLD" />
+    <station name="Helmsdale" crs="HMS" />
+    <station name="Helsby" crs="HSB" />
+    <station name="Hemel Hempstead" crs="HML" />
+    <station name="Hendon" crs="HEN" />
+    <station name="Hengoed" crs="HNG" />
+    <station name="Henley-in-Arden" crs="HNL" />
+    <station name="Henley-on-Thames" crs="HOT" />
+    <station name="Hensall" crs="HEL" />
+    <station name="Hereford" crs="HFD" />
+    <station name="Herne Bay" crs="HNB" />
+    <station name="Herne Hill" crs="HNH" />
+    <station name="Hersham" crs="HER" />
+    <station name="Hertford East" crs="HFE" />
+    <station name="Hertford North" crs="HFN" />
+    <station name="Hessle" crs="HES" />
+    <station name="Heswall" crs="HSW" />
+    <station name="Hever" crs="HEV" />
+    <station name="Heworth" crs="HEW" />
+    <station name="Hexham" crs="HEX" />
+    <station name="Heyford" crs="HYD" />
+    <station name="Heysham Port" crs="HHB" />
+    <station name="High Brooms" crs="HIB" />
+    <station name="High Street (Glasgow)" crs="HST" />
+    <station name="High Street Kensington Underground" crs="ZHS" />
+    <station name="High Wycombe" crs="HWY" />
+    <station name="Higham (Kent)" crs="HGM" />
+    <station name="Highams Park" crs="HIP" />
+    <station name="Highbridge &amp; Burnham" crs="HIG" />
+    <station name="Highbury &amp; Islington" crs="HHY" />
+    <station name="Hightown" crs="HTO" />
+    <station name="Hildenborough" crs="HLB" />
+    <station name="Hillfoot" crs="HLF" />
+    <station name="Hillington East" crs="HLE" />
+    <station name="Hillington West" crs="HLW" />
+    <station name="Hillside" crs="HIL" />
+    <station name="Hilsea" crs="HLS" />
+    <station name="Hinchley Wood" crs="HYW" />
+    <station name="Hinckley (Leics)" crs="HNK" />
+    <station name="Hindley" crs="HIN" />
+    <station name="Hinton Admiral" crs="HNA" />
+    <station name="Hitchin" crs="HIT" />
+    <station name="Hither Green" crs="HGR" />
+    <station name="Hockley" crs="HOC" />
+    <station name="Hollingbourne" crs="HBN" />
+    <station name="Holmes Chapel" crs="HCH" />
+    <station name="Holmwood" crs="HLM" />
+    <station name="Holton Heath" crs="HOL" />
+    <station name="Holyhead" crs="HHD" />
+    <station name="Holytown" crs="HLY" />
+    <station name="Homerton" crs="HMN" />
+    <station name="Honeybourne" crs="HYB" />
+    <station name="Honiton" crs="HON" />
+    <station name="Honley" crs="HOY" />
+    <station name="Honor Oak Park" crs="HPA" />
+    <station name="Hook" crs="HOK" />
+    <station name="Hooton" crs="HOO" />
+    <station name="Hope (Derbyshire)" crs="HOP" />
+    <station name="Hope (Flintshire)" crs="HPE" />
+    <station name="Hopton Heath" crs="HPT" />
+    <station name="Horden" crs="HRE" />
+    <station name="Horley" crs="HOR" />
+    <station name="Hornbeam Park" crs="HBP" />
+    <station name="Hornsey" crs="HRN" />
+    <station name="Horsforth" crs="HRS" />
+    <station name="Horsham" crs="HRH" />
+    <station name="Horsley" crs="HSY" />
+    <station name="Horton-in-Ribblesdale" crs="HIR" />
+    <station name="Horwich Parkway" crs="HWI" />
+    <station name="Hoscar" crs="HSC" />
+    <station name="Hough Green" crs="HGN" />
+    <station name="Hounslow" crs="HOU" />
+    <station name="Hove" crs="HOV" />
+    <station name="Hoveton &amp; Wroxham" crs="HXM" />
+    <station name="How Wood (Herts)" crs="HWW" />
+    <station name="Howden" crs="HOW" />
+    <station name="Howwood (Renfrewshire)" crs="HOZ" />
+    <station name="Hoxton" crs="HOX" />
+    <station name="Hoylake" crs="HYK" />
+    <station name="Hubberts Bridge" crs="HBB" />
+    <station name="Hucknall" crs="HKN" />
+    <station name="Huddersfield" crs="HUD" />
+    <station name="Hull" crs="HUL" />
+    <station name="Humphrey Park" crs="HUP" />
+    <station name="Huncoat" crs="HCT" />
+    <station name="Hungerford" crs="HGD" />
+    <station name="Hunmanby" crs="HUB" />
+    <station name="Huntingdon" crs="HUN" />
+    <station name="Huntly" crs="HNT" />
+    <station name="Hunts Cross" crs="HNX" />
+    <station name="Hurst Green" crs="HUR" />
+    <station name="Hutton Cranswick" crs="HUT" />
+    <station name="Huyton" crs="HUY" />
+    <station name="Hyde Central" crs="HYC" />
+    <station name="Hyde North" crs="HYT" />
+    <station name="Hykeham" crs="HKM" />
+    <station name="Hyndland" crs="HYN" />
+    <station name="Hythe (Essex)" crs="HYH" />
+    <station name="IBM Halt" crs="IBM" />
+    <station name="Ifield" crs="IFI" />
+    <station name="Ilford" crs="IFD" />
+    <station name="Ilkeston" crs="ILN" />
+    <station name="Ilkley" crs="ILK" />
+    <station name="Imperial Wharf" crs="IMW" />
+    <station name="Ince &amp; Elton" crs="INE" />
+    <station name="Ince (Manchester)" crs="INC" />
+    <station name="Ingatestone" crs="INT" />
+    <station name="Insch" crs="INS" />
+    <station name="Invergordon" crs="IGD" />
+    <station name="Invergowrie" crs="ING" />
+    <station name="Inverkeithing" crs="INK" />
+    <station name="Inverkip" crs="INP" />
+    <station name="Inverness" crs="INV" />
+    <station name="Invershin" crs="INH" />
+    <station name="Inverurie" crs="INR" />
+    <station name="Ipswich" crs="IPS" />
+    <station name="Irlam" crs="IRL" />
+    <station name="Irvine" crs="IRV" />
+    <station name="Isleworth" crs="ISL" />
+    <station name="Islip" crs="ISP" />
+    <station name="Iver" crs="IVR" />
+    <station name="Ivybridge" crs="IVY" />
+    <station name="James Cook" crs="JCH" />
+    <station name="Jewellery Quarter" crs="JEQ" />
+    <station name="Johnston (Pembs)" crs="JOH" />
+    <station name="Johnstone (Strathclyde)" crs="JHN" />
+    <station name="Jordanhill" crs="JOR" />
+    <station name="Kearsley (Manchester)" crs="KSL" />
+    <station name="Kearsney (Kent)" crs="KSN" />
+    <station name="Keighley" crs="KEI" />
+    <station name="Keith" crs="KEH" />
+    <station name="Kelvedon" crs="KEL" />
+    <station name="Kelvindale" crs="KVD" />
+    <station name="Kemble" crs="KEM" />
+    <station name="Kempston Hardwick" crs="KMH" />
+    <station name="Kempton Park Racecourse" crs="KMP" />
+    <station name="Kemsing" crs="KMS" />
+    <station name="Kemsley" crs="KML" />
+    <station name="Kendal" crs="KEN" />
+    <station name="Kenilworth" crs="KNW" />
+    <station name="Kenley" crs="KLY" />
+    <station name="Kennett" crs="KNE" />
+    <station name="Kennishead" crs="KNS" />
+    <station name="Kensal Green" crs="KNL" />
+    <station name="Kensal Rise" crs="KNR" />
+    <station name="Kensington Olympia" crs="KPA" />
+    <station name="Kent House" crs="KTH" />
+    <station name="Kentish Town" crs="KTN" />
+    <station name="Kentish Town West" crs="KTW" />
+    <station name="Kenton" crs="KNT" />
+    <station name="Kents Bank" crs="KBK" />
+    <station name="Kettering" crs="KET" />
+    <station name="Kew Bridge" crs="KWB" />
+    <station name="Kew Gardens" crs="KWG" />
+    <station name="Keyham" crs="KEY" />
+    <station name="Keynsham" crs="KYN" />
+    <station name="Kidbrooke" crs="KDB" />
+    <station name="Kidderminster" crs="KID" />
+    <station name="Kidsgrove" crs="KDG" />
+    <station name="Kidwelly" crs="KWL" />
+    <station name="Kilburn High Road" crs="KBN" />
+    <station name="Kildale" crs="KLD" />
+    <station name="Kildonan" crs="KIL" />
+    <station name="Kilgetty" crs="KGT" />
+    <station name="Kilmarnock" crs="KMK" />
+    <station name="Kilmaurs" crs="KLM" />
+    <station name="Kilpatrick" crs="KPT" />
+    <station name="Kilwinning" crs="KWN" />
+    <station name="Kinbrace" crs="KBC" />
+    <station name="Kingham" crs="KGM" />
+    <station name="Kinghorn" crs="KGH" />
+    <station name="Kings Langley" crs="KGL" />
+    <station name="Kings Lynn" crs="KLN" />
+    <station name="Kings Norton" crs="KNN" />
+    <station name="Kings Nympton" crs="KGN" />
+    <station name="Kings Park" crs="KGP" />
+    <station name="Kings Sutton" crs="KGS" />
+    <station name="Kingsknowe" crs="KGE" />
+    <station name="Kingston" crs="KNG" />
+    <station name="Kingswood" crs="KND" />
+    <station name="Kingussie" crs="KIN" />
+    <station name="Kintbury" crs="KIT" />
+    <station name="Kirby Cross" crs="KBX" />
+    <station name="Kirk Sandall" crs="KKS" />
+    <station name="Kirkby (Merseyside)" crs="KIR" />
+    <station name="Kirkby Stephen" crs="KSW" />
+    <station name="Kirkby-in-Ashfield" crs="KKB" />
+    <station name="Kirkby-in-Furness" crs="KBF" />
+    <station name="Kirkcaldy" crs="KDY" />
+    <station name="Kirkconnel" crs="KRK" />
+    <station name="Kirkdale" crs="KKD" />
+    <station name="Kirkham &amp; Wesham" crs="KKM" />
+    <station name="Kirkhill" crs="KKH" />
+    <station name="Kirknewton" crs="KKN" />
+    <station name="Kirkstall Forge" crs="KLF" />
+    <station name="Kirkwood" crs="KWD" />
+    <station name="Kirton Lindsey" crs="KTL" />
+    <station name="Kiveton Bridge" crs="KIV" />
+    <station name="Kiveton Park" crs="KVP" />
+    <station name="Knaresborough" crs="KNA" />
+    <station name="Knebworth" crs="KBW" />
+    <station name="Knighton" crs="KNI" />
+    <station name="Knockholt" crs="KCK" />
+    <station name="Knottingley" crs="KNO" />
+    <station name="Knucklas" crs="KNU" />
+    <station name="Knutsford" crs="KNF" />
+    <station name="Kyle of Lochalsh" crs="KYL" />
+    <station name="Ladybank" crs="LDY" />
+    <station name="Ladywell" crs="LAD" />
+    <station name="Laindon" crs="LAI" />
+    <station name="Lairg" crs="LRG" />
+    <station name="Lake" crs="LKE" />
+    <station name="Lakenheath" crs="LAK" />
+    <station name="Lamphey" crs="LAM" />
+    <station name="Lanark" crs="LNK" />
+    <station name="Lancaster" crs="LAN" />
+    <station name="Lancing" crs="LAC" />
+    <station name="Landywood" crs="LAW" />
+    <station name="Langbank" crs="LGB" />
+    <station name="Langho" crs="LHO" />
+    <station name="Langley (Berks)" crs="LNY" />
+    <station name="Langley Green" crs="LGG" />
+    <station name="Langley Mill" crs="LGM" />
+    <station name="Langside" crs="LGS" />
+    <station name="Langwathby" crs="LGW" />
+    <station name="Langwith-Whaley Thorns" crs="LAG" />
+    <station name="Lapford" crs="LAP" />
+    <station name="Lapworth" crs="LPW" />
+    <station name="Larbert" crs="LBT" />
+    <station name="Largs" crs="LAR" />
+    <station name="Larkhall" crs="LRH" />
+    <station name="Laurencekirk" crs="LAU" />
+    <station name="Lawrence Hill" crs="LWH" />
+    <station name="Layton (Lancs)" crs="LAY" />
+    <station name="Lazonby &amp; Kirkoswald" crs="LZB" />
+    <station name="Lea Bridge" crs="LEB" />
+    <station name="Lea Green" crs="LEG" />
+    <station name="Lea Hall" crs="LEH" />
+    <station name="Leagrave" crs="LEA" />
+    <station name="Lealholm" crs="LHM" />
+    <station name="Leamington Spa" crs="LMS" />
+    <station name="Leasowe" crs="LSW" />
+    <station name="Leatherhead" crs="LHD" />
+    <station name="Ledbury" crs="LED" />
+    <station name="Lee (London)" crs="LEE" />
+    <station name="Leeds" crs="LDS" />
+    <station name="Leicester" crs="LEI" />
+    <station name="Leigh (Kent)" crs="LIH" />
+    <station name="Leigh-on-Sea" crs="LES" />
+    <station name="Leighton Buzzard" crs="LBZ" />
+    <station name="Lelant" crs="LEL" />
+    <station name="Lelant Saltings" crs="LTS" />
+    <station name="Lenham" crs="LEN" />
+    <station name="Lenzie" crs="LNZ" />
+    <station name="Leominster" crs="LEO" />
+    <station name="Letchworth Garden City" crs="LET" />
+    <station name="Leuchars (for St. Andrews)" crs="LEU" />
+    <station name="Levenshulme" crs="LVM" />
+    <station name="Lewes" crs="LWS" />
+    <station name="Lewisham" crs="LEW" />
+    <station name="Leyland" crs="LEY" />
+    <station name="Leyton Midland Road" crs="LEM" />
+    <station name="Leytonstone High Road" crs="LER" />
+    <station name="Lichfield City" crs="LIC" />
+    <station name="Lichfield Trent Valley" crs="LTV" />
+    <station name="Lidlington" crs="LID" />
+    <station name="Limehouse" crs="LHS" />
+    <station name="Lincoln Central" crs="LCN" />
+    <station name="Lingfield" crs="LFD" />
+    <station name="Lingwood" crs="LGD" />
+    <station name="Linlithgow" crs="LIN" />
+    <station name="Liphook" crs="LIP" />
+    <station name="Liskeard" crs="LSK" />
+    <station name="Liss" crs="LIS" />
+    <station name="Lisvane &amp; Thornhill" crs="LVT" />
+    <station name="Little Kimble" crs="LTK" />
+    <station name="Little Sutton" crs="LTT" />
+    <station name="Littleborough" crs="LTL" />
+    <station name="Littlehampton" crs="LIT" />
+    <station name="Littlehaven" crs="LVN" />
+    <station name="Littleport" crs="LTP" />
+    <station name="Liverpool Central" crs="LVC" />
+    <station name="Liverpool James Street" crs="LVJ" />
+    <station name="Liverpool Lime Street" crs="LIV" />
+    <station name="Liverpool South Parkway" crs="LPY" />
+    <station name="Livingston North" crs="LSN" />
+    <station name="Livingston South" crs="LVG" />
+    <station name="Llanaber" crs="LLA" />
+    <station name="Llanbedr" crs="LBR" />
+    <station name="Llanbister Road" crs="LLT" />
+    <station name="Llanbradach" crs="LNB" />
+    <station name="Llandaf" crs="LLN" />
+    <station name="Llandanwg" crs="LDN" />
+    <station name="Llandecwyn" crs="LLC" />
+    <station name="Llandeilo" crs="LLL" />
+    <station name="Llandovery" crs="LLV" />
+    <station name="Llandrindod" crs="LLO" />
+    <station name="Llandudno" crs="LLD" />
+    <station name="Llandudno Junction" crs="LLJ" />
+    <station name="Llandybie" crs="LLI" />
+    <station name="Llanelli" crs="LLE" />
+    <station name="Llanfairfechan" crs="LLF" />
+    <station name="Llanfairpwll" crs="LPG" />
+    <station name="Llangadog" crs="LLG" />
+    <station name="Llangammarch" crs="LLM" />
+    <station name="Llangennech" crs="LLH" />
+    <station name="Llangynllo" crs="LGO" />
+    <station name="Llanharan" crs="LLR" />
+    <station name="Llanhilleth" crs="LTH" />
+    <station name="Llanishen" crs="LLS" />
+    <station name="Llanrwst" crs="LWR" />
+    <station name="Llansamlet" crs="LAS" />
+    <station name="Llantwit Major" crs="LWM" />
+    <station name="Llanwrda" crs="LNR" />
+    <station name="Llanwrtyd" crs="LNW" />
+    <station name="Llwyngwril" crs="LLW" />
+    <station name="Llwynypia" crs="LLY" />
+    <station name="Loch Awe" crs="LHA" />
+    <station name="Loch Eil Outward Bound" crs="LHE" />
+    <station name="Lochailort" crs="LCL" />
+    <station name="Locheilside" crs="LCS" />
+    <station name="Lochgelly" crs="LCG" />
+    <station name="Lochluichart" crs="LCC" />
+    <station name="Lochwinnoch" crs="LHW" />
+    <station name="Lockerbie" crs="LOC" />
+    <station name="Lockwood" crs="LCK" />
+    <station name="London Blackfriars" crs="BFR" />
+    <station name="London Bridge" crs="LBG" />
+    <station name="London Cannon Street" crs="CST" />
+    <station name="London Charing Cross" crs="CHX" />
+    <station name="London Euston" crs="EUS" />
+    <station name="London Fenchurch Street" crs="FST" />
+    <station name="London Fields" crs="LOF" />
+    <station name="London Kings Cross" crs="KGX" />
+    <station name="London Liverpool Street" crs="LST" />
+    <station name="London Marylebone" crs="MYB" />
+    <station name="London Paddington" crs="PAD" />
+    <station name="London Road (Brighton)" crs="LRB" />
+    <station name="London Road (Guildford)" crs="LRD" />
+    <station name="London St Pancras (Intl)" crs="SPX" />
+    <station name="London St Pancras International" crs="STP" />
+    <station name="London Victoria" crs="VIC" />
+    <station name="London Waterloo" crs="WAT" />
+    <station name="London Waterloo East" crs="WAE" />
+    <station name="Long Buckby" crs="LBK" />
+    <station name="Long Eaton" crs="LGE" />
+    <station name="Long Preston" crs="LPR" />
+    <station name="Longbeck" crs="LGK" />
+    <station name="Longbridge" crs="LOB" />
+    <station name="Longcross" crs="LNG" />
+    <station name="Longfield" crs="LGF" />
+    <station name="Longniddry" crs="LND" />
+    <station name="Longport" crs="LPT" />
+    <station name="Longton" crs="LGN" />
+    <station name="Looe" crs="LOO" />
+    <station name="Lostock" crs="LOT" />
+    <station name="Lostock Gralam" crs="LTG" />
+    <station name="Lostock Hall" crs="LOH" />
+    <station name="Lostwithiel" crs="LOS" />
+    <station name="Loughborough" crs="LBO" />
+    <station name="Loughborough Junction" crs="LGJ" />
+    <station name="Low Moor" crs="LMR" />
+    <station name="Lowdham" crs="LOW" />
+    <station name="Lower Sydenham" crs="LSY" />
+    <station name="Lowestoft" crs="LWT" />
+    <station name="Ludlow" crs="LUD" />
+    <station name="Luton" crs="LUT" />
+    <station name="Luton Airport Parkway" crs="LTN" />
+    <station name="Luxulyan" crs="LUX" />
+    <station name="Lydney" crs="LYD" />
+    <station name="Lye (West Midlands)" crs="LYE" />
+    <station name="Lymington Pier" crs="LYP" />
+    <station name="Lymington Town" crs="LYT" />
+    <station name="Lympstone Commando" crs="LYC" />
+    <station name="Lympstone Village" crs="LYM" />
+    <station name="Lytham" crs="LTM" />
+    <station name="Macclesfield" crs="MAC" />
+    <station name="Machynlleth" crs="MCN" />
+    <station name="Maesteg" crs="MST" />
+    <station name="Maesteg (Ewenny Road)" crs="MEW" />
+    <station name="Maghull" crs="MAG" />
+    <station name="Maghull North" crs="MNS" />
+    <station name="Maiden Newton" crs="MDN" />
+    <station name="Maidenhead" crs="MAI" />
+    <station name="Maidstone Barracks" crs="MDB" />
+    <station name="Maidstone East" crs="MDE" />
+    <station name="Maidstone West" crs="MDW" />
+    <station name="Malden Manor" crs="MAL" />
+    <station name="Mallaig" crs="MLG" />
+    <station name="Malton" crs="MLT" />
+    <station name="Malvern Link" crs="MVL" />
+    <station name="Manchester Airport" crs="MIA" />
+    <station name="Manchester Oxford Road" crs="MCO" />
+    <station name="Manchester Piccadilly" crs="MAN" />
+    <station name="Manchester United Football Ground" crs="MUF" />
+    <station name="Manchester Victoria" crs="MCV" />
+    <station name="Manea" crs="MNE" />
+    <station name="Manningtree" crs="MNG" />
+    <station name="Manor Park" crs="MNP" />
+    <station name="Manor Road" crs="MNR" />
+    <station name="Manorbier" crs="MRB" />
+    <station name="Manors" crs="MAS" />
+    <station name="Mansfield" crs="MFT" />
+    <station name="Mansfield Woodhouse" crs="MSW" />
+    <station name="March" crs="MCH" />
+    <station name="Marden (Kent)" crs="MRN" />
+    <station name="Margate" crs="MAR" />
+    <station name="Market Harborough" crs="MHR" />
+    <station name="Market Rasen" crs="MKR" />
+    <station name="Markinch" crs="MNC" />
+    <station name="Marks Tey" crs="MKT" />
+    <station name="Marlow" crs="MLW" />
+    <station name="Marple" crs="MPL" />
+    <station name="Marsden (Yorks)" crs="MSN" />
+    <station name="Marske" crs="MSK" />
+    <station name="Marston Green" crs="MGN" />
+    <station name="Martin Mill" crs="MTM" />
+    <station name="Martins Heron" crs="MAO" />
+    <station name="Marton" crs="MTO" />
+    <station name="Maryhill" crs="MYH" />
+    <station name="Maryland" crs="MYL" />
+    <station name="Maryport" crs="MRY" />
+    <station name="Matlock" crs="MAT" />
+    <station name="Matlock Bath" crs="MTB" />
+    <station name="Mauldeth Road" crs="MAU" />
+    <station name="Maxwell Park" crs="MAX" />
+    <station name="Maybole" crs="MAY" />
+    <station name="Maze Hill" crs="MZH" />
+    <station name="Meadowhall" crs="MHS" />
+    <station name="Meldreth" crs="MEL" />
+    <station name="Melksham" crs="MKM" />
+    <station name="Melton (Suffolk)" crs="MES" />
+    <station name="Melton Mowbray" crs="MMO" />
+    <station name="Menheniot" crs="MEN" />
+    <station name="Menston" crs="MNN" />
+    <station name="Meols" crs="MEO" />
+    <station name="Meols Cop" crs="MEC" />
+    <station name="Meopham" crs="MEP" />
+    <station name="Meridian Water" crs="MRW" />
+    <station name="Merryton" crs="MEY" />
+    <station name="Merstham" crs="MHM" />
+    <station name="Merthyr Tydfil" crs="MER" />
+    <station name="Merthyr Vale" crs="MEV" />
+    <station name="Metheringham" crs="MGM" />
+    <station name="MetroCentre" crs="MCE" />
+    <station name="Mexborough" crs="MEX" />
+    <station name="Micheldever" crs="MIC" />
+    <station name="Micklefield" crs="MIK" />
+    <station name="Middlesbrough" crs="MBR" />
+    <station name="Middlewood" crs="MDL" />
+    <station name="Midgham" crs="MDG" />
+    <station name="Milford (Surrey)" crs="MLF" />
+    <station name="Milford Haven" crs="MFH" />
+    <station name="Mill Hill (Lancs)" crs="MLH" />
+    <station name="Mill Hill Broadway" crs="MIL" />
+    <station name="Millbrook (Beds)" crs="MLB" />
+    <station name="Millbrook (Hants)" crs="MBK" />
+    <station name="Milliken Park" crs="MIN" />
+    <station name="Millom" crs="MLM" />
+    <station name="Mills Hill (Manchester)" crs="MIH" />
+    <station name="Milngavie" crs="MLN" />
+    <station name="Milton Keynes Central" crs="MKC" />
+    <station name="Minffordd" crs="MFF" />
+    <station name="Minster" crs="MSR" />
+    <station name="Mirfield" crs="MIR" />
+    <station name="Mistley" crs="MIS" />
+    <station name="Mitcham Eastfields" crs="MTC" />
+    <station name="Mitcham Junction" crs="MIJ" />
+    <station name="Mobberley" crs="MOB" />
+    <station name="Monifieth" crs="MON" />
+    <station name="Monks Risborough" crs="MRS" />
+    <station name="Montpelier" crs="MTP" />
+    <station name="Montrose" crs="MTS" />
+    <station name="Moorfields" crs="MRF" />
+    <station name="Moorgate" crs="MOG" />
+    <station name="Moorside" crs="MSD" />
+    <station name="Moorthorpe" crs="MRP" />
+    <station name="Morar" crs="MRR" />
+    <station name="Morchard Road" crs="MRD" />
+    <station name="Morden South" crs="MDS" />
+    <station name="Morecambe" crs="MCM" />
+    <station name="Moreton (Dorset)" crs="MTN" />
+    <station name="Moreton (Merseyside)" crs="MRT" />
+    <station name="Moreton-in-Marsh" crs="MIM" />
+    <station name="Morfa Mawddach" crs="MFA" />
+    <station name="Morley" crs="MLY" />
+    <station name="Morpeth" crs="MPT" />
+    <station name="Mortimer" crs="MOR" />
+    <station name="Mortlake" crs="MTL" />
+    <station name="Moses Gate" crs="MSS" />
+    <station name="Moss Side" crs="MOS" />
+    <station name="Mossley (Manchester)" crs="MSL" />
+    <station name="Mossley Hill" crs="MSH" />
+    <station name="Mosspark" crs="MPK" />
+    <station name="Moston" crs="MSO" />
+    <station name="Motherwell" crs="MTH" />
+    <station name="Motspur Park" crs="MOT" />
+    <station name="Mottingham" crs="MTG" />
+    <station name="Mottisfont &amp; Dunbridge" crs="DBG" />
+    <station name="Mouldsworth" crs="MLD" />
+    <station name="Moulsecoomb" crs="MCB" />
+    <station name="Mount Florida" crs="MFL" />
+    <station name="Mount Vernon" crs="MTV" />
+    <station name="Mountain Ash" crs="MTA" />
+    <station name="Muir of Ord" crs="MOO" />
+    <station name="Muirend" crs="MUI" />
+    <station name="Musselburgh" crs="MUB" />
+    <station name="Mytholmroyd" crs="MYT" />
+    <station name="Nafferton" crs="NFN" />
+    <station name="Nailsea &amp; Backwell" crs="NLS" />
+    <station name="Nairn" crs="NRN" />
+    <station name="Nantwich" crs="NAN" />
+    <station name="Narberth" crs="NAR" />
+    <station name="Narborough" crs="NBR" />
+    <station name="Navigation Road" crs="NVR" />
+    <station name="Neath" crs="NTH" />
+    <station name="Needham Market" crs="NMT" />
+    <station name="Neilston" crs="NEI" />
+    <station name="Nelson" crs="NEL" />
+    <station name="Neston" crs="NES" />
+    <station name="Netherfield" crs="NET" />
+    <station name="Nethertown" crs="NRT" />
+    <station name="Netley" crs="NTL" />
+    <station name="New Barnet" crs="NBA" />
+    <station name="New Beckenham" crs="NBC" />
+    <station name="New Brighton" crs="NBN" />
+    <station name="New Clee" crs="NCE" />
+    <station name="New Cross" crs="NWX" />
+    <station name="New Cross Gate" crs="NXG" />
+    <station name="New Cumnock" crs="NCK" />
+    <station name="New Eltham" crs="NEH" />
+    <station name="New Holland" crs="NHL" />
+    <station name="New Hythe" crs="NHE" />
+    <station name="New Lane" crs="NLN" />
+    <station name="New Malden" crs="NEM" />
+    <station name="New Mills Central" crs="NMC" />
+    <station name="New Mills Newtown" crs="NMN" />
+    <station name="New Milton" crs="NWM" />
+    <station name="New Pudsey" crs="NPD" />
+    <station name="New Southgate" crs="NSG" />
+    <station name="Newark Castle" crs="NCT" />
+    <station name="Newark North Gate" crs="NNG" />
+    <station name="Newbridge" crs="NBE" />
+    <station name="Newbury" crs="NBY" />
+    <station name="Newbury Racecourse" crs="NRC" />
+    <station name="Newcastle" crs="NCL" />
+    <station name="Newcourt" crs="NCO" />
+    <station name="Newcraighall" crs="NEW" />
+    <station name="Newhaven Harbour" crs="NVH" />
+    <station name="Newhaven Town" crs="NVN" />
+    <station name="Newington" crs="NGT" />
+    <station name="Newmarket" crs="NMK" />
+    <station name="Newport (Essex)" crs="NWE" />
+    <station name="Newport (South Wales)" crs="NWP" />
+    <station name="Newquay" crs="NQY" />
+    <station name="Newstead" crs="NSD" />
+    <station name="Newton (Lanark)" crs="NTN" />
+    <station name="Newton Abbot" crs="NTA" />
+    <station name="Newton Aycliffe" crs="NAY" />
+    <station name="Newton for Hyde" crs="NWN" />
+    <station name="Newton St Cyres" crs="NTC" />
+    <station name="Newtongrange" crs="NEG" />
+    <station name="Newton-le-Willows" crs="NLW" />
+    <station name="Newtonmore" crs="NWR" />
+    <station name="Newton-on-Ayr" crs="NOA" />
+    <station name="Newtown (Powys)" crs="NWT" />
+    <station name="Ninian Park" crs="NNP" />
+    <station name="Nitshill" crs="NIT" />
+    <station name="Norbiton" crs="NBT" />
+    <station name="Norbury" crs="NRB" />
+    <station name="Normans Bay" crs="NSB" />
+    <station name="Normanton" crs="NOR" />
+    <station name="North Berwick" crs="NBW" />
+    <station name="North Camp" crs="NCM" />
+    <station name="North Dulwich" crs="NDL" />
+    <station name="North Fambridge" crs="NFA" />
+    <station name="North Llanrwst" crs="NLR" />
+    <station name="North Queensferry" crs="NQU" />
+    <station name="North Road (Darlington)" crs="NRD" />
+    <station name="North Sheen" crs="NSH" />
+    <station name="North Walsham" crs="NWA" />
+    <station name="North Wembley" crs="NWB" />
+    <station name="Northallerton" crs="NTR" />
+    <station name="Northampton" crs="NMP" />
+    <station name="Northfield" crs="NFD" />
+    <station name="Northfleet" crs="NFL" />
+    <station name="Northolt Park" crs="NLT" />
+    <station name="Northumberland Park" crs="NUM" />
+    <station name="Northwich" crs="NWI" />
+    <station name="Norwich" crs="NRW" />
+    <station name="Norwood Junction" crs="NWD" />
+    <station name="Nottingham" crs="NOT" />
+    <station name="Nuneaton" crs="NUN" />
+    <station name="Nunhead" crs="NHD" />
+    <station name="Nunthorpe" crs="NNT" />
+    <station name="Nutbourne" crs="NUT" />
+    <station name="Nutfield" crs="NUF" />
+    <station name="Oakengates" crs="OKN" />
+    <station name="Oakham" crs="OKM" />
+    <station name="Oakleigh Park" crs="OKL" />
+    <station name="Oban" crs="OBN" />
+    <station name="Ockendon" crs="OCK" />
+    <station name="Ockley" crs="OLY" />
+    <station name="Okehampton" crs="OKE" />
+    <station name="Okehampton" crs="OKE" />
+    <station name="Old Hill" crs="OHL" />
+    <station name="Old Roan" crs="ORN" />
+    <station name="Old Street" crs="OLD" />
+    <station name="Oldfield Park" crs="OLF" />
+    <station name="Olton" crs="OLT" />
+    <station name="Ore" crs="ORE" />
+    <station name="Ormskirk" crs="OMS" />
+    <station name="Orpington" crs="ORP" />
+    <station name="Orrell" crs="ORR" />
+    <station name="Orrell Park" crs="OPK" />
+    <station name="Otford" crs="OTF" />
+    <station name="Oulton Broad North" crs="OUN" />
+    <station name="Oulton Broad South" crs="OUS" />
+    <station name="Outwood" crs="OUT" />
+    <station name="Overpool" crs="OVE" />
+    <station name="Overton" crs="OVR" />
+    <station name="Oxenholme Lake District" crs="OXN" />
+    <station name="Oxford" crs="OXF" />
+    <station name="Oxford Parkway" crs="OXP" />
+    <station name="Oxshott" crs="OXS" />
+    <station name="Oxted" crs="OXT" />
+    <station name="Paddock Wood" crs="PDW" />
+    <station name="Padgate" crs="PDG" />
+    <station name="Paignton" crs="PGN" />
+    <station name="Paisley Canal" crs="PCN" />
+    <station name="Paisley Gilmour Street" crs="PYG" />
+    <station name="Paisley St James" crs="PYJ" />
+    <station name="Palmers Green" crs="PAL" />
+    <station name="Pangbourne" crs="PAN" />
+    <station name="Pannal" crs="PNL" />
+    <station name="Pantyffynnon" crs="PTF" />
+    <station name="Par" crs="PAR" />
+    <station name="Parbold" crs="PBL" />
+    <station name="Park Street" crs="PKT" />
+    <station name="Parkstone (Dorset)" crs="PKS" />
+    <station name="Parson Street" crs="PSN" />
+    <station name="Partick" crs="PTK" />
+    <station name="Parton" crs="PRN" />
+    <station name="Patchway" crs="PWY" />
+    <station name="Patricroft" crs="PAT" />
+    <station name="Patterton" crs="PTT" />
+    <station name="Peartree" crs="PEA" />
+    <station name="Peckham Rye" crs="PMR" />
+    <station name="Pegswood" crs="PEG" />
+    <station name="Pemberton" crs="PEM" />
+    <station name="Pembrey &amp; Burry Port" crs="PBY" />
+    <station name="Pembroke" crs="PMB" />
+    <station name="Pembroke Dock" crs="PMD" />
+    <station name="Penally" crs="PNA" />
+    <station name="Penarth" crs="PEN" />
+    <station name="Pencoed" crs="PCD" />
+    <station name="Pengam" crs="PGM" />
+    <station name="Penge East" crs="PNE" />
+    <station name="Penge West" crs="PNW" />
+    <station name="Penhelig" crs="PHG" />
+    <station name="Penistone" crs="PNS" />
+    <station name="Penkridge" crs="PKG" />
+    <station name="Penmaenmawr" crs="PMW" />
+    <station name="Penmere" crs="PNM" />
+    <station name="Penrhiwceiber" crs="PER" />
+    <station name="Penrhyndeudraeth" crs="PRH" />
+    <station name="Penrith (North Lakes)" crs="PNR" />
+    <station name="Penryn (Cornwall)" crs="PYN" />
+    <station name="Pensarn (Gwynedd)" crs="PES" />
+    <station name="Penshurst" crs="PHR" />
+    <station name="Pentre-Bach" crs="PTB" />
+    <station name="Pen-y-Bont" crs="PNY" />
+    <station name="Penychain" crs="PNC" />
+    <station name="Penyffordd" crs="PNF" />
+    <station name="Penzance" crs="PNZ" />
+    <station name="Perranwell" crs="PRW" />
+    <station name="Perry Barr" crs="PRY" />
+    <station name="Pershore" crs="PSH" />
+    <station name="Perth" crs="PTH" />
+    <station name="Peterborough" crs="PBO" />
+    <station name="Petersfield" crs="PTR" />
+    <station name="Petts Wood" crs="PET" />
+    <station name="Pevensey &amp; Westham" crs="PEV" />
+    <station name="Pevensey Bay" crs="PEB" />
+    <station name="Pewsey" crs="PEW" />
+    <station name="Pilning" crs="PIL" />
+    <station name="Pinhoe" crs="PIN" />
+    <station name="Pitlochry" crs="PIT" />
+    <station name="Pitsea" crs="PSE" />
+    <station name="Pleasington" crs="PLS" />
+    <station name="Plockton" crs="PLK" />
+    <station name="Pluckley" crs="PLC" />
+    <station name="Plumley" crs="PLM" />
+    <station name="Plumpton" crs="PMP" />
+    <station name="Plumstead" crs="PLU" />
+    <station name="Plymouth" crs="PLY" />
+    <station name="Pokesdown" crs="POK" />
+    <station name="Polegate" crs="PLG" />
+    <station name="Polesworth" crs="PSW" />
+    <station name="Pollokshaws East" crs="PWE" />
+    <station name="Pollokshaws West" crs="PWW" />
+    <station name="Pollokshields East" crs="PLE" />
+    <station name="Pollokshields West" crs="PLW" />
+    <station name="Polmont" crs="PMT" />
+    <station name="Polsloe Bridge" crs="POL" />
+    <station name="Ponders End" crs="PON" />
+    <station name="Pontarddulais" crs="PTD" />
+    <station name="Pontefract Baghill" crs="PFR" />
+    <station name="Pontefract Monkhill" crs="PFM" />
+    <station name="Pontefract Tanshelf" crs="POT" />
+    <station name="Pontlottyn" crs="PLT" />
+    <station name="Pontyclun" crs="PYC" />
+    <station name="Pont-y-Pant" crs="PYP" />
+    <station name="Pontypool &amp; New Inn" crs="PPL" />
+    <station name="Pontypridd" crs="PPD" />
+    <station name="Poole" crs="POO" />
+    <station name="Poppleton" crs="POP" />
+    <station name="Port Glasgow" crs="PTG" />
+    <station name="Port Sunlight" crs="PSL" />
+    <station name="Port Talbot Parkway" crs="PTA" />
+    <station name="Portchester" crs="PTC" />
+    <station name="Porth" crs="POR" />
+    <station name="Porthmadog" crs="PTM" />
+    <station name="Portlethen" crs="PLN" />
+    <station name="Portslade" crs="PLD" />
+    <station name="Portsmouth &amp; Southsea" crs="PMS" />
+    <station name="Portsmouth Arms" crs="PMA" />
+    <station name="Portsmouth Harbour" crs="PMH" />
+    <station name="Possilpark &amp; Parkhouse" crs="PPK" />
+    <station name="Potters Bar" crs="PBR" />
+    <station name="Poulton-le-Fylde" crs="PFY" />
+    <station name="Poynton" crs="PYT" />
+    <station name="Prees" crs="PRS" />
+    <station name="Prescot" crs="PSC" />
+    <station name="Prestatyn" crs="PRT" />
+    <station name="Prestbury" crs="PRB" />
+    <station name="Preston (Lancs)" crs="PRE" />
+    <station name="Preston Park" crs="PRP" />
+    <station name="Prestonpans" crs="PST" />
+    <station name="Prestwick International Airport" crs="PRA" />
+    <station name="Prestwick Town" crs="PTW" />
+    <station name="Priesthill &amp; Darnley" crs="PTL" />
+    <station name="Princes Risborough" crs="PRR" />
+    <station name="Prittlewell" crs="PRL" />
+    <station name="Prudhoe" crs="PRU" />
+    <station name="Pulborough" crs="PUL" />
+    <station name="Purfleet" crs="PFL" />
+    <station name="Purley" crs="PUR" />
+    <station name="Purley Oaks" crs="PUO" />
+    <station name="Putney" crs="PUT" />
+    <station name="Pwllheli" crs="PWL" />
+    <station name="Pye Corner" crs="PYE" />
+    <station name="Pyle" crs="PYL" />
+    <station name="Quakers Yard" crs="QYD" />
+    <station name="Queenborough" crs="QBR" />
+    <station name="Queens Park (Glasgow)" crs="QPK" />
+    <station name="Queens Park (London)" crs="QPW" />
+    <station name="Queens Road (Peckham)" crs="QRP" />
+    <station name="Queenstown Road (Battersea)" crs="QRB" />
+    <station name="Quintrell Downs" crs="QUI" />
+    <station name="Radcliffe-on-Trent" crs="RDF" />
+    <station name="Radlett" crs="RDT" />
+    <station name="Radley" crs="RAD" />
+    <station name="Radyr" crs="RDR" />
+    <station name="Rainford" crs="RNF" />
+    <station name="Rainham (Essex)" crs="RNM" />
+    <station name="Rainham (Kent)" crs="RAI" />
+    <station name="Rainhill" crs="RNH" />
+    <station name="Ramsgate" crs="RAM" />
+    <station name="Ramsgreave &amp; Wilpshire" crs="RGW" />
+    <station name="Rannoch" crs="RAN" />
+    <station name="Rauceby" crs="RAU" />
+    <station name="Ravenglass for Eskdale" crs="RAV" />
+    <station name="Ravensbourne" crs="RVB" />
+    <station name="Ravensthorpe" crs="RVN" />
+    <station name="Rawcliffe" crs="RWC" />
+    <station name="Rayleigh" crs="RLG" />
+    <station name="Raynes Park" crs="RAY" />
+    <station name="Reading" crs="RDG" />
+    <station name="Reading West" crs="RDW" />
+    <station name="Rectory Road" crs="REC" />
+    <station name="Redbridge" crs="RDB" />
+    <station name="Redcar British Steel" crs="RBS" />
+    <station name="Redcar Central" crs="RCC" />
+    <station name="Redcar East" crs="RCE" />
+    <station name="Reddish North" crs="RDN" />
+    <station name="Reddish South" crs="RDS" />
+    <station name="Redditch" crs="RDC" />
+    <station name="Redhill" crs="RDH" />
+    <station name="Redland" crs="RDA" />
+    <station name="Redruth" crs="RED" />
+    <station name="Reedham (Norfolk)" crs="REE" />
+    <station name="Reedham (Surrey)" crs="RHM" />
+    <station name="Reigate" crs="REI" />
+    <station name="Renton" crs="RTN" />
+    <station name="Retford" crs="RET" />
+    <station name="Rhiwbina" crs="RHI" />
+    <station name="Rhoose Cardiff International Airport" crs="RIA" />
+    <station name="Rhosneigr" crs="RHO" />
+    <station name="Rhyl" crs="RHL" />
+    <station name="Rhymney" crs="RHY" />
+    <station name="Ribblehead" crs="RHD" />
+    <station name="Rice Lane" crs="RIL" />
+    <station name="Richmond (London)" crs="RMD" />
+    <station name="Rickmansworth" crs="RIC" />
+    <station name="Riddlesdown" crs="RDD" />
+    <station name="Ridgmont" crs="RID" />
+    <station name="Riding Mill" crs="RDM" />
+    <station name="Risca &amp; Pontymister" crs="RCA" />
+    <station name="Rishton" crs="RIS" />
+    <station name="Robertsbridge" crs="RBR" />
+    <station name="Robroyston" crs="RRN" />
+    <station name="Roby" crs="ROB" />
+    <station name="Rochdale" crs="RCD" />
+    <station name="Roche" crs="ROC" />
+    <station name="Rochester" crs="RTR" />
+    <station name="Rochford" crs="RFD" />
+    <station name="Rock Ferry" crs="RFY" />
+    <station name="Rogart" crs="ROG" />
+    <station name="Rogerstone" crs="ROR" />
+    <station name="Rolleston" crs="ROL" />
+    <station name="Roman Bridge" crs="RMB" />
+    <station name="Romford" crs="RMF" />
+    <station name="Romiley" crs="RML" />
+    <station name="Romsey" crs="ROM" />
+    <station name="Roose" crs="ROO" />
+    <station name="Rose Grove" crs="RSG" />
+    <station name="Rose Hill Marple" crs="RSH" />
+    <station name="Rosyth" crs="ROS" />
+    <station name="Rotherham Central" crs="RMC" />
+    <station name="Rotherhithe" crs="ROE" />
+    <station name="Roughton Road" crs="RNR" />
+    <station name="Rowlands Castle" crs="RLN" />
+    <station name="Rowley Regis" crs="ROW" />
+    <station name="Roy Bridge" crs="RYB" />
+    <station name="Roydon" crs="RYN" />
+    <station name="Royston" crs="RYS" />
+    <station name="Ruabon" crs="RUA" />
+    <station name="Rufford" crs="RUF" />
+    <station name="Rugby" crs="RUG" />
+    <station name="Rugeley Town" crs="RGT" />
+    <station name="Rugeley Trent Valley" crs="RGL" />
+    <station name="Runcorn" crs="RUN" />
+    <station name="Runcorn East" crs="RUE" />
+    <station name="Ruskington" crs="RKT" />
+    <station name="Ruswarp" crs="RUS" />
+    <station name="Rutherglen" crs="RUT" />
+    <station name="Ryde Esplanade" crs="RYD" />
+    <station name="Ryde Pier Head" crs="RYP" />
+    <station name="Ryde St Johns Road" crs="RYR" />
+    <station name="Ryder Brow" crs="RRB" />
+    <station name="Rye (Sussex)" crs="RYE" />
+    <station name="Rye House" crs="RYH" />
+    <station name="Salford Central" crs="SFD" />
+    <station name="Salford Crescent" crs="SLD" />
+    <station name="Salfords (Surrey)" crs="SAF" />
+    <station name="Salhouse" crs="SAH" />
+    <station name="Salisbury" crs="SAL" />
+    <station name="Saltaire" crs="SAE" />
+    <station name="Saltash" crs="STS" />
+    <station name="Saltburn" crs="SLB" />
+    <station name="Saltcoats" crs="SLT" />
+    <station name="Saltmarshe" crs="SAM" />
+    <station name="Salwick" crs="SLW" />
+    <station name="Sampford Courtenay" crs="SMC" />
+    <station name="Sandal &amp; Agbrigg" crs="SNA" />
+    <station name="Sandbach" crs="SDB" />
+    <station name="Sanderstead" crs="SNR" />
+    <station name="Sandhills" crs="SDL" />
+    <station name="Sandhurst (Berks)" crs="SND" />
+    <station name="Sandling" crs="SDG" />
+    <station name="Sandown" crs="SAN" />
+    <station name="Sandplace" crs="SDP" />
+    <station name="Sandwell &amp; Dudley" crs="SAD" />
+    <station name="Sandwich" crs="SDW" />
+    <station name="Sandy" crs="SDY" />
+    <station name="Sankey for Penketh" crs="SNK" />
+    <station name="Sanquhar" crs="SQH" />
+    <station name="Sarn" crs="SRR" />
+    <station name="Saundersfoot" crs="SDF" />
+    <station name="Saunderton" crs="SDR" />
+    <station name="Sawbridgeworth" crs="SAW" />
+    <station name="Saxilby" crs="SXY" />
+    <station name="Saxmundham" crs="SAX" />
+    <station name="Scarborough" crs="SCA" />
+    <station name="Scotscalder" crs="SCT" />
+    <station name="Scotstounhill" crs="SCH" />
+    <station name="Scunthorpe" crs="SCU" />
+    <station name="Sea Mills" crs="SML" />
+    <station name="Seaford (Sussex)" crs="SEF" />
+    <station name="Seaforth &amp; Litherland" crs="SFL" />
+    <station name="Seaham" crs="SEA" />
+    <station name="Seamer" crs="SEM" />
+    <station name="Seascale" crs="SSC" />
+    <station name="Seaton Carew" crs="SEC" />
+    <station name="Seer Green &amp; Jordans" crs="SRG" />
+    <station name="Selby" crs="SBY" />
+    <station name="Selhurst" crs="SRS" />
+    <station name="Sellafield" crs="SEL" />
+    <station name="Selling" crs="SEG" />
+    <station name="Selly Oak" crs="SLY" />
+    <station name="Settle" crs="SET" />
+    <station name="Seven Kings" crs="SVK" />
+    <station name="Seven Sisters" crs="SVS" />
+    <station name="Sevenoaks" crs="SEV" />
+    <station name="Severn Beach" crs="SVB" />
+    <station name="Severn Tunnel Junction" crs="STJ" />
+    <station name="Shadwell" crs="SDE" />
+    <station name="Shalford (Surrey)" crs="SFR" />
+    <station name="Shanklin" crs="SHN" />
+    <station name="Shawfair" crs="SFI" />
+    <station name="Shawford" crs="SHW" />
+    <station name="Shawlands" crs="SHL" />
+    <station name="Sheerness-on-Sea" crs="SSS" />
+    <station name="Sheffield" crs="SHF" />
+    <station name="Shelford (Cambs)" crs="SED" />
+    <station name="Shenfield" crs="SNF" />
+    <station name="Shenstone" crs="SEN" />
+    <station name="Shepherd&apos;s Bush" crs="SPB" />
+    <station name="Shepherds Well" crs="SPH" />
+    <station name="Shepley" crs="SPY" />
+    <station name="Shepperton" crs="SHP" />
+    <station name="Shepreth" crs="STH" />
+    <station name="Sherborne" crs="SHE" />
+    <station name="Sherburn-in-Elmet" crs="SIE" />
+    <station name="Sheringham" crs="SHM" />
+    <station name="Shettleston" crs="SLS" />
+    <station name="Shieldmuir" crs="SDM" />
+    <station name="Shifnal" crs="SFN" />
+    <station name="Shildon" crs="SHD" />
+    <station name="Shiplake" crs="SHI" />
+    <station name="Shipley (Yorks)" crs="SHY" />
+    <station name="Shippea Hill" crs="SPP" />
+    <station name="Shipton" crs="SIP" />
+    <station name="Shirebrook" crs="SHB" />
+    <station name="Shirehampton" crs="SHH" />
+    <station name="Shireoaks" crs="SRO" />
+    <station name="Shirley" crs="SRL" />
+    <station name="Shoeburyness" crs="SRY" />
+    <station name="Sholing" crs="SHO" />
+    <station name="Shoreditch High Street" crs="SDC" />
+    <station name="Shoreham (Kent)" crs="SEH" />
+    <station name="Shoreham-by-Sea" crs="SSE" />
+    <station name="Shortlands" crs="SRT" />
+    <station name="Shotton" crs="SHT" />
+    <station name="Shotts" crs="SHS" />
+    <station name="Shrewsbury" crs="SHR" />
+    <station name="Sidcup" crs="SID" />
+    <station name="Sileby" crs="SIL" />
+    <station name="Silecroft" crs="SIC" />
+    <station name="Silkstone Common" crs="SLK" />
+    <station name="Silver Street" crs="SLV" />
+    <station name="Silverdale" crs="SVR" />
+    <station name="Singer" crs="SIN" />
+    <station name="Sittingbourne" crs="SIT" />
+    <station name="Skegness" crs="SKG" />
+    <station name="Skewen" crs="SKE" />
+    <station name="Skipton" crs="SKI" />
+    <station name="Slade Green" crs="SGR" />
+    <station name="Slaithwaite" crs="SWT" />
+    <station name="Slateford" crs="SLA" />
+    <station name="Sleaford" crs="SLR" />
+    <station name="Sleights" crs="SLH" />
+    <station name="Slough" crs="SLO" />
+    <station name="Small Heath" crs="SMA" />
+    <station name="Smallbrook Junction" crs="SAB" />
+    <station name="Smethwick Galton Bridge" crs="SGB" />
+    <station name="Smethwick Rolfe Street" crs="SMR" />
+    <station name="Smithy Bridge" crs="SMB" />
+    <station name="Snaith" crs="SNI" />
+    <station name="Snodland" crs="SDA" />
+    <station name="Snowdown" crs="SWO" />
+    <station name="Sole Street" crs="SOR" />
+    <station name="Solihull" crs="SOL" />
+    <station name="Somerleyton" crs="SYT" />
+    <station name="South Acton" crs="SAT" />
+    <station name="South Bank" crs="SBK" />
+    <station name="South Bermondsey" crs="SBM" />
+    <station name="South Croydon" crs="SCY" />
+    <station name="South Elmsall" crs="SES" />
+    <station name="South Greenford" crs="SGN" />
+    <station name="South Gyle" crs="SGL" />
+    <station name="South Hampstead" crs="SOH" />
+    <station name="South Kenton" crs="SOK" />
+    <station name="South Merton" crs="SMO" />
+    <station name="South Milford" crs="SOM" />
+    <station name="South Ruislip" crs="SRU" />
+    <station name="South Tottenham" crs="STO" />
+    <station name="South Wigston" crs="SWS" />
+    <station name="South Woodham Ferrers" crs="SOF" />
+    <station name="Southall" crs="STL" />
+    <station name="Southampton Airport Parkway" crs="SOA" />
+    <station name="Southampton Central" crs="SOU" />
+    <station name="Southbourne" crs="SOB" />
+    <station name="Southbury" crs="SBU" />
+    <station name="Southease" crs="SEE" />
+    <station name="Southend Airport" crs="SIA" />
+    <station name="Southend Central" crs="SOC" />
+    <station name="Southend East" crs="SOE" />
+    <station name="Southend Victoria" crs="SOV" />
+    <station name="Southminster" crs="SMN" />
+    <station name="Southport" crs="SOP" />
+    <station name="Southwick" crs="SWK" />
+    <station name="Sowerby Bridge" crs="SOW" />
+    <station name="Spalding" crs="SPA" />
+    <station name="Spean Bridge" crs="SBR" />
+    <station name="Spital" crs="SPI" />
+    <station name="Spondon" crs="SPO" />
+    <station name="Spooner Row" crs="SPN" />
+    <station name="Spring Road" crs="SRI" />
+    <station name="Springburn" crs="SPR" />
+    <station name="Springfield" crs="SPF" />
+    <station name="Squires Gate" crs="SQU" />
+    <station name="St Albans Abbey" crs="SAA" />
+    <station name="St Albans City" crs="SAC" />
+    <station name="St Andrews Road" crs="SAR" />
+    <station name="St Annes-on-Sea" crs="SAS" />
+    <station name="St Austell" crs="SAU" />
+    <station name="St Bees" crs="SBS" />
+    <station name="St Budeaux Ferry Road" crs="SBF" />
+    <station name="St Budeaux Victoria Road" crs="SBV" />
+    <station name="St Columb Road" crs="SCR" />
+    <station name="St Denys" crs="SDN" />
+    <station name="St Erth" crs="SER" />
+    <station name="St Germans" crs="SGM" />
+    <station name="St Helens Central" crs="SNH" />
+    <station name="St Helens Junction" crs="SHJ" />
+    <station name="St Helier (Surrey)" crs="SIH" />
+    <station name="St Ives (Cornwall)" crs="SIV" />
+    <station name="St James Park (Exeter)" crs="SJP" />
+    <station name="St James Street (Walthamstow)" crs="SJS" />
+    <station name="St Johns (London)" crs="SAJ" />
+    <station name="St Keyne Wishing Well Halt" crs="SKN" />
+    <station name="St Leonards Warrior Square" crs="SLQ" />
+    <station name="St Margarets (Herts)" crs="SMT" />
+    <station name="St Margarets (London)" crs="SMG" />
+    <station name="St Mary Cray" crs="SMY" />
+    <station name="St Michaels" crs="STM" />
+    <station name="St Neots" crs="SNO" />
+    <station name="Stafford" crs="STA" />
+    <station name="Staines" crs="SNS" />
+    <station name="Stallingborough" crs="SLL" />
+    <station name="Stalybridge" crs="SYB" />
+    <station name="Stamford (Lincs)" crs="SMD" />
+    <station name="Stamford Hill" crs="SMH" />
+    <station name="Stanford-le-Hope" crs="SFO" />
+    <station name="Stanlow &amp; Thornton" crs="SNT" />
+    <station name="Stansted Airport" crs="SSD" />
+    <station name="Stansted Mountfitchet" crs="SST" />
+    <station name="Staplehurst" crs="SPU" />
+    <station name="Stapleton Road" crs="SRD" />
+    <station name="Starbeck" crs="SBE" />
+    <station name="Starcross" crs="SCS" />
+    <station name="Staveley (Cumbria)" crs="SVL" />
+    <station name="Stechford" crs="SCF" />
+    <station name="Steeton &amp; Silsden" crs="SON" />
+    <station name="Stepps" crs="SPS" />
+    <station name="Stevenage" crs="SVG" />
+    <station name="Stevenston" crs="STV" />
+    <station name="Stewartby" crs="SWR" />
+    <station name="Stewarton" crs="STT" />
+    <station name="Stirling" crs="STG" />
+    <station name="Stockport" crs="SPT" />
+    <station name="Stocksfield" crs="SKS" />
+    <station name="Stocksmoor" crs="SSM" />
+    <station name="Stockton" crs="STK" />
+    <station name="Stoke Mandeville" crs="SKM" />
+    <station name="Stoke Newington" crs="SKW" />
+    <station name="Stoke-on-Trent" crs="SOT" />
+    <station name="Stone (Staffs)" crs="SNE" />
+    <station name="Stone Crossing" crs="SCG" />
+    <station name="Stonebridge Park" crs="SBP" />
+    <station name="Stonegate" crs="SOG" />
+    <station name="Stonehaven" crs="STN" />
+    <station name="Stonehouse" crs="SHU" />
+    <station name="Stoneleigh" crs="SNL" />
+    <station name="Stourbridge Junction" crs="SBJ" />
+    <station name="Stourbridge Town" crs="SBT" />
+    <station name="Stow" crs="SOI" />
+    <station name="Stowmarket" crs="SMK" />
+    <station name="Stranraer" crs="STR" />
+    <station name="Stratford (London)" crs="SRA" />
+    <station name="Stratford International" crs="SFA" />
+    <station name="Stratford-upon-Avon" crs="SAV" />
+    <station name="Stratford-upon-Avon Parkway" crs="STY" />
+    <station name="Strathcarron" crs="STC" />
+    <station name="Strawberry Hill" crs="STW" />
+    <station name="Streatham (Greater London)" crs="STE" />
+    <station name="Streatham Common" crs="SRC" />
+    <station name="Streatham Hill" crs="SRH" />
+    <station name="Streethouse" crs="SHC" />
+    <station name="Strines" crs="SRN" />
+    <station name="Stromeferry" crs="STF" />
+    <station name="Strood (Kent)" crs="SOO" />
+    <station name="Stroud (Gloucs)" crs="STD" />
+    <station name="Sturry" crs="STU" />
+    <station name="Styal" crs="SYA" />
+    <station name="Sudbury &amp; Harrow Road" crs="SUD" />
+    <station name="Sudbury (Suffolk)" crs="SUY" />
+    <station name="Sudbury Hill Harrow" crs="SDH" />
+    <station name="Sugar Loaf" crs="SUG" />
+    <station name="Summerston" crs="SUM" />
+    <station name="Sunbury" crs="SUU" />
+    <station name="Sunderland" crs="SUN" />
+    <station name="Sundridge Park" crs="SUP" />
+    <station name="Sunningdale" crs="SNG" />
+    <station name="Sunnymeads" crs="SNY" />
+    <station name="Surbiton" crs="SUR" />
+    <station name="Surrey Quays" crs="SQE" />
+    <station name="Sutton (Surrey)" crs="SUO" />
+    <station name="Sutton Coldfield" crs="SUT" />
+    <station name="Sutton Common" crs="SUC" />
+    <station name="Sutton Parkway" crs="SPK" />
+    <station name="Swale" crs="SWL" />
+    <station name="Swanley" crs="SAY" />
+    <station name="Swanscombe" crs="SWM" />
+    <station name="Swansea" crs="SWA" />
+    <station name="Swanwick" crs="SNW" />
+    <station name="Sway" crs="SWY" />
+    <station name="Swaythling" crs="SWG" />
+    <station name="Swinderby" crs="SWD" />
+    <station name="Swindon (Wilts)" crs="SWI" />
+    <station name="Swineshead" crs="SWE" />
+    <station name="Swinton (Manchester)" crs="SNN" />
+    <station name="Swinton (South Yorks)" crs="SWN" />
+    <station name="Sydenham (London)" crs="SYD" />
+    <station name="Sydenham Hill" crs="SYH" />
+    <station name="Syon Lane" crs="SYL" />
+    <station name="Syston" crs="SYS" />
+    <station name="Tackley" crs="TAC" />
+    <station name="Tadworth" crs="TAD" />
+    <station name="Taffs Well" crs="TAF" />
+    <station name="Tain" crs="TAI" />
+    <station name="Talsarnau" crs="TAL" />
+    <station name="Talybont" crs="TLB" />
+    <station name="Tal-y-Cafn" crs="TLC" />
+    <station name="Tame Bridge Parkway" crs="TAB" />
+    <station name="Tamworth" crs="TAM" />
+    <station name="Taplow" crs="TAP" />
+    <station name="Tattenham Corner" crs="TAT" />
+    <station name="Taunton" crs="TAU" />
+    <station name="Taynuilt" crs="TAY" />
+    <station name="Teddington" crs="TED" />
+    <station name="Tees-side Airport" crs="TEA" />
+    <station name="Teignmouth" crs="TGM" />
+    <station name="Telford Central" crs="TFC" />
+    <station name="Templecombe" crs="TMC" />
+    <station name="Tenby" crs="TEN" />
+    <station name="Teynham" crs="TEY" />
+    <station name="Thames Ditton" crs="THD" />
+    <station name="Thatcham" crs="THA" />
+    <station name="Thatto Heath" crs="THH" />
+    <station name="The Hawthorns" crs="THW" />
+    <station name="The Lakes (Warks)" crs="TLK" />
+    <station name="Theale" crs="THE" />
+    <station name="Theobalds Grove" crs="TEO" />
+    <station name="Thetford" crs="TTF" />
+    <station name="Thirsk" crs="THI" />
+    <station name="Thornaby" crs="TBY" />
+    <station name="Thorne North" crs="TNN" />
+    <station name="Thorne South" crs="TNS" />
+    <station name="Thornford" crs="THO" />
+    <station name="Thornliebank" crs="THB" />
+    <station name="Thornton Abbey" crs="TNA" />
+    <station name="Thornton Heath" crs="TTH" />
+    <station name="Thorntonhall" crs="THT" />
+    <station name="Thorpe Bay" crs="TPB" />
+    <station name="Thorpe Culvert" crs="TPC" />
+    <station name="Thorpe-le-Soken" crs="TLS" />
+    <station name="Three Bridges" crs="TBD" />
+    <station name="Three Oaks" crs="TOK" />
+    <station name="Thurgarton" crs="THU" />
+    <station name="Thurnscoe" crs="THC" />
+    <station name="Thurso" crs="THS" />
+    <station name="Thurston" crs="TRS" />
+    <station name="Tilbury Town" crs="TIL" />
+    <station name="Tile Hill" crs="THL" />
+    <station name="Tilehurst" crs="TLH" />
+    <station name="Tipton" crs="TIP" />
+    <station name="Tir-Phil" crs="TIR" />
+    <station name="Tisbury" crs="TIS" />
+    <station name="Tiverton Parkway" crs="TVP" />
+    <station name="Todmorden" crs="TOD" />
+    <station name="Tolworth" crs="TOL" />
+    <station name="Ton Pentre" crs="TPN" />
+    <station name="Tonbridge" crs="TON" />
+    <station name="Tondu" crs="TDU" />
+    <station name="Tonfanau" crs="TNF" />
+    <station name="Tonypandy" crs="TNP" />
+    <station name="Tooting" crs="TOO" />
+    <station name="Topsham" crs="TOP" />
+    <station name="Torquay" crs="TQY" />
+    <station name="Torre" crs="TRR" />
+    <station name="Totnes" crs="TOT" />
+    <station name="Tottenham Hale" crs="TOM" />
+    <station name="Totton" crs="TTN" />
+    <station name="Town Green" crs="TWN" />
+    <station name="Trafford Park" crs="TRA" />
+    <station name="Trefforest" crs="TRF" />
+    <station name="Trefforest Estate" crs="TRE" />
+    <station name="Trehafod" crs="TRH" />
+    <station name="Treherbert" crs="TRB" />
+    <station name="Treorchy" crs="TRY" />
+    <station name="Trimley" crs="TRM" />
+    <station name="Tring" crs="TRI" />
+    <station name="Troed-y-rhiw" crs="TRD" />
+    <station name="Troon" crs="TRN" />
+    <station name="Trowbridge" crs="TRO" />
+    <station name="Truro" crs="TRU" />
+    <station name="Tulloch" crs="TUL" />
+    <station name="Tulse Hill" crs="TUH" />
+    <station name="Tunbridge Wells" crs="TBW" />
+    <station name="Turkey Street" crs="TUR" />
+    <station name="Tutbury &amp; Hatton" crs="TUT" />
+    <station name="Tweedbank" crs="TWB" />
+    <station name="Twickenham" crs="TWI" />
+    <station name="Twyford" crs="TWY" />
+    <station name="Ty Croes" crs="TYC" />
+    <station name="Ty Glas" crs="TGS" />
+    <station name="Tygwyn" crs="TYG" />
+    <station name="Tyndrum Lower" crs="TYL" />
+    <station name="Tyseley" crs="TYS" />
+    <station name="Tywyn" crs="TYW" />
+    <station name="Uckfield" crs="UCK" />
+    <station name="Uddingston" crs="UDD" />
+    <station name="Ulceby" crs="ULC" />
+    <station name="Ulleskelf" crs="ULL" />
+    <station name="Ulverston" crs="ULV" />
+    <station name="Umberleigh" crs="UMB" />
+    <station name="University (Birmingham)" crs="UNI" />
+    <station name="Uphall" crs="UHA" />
+    <station name="Upholland" crs="UPL" />
+    <station name="Upminster" crs="UPM" />
+    <station name="Upper Halliford" crs="UPH" />
+    <station name="Upper Holloway" crs="UHL" />
+    <station name="Upper Tyndrum" crs="UTY" />
+    <station name="Upper Warlingham" crs="UWL" />
+    <station name="Upton (Merseyside)" crs="UPT" />
+    <station name="Upwey" crs="UPW" />
+    <station name="Urmston" crs="URM" />
+    <station name="Uttoxeter" crs="UTT" />
+    <station name="Valley" crs="VAL" />
+    <station name="Vauxhall" crs="VXH" />
+    <station name="Virginia Water" crs="VIR" />
+    <station name="Waddon" crs="WDO" />
+    <station name="Wadhurst" crs="WAD" />
+    <station name="Wainfleet" crs="WFL" />
+    <station name="Wakefield Kirkgate" crs="WKK" />
+    <station name="Wakefield Westgate" crs="WKF" />
+    <station name="Walkden" crs="WKD" />
+    <station name="Wallasey Grove Road" crs="WLG" />
+    <station name="Wallasey Village" crs="WLV" />
+    <station name="Wallington" crs="WLT" />
+    <station name="Wallyford" crs="WAF" />
+    <station name="Walmer" crs="WAM" />
+    <station name="Walsall" crs="WSL" />
+    <station name="Walsden" crs="WDN" />
+    <station name="Waltham Cross" crs="WLC" />
+    <station name="Walthamstow Central" crs="WHC" />
+    <station name="Walthamstow Queen&apos;s Road" crs="WMW" />
+    <station name="Walton (Merseyside)" crs="WAO" />
+    <station name="Walton-on-Thames" crs="WAL" />
+    <station name="Walton-on-the-Naze" crs="WON" />
+    <station name="Wanborough" crs="WAN" />
+    <station name="Wandsworth Common" crs="WSW" />
+    <station name="Wandsworth Road" crs="WWR" />
+    <station name="Wandsworth Town" crs="WNT" />
+    <station name="Wanstead Park" crs="WNP" />
+    <station name="Wapping" crs="WPE" />
+    <station name="Warblington" crs="WBL" />
+    <station name="Ware (Herts)" crs="WAR" />
+    <station name="Wareham (Dorset)" crs="WRM" />
+    <station name="Wargrave" crs="WGV" />
+    <station name="Warminster" crs="WMN" />
+    <station name="Warnham" crs="WNH" />
+    <station name="Warrington Bank Quay" crs="WBQ" />
+    <station name="Warrington Central" crs="WAC" />
+    <station name="Warrington West" crs="WAW" />
+    <station name="Warwick" crs="WRW" />
+    <station name="Warwick Parkway" crs="WRP" />
+    <station name="Water Orton" crs="WTO" />
+    <station name="Waterbeach" crs="WBC" />
+    <station name="Wateringbury" crs="WTR" />
+    <station name="Waterloo (Merseyside)" crs="WLO" />
+    <station name="Watford High Street" crs="WFH" />
+    <station name="Watford Junction" crs="WFJ" />
+    <station name="Watford North" crs="WFN" />
+    <station name="Watlington" crs="WTG" />
+    <station name="Watton-at-Stone" crs="WAS" />
+    <station name="Waun-Gron Park" crs="WNG" />
+    <station name="Wavertree Technology Park" crs="WAV" />
+    <station name="Wedgwood" crs="WED" />
+    <station name="Weeley" crs="WEE" />
+    <station name="Weeton" crs="WET" />
+    <station name="Welham Green" crs="WMG" />
+    <station name="Welling" crs="WLI" />
+    <station name="Wellingborough" crs="WEL" />
+    <station name="Wellington (Shropshire)" crs="WLN" />
+    <station name="Welshpool" crs="WLP" />
+    <station name="Welwyn Garden City" crs="WGC" />
+    <station name="Welwyn North" crs="WLW" />
+    <station name="Wem" crs="WEM" />
+    <station name="Wembley Central" crs="WMB" />
+    <station name="Wembley Stadium" crs="WCX" />
+    <station name="Wemyss Bay" crs="WMS" />
+    <station name="Wendover" crs="WND" />
+    <station name="Wennington" crs="WNN" />
+    <station name="West Allerton" crs="WSA" />
+    <station name="West Brompton" crs="WBP" />
+    <station name="West Byfleet" crs="WBY" />
+    <station name="West Calder" crs="WCL" />
+    <station name="West Croydon" crs="WCY" />
+    <station name="West Drayton" crs="WDT" />
+    <station name="West Dulwich" crs="WDU" />
+    <station name="West Ealing" crs="WEA" />
+    <station name="West Ham" crs="WEH" />
+    <station name="West Hampstead" crs="WHD" />
+    <station name="West Hampstead Thameslink" crs="WHP" />
+    <station name="West Horndon" crs="WHR" />
+    <station name="West Kilbride" crs="WKB" />
+    <station name="West Kirby" crs="WKI" />
+    <station name="West Malling" crs="WMA" />
+    <station name="West Norwood" crs="WNW" />
+    <station name="West Ruislip" crs="WRU" />
+    <station name="West Runton" crs="WRN" />
+    <station name="West St Leonards" crs="WLD" />
+    <station name="West Sutton" crs="WSU" />
+    <station name="West Wickham" crs="WWI" />
+    <station name="West Worthing" crs="WWO" />
+    <station name="Westbury (Wilts)" crs="WSB" />
+    <station name="Westcliff" crs="WCF" />
+    <station name="Westcombe Park" crs="WCB" />
+    <station name="Westenhanger" crs="WHA" />
+    <station name="Wester Hailes" crs="WTA" />
+    <station name="Westerfield" crs="WFI" />
+    <station name="Westerton" crs="WES" />
+    <station name="Westgate-on-Sea" crs="WGA" />
+    <station name="Westhoughton" crs="WHG" />
+    <station name="Weston Milton" crs="WNM" />
+    <station name="Weston-super-Mare" crs="WSM" />
+    <station name="Wetheral" crs="WRL" />
+    <station name="Weybridge" crs="WYB" />
+    <station name="Weymouth" crs="WEY" />
+    <station name="Whaley Bridge" crs="WBR" />
+    <station name="Whalley (Lancs)" crs="WHE" />
+    <station name="Whatstandwell" crs="WTS" />
+    <station name="Whifflet" crs="WFF" />
+    <station name="Whimple" crs="WHM" />
+    <station name="Whinhill" crs="WNL" />
+    <station name="Whiston" crs="WHN" />
+    <station name="Whitby" crs="WTB" />
+    <station name="Whitchurch (Cardiff)" crs="WHT" />
+    <station name="Whitchurch (Hants)" crs="WCH" />
+    <station name="Whitchurch (Shropshire)" crs="WTC" />
+    <station name="White Hart Lane" crs="WHL" />
+    <station name="White Notley" crs="WNY" />
+    <station name="Whitechapel" crs="ZLW" />
+    <station name="Whitecraigs" crs="WCR" />
+    <station name="Whitehaven" crs="WTH" />
+    <station name="Whitland" crs="WTL" />
+    <station name="Whitley Bridge" crs="WBD" />
+    <station name="Whitlocks End" crs="WTE" />
+    <station name="Whitstable" crs="WHI" />
+    <station name="Whittlesea" crs="WLE" />
+    <station name="Whittlesford Parkway" crs="WLF" />
+    <station name="Whitton (London)" crs="WTN" />
+    <station name="Whitwell (Derbyshire)" crs="WWL" />
+    <station name="Whyteleafe" crs="WHY" />
+    <station name="Whyteleafe South" crs="WHS" />
+    <station name="Wick" crs="WCK" />
+    <station name="Wickford" crs="WIC" />
+    <station name="Wickham Market" crs="WCM" />
+    <station name="Widdrington" crs="WDD" />
+    <station name="Widnes" crs="WID" />
+    <station name="Widney Manor" crs="WMR" />
+    <station name="Wigan North Western" crs="WGN" />
+    <station name="Wigan Wallgate" crs="WGW" />
+    <station name="Wigton" crs="WGT" />
+    <station name="Wildmill" crs="WMI" />
+    <station name="Willesden Junction" crs="WIJ" />
+    <station name="Williamwood" crs="WLM" />
+    <station name="Willington" crs="WIL" />
+    <station name="Wilmcote" crs="WMC" />
+    <station name="Wilmslow" crs="WML" />
+    <station name="Wilnecote (Staffs)" crs="WNE" />
+    <station name="Wimbledon" crs="WIM" />
+    <station name="Wimbledon Chase" crs="WBO" />
+    <station name="Winchelsea" crs="WSE" />
+    <station name="Winchester" crs="WIN" />
+    <station name="Winchfield" crs="WNF" />
+    <station name="Winchmore Hill" crs="WIH" />
+    <station name="Windermere" crs="WDM" />
+    <station name="Windsor &amp; Eton Central" crs="WNC" />
+    <station name="Windsor &amp; Eton Riverside" crs="WNR" />
+    <station name="Winnersh" crs="WNS" />
+    <station name="Winnersh Triangle" crs="WTI" />
+    <station name="Winsford" crs="WSF" />
+    <station name="Wishaw" crs="WSH" />
+    <station name="Witham" crs="WTM" />
+    <station name="Witley" crs="WTY" />
+    <station name="Witton (West Midlands)" crs="WTT" />
+    <station name="Wivelsfield" crs="WVF" />
+    <station name="Wivenhoe" crs="WIV" />
+    <station name="Woburn Sands" crs="WOB" />
+    <station name="Woking" crs="WOK" />
+    <station name="Wokingham" crs="WKM" />
+    <station name="Woldingham" crs="WOH" />
+    <station name="Wolverhampton" crs="WVH" />
+    <station name="Wolverton" crs="WOL" />
+    <station name="Wombwell" crs="WOM" />
+    <station name="Wood End" crs="WDE" />
+    <station name="Wood Street" crs="WST" />
+    <station name="Woodbridge" crs="WDB" />
+    <station name="Woodgrange Park" crs="WGR" />
+    <station name="Woodhall" crs="WDL" />
+    <station name="Woodhouse" crs="WDH" />
+    <station name="Woodlesford" crs="WDS" />
+    <station name="Woodley" crs="WLY" />
+    <station name="Woodmansterne" crs="WME" />
+    <station name="Woodsmoor" crs="WSR" />
+    <station name="Wool" crs="WOO" />
+    <station name="Woolston" crs="WLS" />
+    <station name="Woolwich Arsenal" crs="WWA" />
+    <station name="Woolwich Dockyard" crs="WWD" />
+    <station name="Wootton Wawen" crs="WWW" />
+    <station name="Worcester Foregate Street" crs="WOF" />
+    <station name="Worcester Park" crs="WCP" />
+    <station name="Worcester Shrub Hill" crs="WOS" />
+    <station name="Worcestershire Parkway" crs="WOP" />
+    <station name="Workington" crs="WKG" />
+    <station name="Worksop" crs="WRK" />
+    <station name="Worle" crs="WOR" />
+    <station name="Worplesdon" crs="WPL" />
+    <station name="Worstead" crs="WRT" />
+    <station name="Worthing" crs="WRH" />
+    <station name="Wrabness" crs="WRB" />
+    <station name="Wraysbury" crs="WRY" />
+    <station name="Wrenbury" crs="WRE" />
+    <station name="Wressle" crs="WRS" />
+    <station name="Wrexham Central" crs="WXC" />
+    <station name="Wrexham General" crs="WRX" />
+    <station name="Wye" crs="WYE" />
+    <station name="Wylam" crs="WYM" />
+    <station name="Wylde Green" crs="WYL" />
+    <station name="Wymondham" crs="WMD" />
+    <station name="Wythall" crs="WYT" />
+    <station name="Yalding" crs="YAL" />
+    <station name="Yardley Wood" crs="YRD" />
+    <station name="Yarm" crs="YRM" />
+    <station name="Yate" crs="YAE" />
+    <station name="Yatton" crs="YAT" />
+    <station name="Yeoford" crs="YEO" />
+    <station name="Yeovil Junction" crs="YVJ" />
+    <station name="Yeovil Pen Mill" crs="YVP" />
+    <station name="Yetminster" crs="YET" />
+    <station name="Ynyswen" crs="YNW" />
+    <station name="Yoker" crs="YOK" />
+    <station name="York" crs="YRK" />
+    <station name="Yorton" crs="YRT" />
+    <station name="Ystrad Mynach" crs="YSM" />
+    <station name="Ystrad Rhondda" crs="YSR" />
+    <station name="Hogwarts" crs="HOG" />
+</stations>

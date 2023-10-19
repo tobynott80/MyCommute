@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">"MyCommute"</string>
+    <string name="title_home">"Home"</string>
+    <string name="title_timetable">"Timetable"</string>
+    <string name="title_settings">"Settings"</string>
+    <string name="travelling_from">"Travelling From"</string>
+    <string name="search">"Search"</string>
+    <string name="travelling_to">"Travelling to"</string>
+    <string name="search_hint">"Station"</string>
+    <string name="on_time">"On Time"</string>
+    <string name="platform">"Platform"</string>
+    <string name="delayed">"Delayed"</string>
+    <string name="cancelled">"Cancelled"</string>
+    <string name="no_information">"No Information"</string>
+    <string name="arrival">"Arrival"</string>
+    <string name="departure">"Departure"</string>
+    <string name="forwards_arrow">"Forwards Arrow"</string>
+    <string name="home_commute">"Home Commute"</string>
+    <string name="work_commute">"Work Commute"</string>
+    <string name="welcomeText3">"If the journey has multiple legs, please only enter the first leg"</string>
+    <string name="WelcomeText2">"Get started by setting a home and work route"</string>
+    <string name="WelcomeText1">"Welcome to MyCommute!"</string>
+    <string name="skip">"Skip"</string>
+    <string name="continueString">"Continue"</string>
+    <string name="welcometext2">"MyCommute is designed to help commuters track their train times to and from work"</string>
+    <string name="train_icon">"train icon"</string>
+    <string name="daily_commute">"Daily Commute"</string>
+    <string name="timetable">"Timetable"</string>
+    <string name="dailycommutepara">"Set and track the trains you take every day to keep up to date with any delays cancellations and platform changes"</string>
+    <string name="timetablepara">"Get live information on any train in the UK, with up-to-the-minute data from RealTimeTrains"</string>
+    <string name="stay_notified">"Stay Notified"</string>
+    <string name="stay_notified_para">"Sign up for notifications to get information about delays before you leave. You'll never miss a meeting again!"</string>
+    <string name="settingsHelper1">"Please enter the first leg of your journey"</string>
+    <string name="arrow_downwards">"Arrow Downwards"</string>
+    <string name="submit">"Submit"</string>
+    <string name="cancel">"Cancel"</string>
+    <string name="homeTimeTitle">"Set Home Commute Time"</string>
+    <string name="workTimeTitle">"Set Work Commute Time"</string>
+    <string name="home">"Home"</string>
+    <string name="work">"Work"</string>
+    <string name="time">"%1$s:%2$s"</string>
+    <string name="replacement_bus">"Replacement Bus"</string>
+    <string name="bus">"Bus"</string>
+    <string name="cancelled_colon">"Cancelled: "</string>
+    <string name="no_departures_available">"No Departures Available"</string>
+    <string name="err_api_unavailable">"Error: API unavailable"</string>
+    <string name="select_arr_and_dep_stnt">"Please select an Arrival and Departure station"</string>
+    <string name="delayed_by">"Delayed by %1$s mins (%2$s)"</string>
+    <string name="arr_from_colon">"Arriving From: "</string>
+    <string name="home_init">"Set a home and work route in settings."</string>
+    <string name="home_commute_time">"Home Commute Time"</string>
+    <string name="work_commute_time">"Work Commute Time"</string>
+    <string name="daily_commute_notifications">"Daily Commute Notifications"</string>
+    <string name="sample_notification">"This is how you will be notified"</string>
+    <string name="no_time_set">"Please set a time for home and work"</string>
+    <string name="time_plain">"Time"</string>
+    <string name="swap" translatable="false">swap</string>
+    <string name="station_to_station" translatable="false">Station to Station</string>
+    <string name="no_services_found" translatable="false">No services found</string>
+    <string name="you_are_currently_offline" translatable="false">You are currently offline</string>
+    <string name="view_welcome_screen" translatable="false">View Welcome Screen</string>
+</resources>
