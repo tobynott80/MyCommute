@@ -1,4 +1,4 @@
-# MyCommute - 21048229
+# MyCommute
 
 An app to help commuters check their daily train commute. Powered by [RTT API](https://api.rtt.io/).
 
